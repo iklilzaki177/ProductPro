@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 interface HeroSectionProps {
   onBuyNowClick: () => void;
@@ -8,50 +8,63 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSectionProps) {
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4 font-heading">
-              Revolutionary Product That <span className="text-primary">Changes Everything</span>
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Our innovative product solves your everyday problems with cutting-edge technology and thoughtful design.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button 
-                onClick={onBuyNowClick}
-                className="bg-primary hover:bg-blue-600 text-white px-8 py-3 h-auto text-lg"
-              >
-                Buy Now
-              </Button>
-              <Button 
-                onClick={onLearnMoreClick}
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 h-auto text-lg"
-              >
-                Learn More
-              </Button>
-            </div>
+    <section className="pt-6 pb-12">
+      <div className="apple-hero">
+        <div className="max-w-[600px] mx-auto px-4">
+          <h2 className="text-base text-primary font-normal mb-2">New</h2>
+          <h1 className="apple-hero-title mb-2">iPhone 15 Pro</h1>
+          <h3 className="apple-hero-subtitle mb-4">Titanium. So strong. So light. So Pro.</h3>
+          <div className="flex justify-center space-x-6 mt-5">
+            <button 
+              onClick={onBuyNowClick}
+              className="text-blue-600 hover:underline font-medium text-xl flex items-center"
+            >
+              Buy <ChevronRight className="h-5 w-5 ml-0.5" />
+            </button>
+            <button 
+              onClick={onLearnMoreClick}
+              className="text-blue-600 hover:underline font-medium text-xl flex items-center"
+            >
+              Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
+            </button>
           </div>
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&h=600" 
-              alt="Product" 
-              className="rounded-lg shadow-xl w-full"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
-              <div className="flex items-center">
-                <div className="bg-green-100 p-2 rounded-full mr-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-medium text-dark">Trusted by 5,000+</p>
-                  <p className="text-sm text-gray-500">Happy customers</p>
-                </div>
-              </div>
-            </div>
+        </div>
+        
+        <div className="mt-8 overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1631281956016-3cdc1b2fe5fb?auto=format&fit=crop&w=1500&q=80" 
+            alt="iPhone 15 Pro" 
+            className="w-full max-w-[1200px] mx-auto object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="apple-hero mt-12">
+        <div className="max-w-[600px] mx-auto px-4">
+          <h1 className="apple-hero-title mb-2">iPad Pro</h1>
+          <h3 className="apple-hero-subtitle mb-4">Supercharged by the Apple M2 chip.</h3>
+          <div className="flex justify-center space-x-6 mt-5">
+            <button 
+              onClick={onBuyNowClick}
+              className="text-blue-600 hover:underline font-medium text-xl flex items-center"
+            >
+              Buy <ChevronRight className="h-5 w-5 ml-0.5" />
+            </button>
+            <button 
+              onClick={onLearnMoreClick}
+              className="text-blue-600 hover:underline font-medium text-xl flex items-center"
+            >
+              Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
+            </button>
           </div>
+        </div>
+        
+        <div className="mt-8 overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=1500&q=80" 
+            alt="iPad Pro" 
+            className="w-full max-w-[1200px] mx-auto object-cover"
+          />
         </div>
       </div>
     </section>

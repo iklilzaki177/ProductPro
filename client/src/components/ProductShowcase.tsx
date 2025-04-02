@@ -1,94 +1,101 @@
-import { ProductDetail } from '@/lib/types';
-import { CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ChevronRight } from 'lucide-react';
 
 export default function ProductShowcase() {
-  const productDetails: ProductDetail[] = [
-    {
-      title: "Premium Quality Materials",
-      description: "Crafted with the finest materials available, our product is built to last. We don't compromise on quality and neither should you.",
-      benefits: [
-        "Durable construction ensures longevity",
-        "Premium finish that stands out from competitors",
-        "Ethically sourced materials you can feel good about"
-      ]
-    },
-    {
-      title: "Innovative Technology",
-      description: "Our product incorporates cutting-edge technology that puts it ahead of any competitor in the market today.",
-      benefits: [
-        "Smart functionality adapts to your needs",
-        "Energy-efficient design saves resources",
-        "Patented technology you won't find elsewhere"
-      ]
-    }
-  ];
-
   return (
-    <section id="product" className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4 font-heading">Our Amazing Product</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover how our product can transform your everyday experience with its innovative features.
-          </p>
-        </div>
-        
-        {/* First Product Detail */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h3 className="text-2xl font-bold text-dark mb-4 font-heading">{productDetails[0].title}</h3>
-            <p className="text-gray-600 mb-6">{productDetails[0].description}</p>
-            
-            <ul className="space-y-3 mb-8">
-              {productDetails[0].benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mt-1 mr-2" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <Button className="bg-primary hover:bg-blue-600 text-white">
-              Learn More
-            </Button>
+    <section id="product" className="py-8">
+      <div className="apple-container">
+        {/* Grid layout for product displays */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* First product card */}
+          <div className="bg-gray-100 rounded-3xl p-10 text-center overflow-hidden relative">
+            <div className="mb-8">
+              <h2 className="text-3xl font-semibold mb-2">MacBook Air</h2>
+              <p className="text-xl text-gray-500 font-light">Impressively thin. Impossibly powerful.</p>
+              <div className="mt-4 flex justify-center space-x-6">
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Buy <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+              </div>
+            </div>
+            <div className="h-60 flex justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&h=400" 
+                alt="MacBook Air" 
+                className="max-h-full object-contain"
+              />
+            </div>
           </div>
           
-          <div className="order-1 md:order-2">
-            <img 
-              src="https://images.unsplash.com/photo-1555089548-54c600a6d7cb?auto=format&fit=crop&w=600&h=400" 
-              alt="Product Detail" 
-              className="rounded-lg shadow-xl w-full" 
-            />
-          </div>
-        </div>
-        
-        {/* Second Product Detail */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mt-24">
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&h=400" 
-              alt="Product Innovation" 
-              className="rounded-lg shadow-xl w-full" 
-            />
+          {/* Second product card */}
+          <div className="bg-gray-900 text-white rounded-3xl p-10 text-center overflow-hidden relative">
+            <div className="mb-8">
+              <h2 className="text-3xl font-semibold mb-2">AirPods Pro</h2>
+              <p className="text-xl text-gray-400 font-light">Adaptive Audio. Now playing.</p>
+              <div className="mt-4 flex justify-center space-x-6">
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Buy <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+              </div>
+            </div>
+            <div className="h-60 flex justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1600294037681-c80b4cb5871c?auto=format&fit=crop&w=600&h=400" 
+                alt="AirPods Pro" 
+                className="max-h-full object-contain" 
+              />
+            </div>
           </div>
           
-          <div>
-            <h3 className="text-2xl font-bold text-dark mb-4 font-heading">{productDetails[1].title}</h3>
-            <p className="text-gray-600 mb-6">{productDetails[1].description}</p>
-            
-            <ul className="space-y-3 mb-8">
-              {productDetails[1].benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-500 mt-1 mr-2" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <Button className="bg-primary hover:bg-blue-600 text-white">
-              Learn More
-            </Button>
+          {/* Third product card */}
+          <div className="bg-gradient-to-r from-purple-200 to-pink-200 rounded-3xl p-10 text-center overflow-hidden relative">
+            <div className="mb-8">
+              <h2 className="text-3xl font-semibold mb-2">iPad</h2>
+              <p className="text-xl text-gray-600 font-light">Lovable. Drawable. Magical.</p>
+              <div className="mt-4 flex justify-center space-x-6">
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Buy <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+              </div>
+            </div>
+            <div className="h-60 flex justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=600&h=400" 
+                alt="iPad" 
+                className="max-h-full object-contain" 
+              />
+            </div>
+          </div>
+          
+          {/* Fourth product card */}
+          <div className="bg-gradient-to-r from-green-100 to-blue-100 rounded-3xl p-10 text-center overflow-hidden relative">
+            <div className="mb-8">
+              <h2 className="text-3xl font-semibold mb-2">Apple Watch</h2>
+              <p className="text-xl text-gray-600 font-light">Smarter. Brighter. Mightier.</p>
+              <div className="mt-4 flex justify-center space-x-6">
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
+                  Buy <ChevronRight className="h-5 w-5 ml-0.5" />
+                </a>
+              </div>
+            </div>
+            <div className="h-60 flex justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&h=400" 
+                alt="Apple Watch" 
+                className="max-h-full object-contain" 
+              />
+            </div>
           </div>
         </div>
       </div>
