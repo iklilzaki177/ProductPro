@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Check } from 'lucide-react';
+import { ChevronRight, Check, FileText, Type, ListOrdered } from 'lucide-react';
 
 interface HeroSectionProps {
   onBuyNowClick: () => void;
@@ -22,9 +22,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         <div className="max-w-[600px] mx-auto px-4">
           <h2 className="text-base text-blue-500 font-normal mb-2">Introducing</h2>
           <h1 className="apple-hero-title mb-2">Easy.<span className="text-blue-500">kripsi</span></h1>
-          <h3 className="apple-hero-subtitle mb-4">Secure. Simple. Innovative.</h3>
+          <h3 className="apple-hero-subtitle mb-4">Thesis formatting made simple.</h3>
           <p className="text-gray-400 text-center mb-5">
-            Choose from three powerful packages designed for your security needs
+            Microsoft Word automation tool that helps you format your thesis perfectly
           </p>
           <div className="flex justify-center space-x-6 mt-5">
             <button 
@@ -48,20 +48,20 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             {/* Basic Package */}
             <div className="bg-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105">
               <h3 className="text-2xl font-medium mb-3">Basic</h3>
-              <p className="text-gray-400 mb-4">Essential security for everyday needs</p>
+              <p className="text-gray-400 mb-4">Essential formatting tools for students</p>
               <p className="text-xl font-semibold mb-6">$9.99<span className="text-sm font-normal text-gray-400">/mo</span></p>
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Core encryption features</span>
+                  <span className="text-gray-300">Automatic heading formatting</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Secure messaging</span>
+                  <span className="text-gray-300">Page number automation</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Password management</span>
+                  <span className="text-gray-300">Basic citation assistance</span>
                 </li>
               </ul>
               <button 
@@ -75,7 +75,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             {/* Lite Package */}
             <div className="bg-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105">
               <h3 className="text-2xl font-medium mb-3">Lite</h3>
-              <p className="text-gray-400 mb-4">Advanced protection for professionals</p>
+              <p className="text-gray-400 mb-4">Advanced tools for graduate students</p>
               <p className="text-xl font-semibold mb-6">$19.99<span className="text-sm font-normal text-gray-400">/mo</span></p>
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
@@ -84,15 +84,15 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">VPN protection</span>
+                  <span className="text-gray-300">Table of contents generation</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Priority support</span>
+                  <span className="text-gray-300">Figure & table caption tools</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Multi-device support</span>
+                  <span className="text-gray-300">Multiple citation styles</span>
                 </li>
               </ul>
               <button 
@@ -107,7 +107,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             <div className="bg-gradient-to-b from-blue-900 to-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105 ring-2 ring-blue-500">
               <div className="bg-blue-600 text-xs font-bold py-1 px-3 rounded-full inline-block mb-2">MOST POPULAR</div>
               <h3 className="text-2xl font-medium mb-3">Ultimate</h3>
-              <p className="text-gray-300 mb-4">Complete security solution for enterprises</p>
+              <p className="text-gray-300 mb-4">Complete thesis automation suite</p>
               <p className="text-xl font-semibold mb-6">$39.99<span className="text-sm font-normal text-gray-300">/mo</span></p>
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
@@ -116,19 +116,19 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Advanced threat protection</span>
+                  <span className="text-gray-300">Reference management system</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Enterprise admin controls</span>
+                  <span className="text-gray-300">Template library with university formats</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">24/7 dedicated support</span>
+                  <span className="text-gray-300">AI-powered proofreading</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Custom security policies</span>
+                  <span className="text-gray-300">Priority thesis formatting support</span>
                 </li>
               </ul>
               <button 
@@ -137,6 +137,43 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               >
                 Choose Ultimate
               </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Sample illustration */}
+        <div className="mt-24 text-center">
+          <h2 className="text-2xl font-semibold mb-6">How Easy.kripsi saves you time</h2>
+          <div className="bg-zinc-800 rounded-2xl p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center justify-center md:w-1/2 mb-8 md:mb-0">
+              <div className="relative">
+                <FileText className="w-48 h-48 text-blue-400 opacity-70" />
+                <div className="absolute top-1/4 left-1/4 right-1/4 bottom-1/4 flex items-center justify-center">
+                  <div className="w-full h-1/2 flex flex-col space-y-2">
+                    <div className="h-2 bg-blue-500 rounded-full w-3/4"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-full"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-5/6"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-2/3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-xl font-medium mb-4">One-click thesis formatting</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <Type className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Automatic heading styles that match your university guidelines</span>
+                </li>
+                <li className="flex items-start">
+                  <ListOrdered className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Smart page numbering with different formats for different sections</span>
+                </li>
+                <li className="flex items-start">
+                  <FileText className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Save hours of manual formatting with just a few clicks</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
