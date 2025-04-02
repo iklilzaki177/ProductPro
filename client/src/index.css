@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -20,35 +20,39 @@
 }
 
 @layer components {
-  .apple-container {
+  .main-container {
     @apply max-w-[980px] mx-auto px-4 sm:px-8;
   }
   
-  .apple-nav {
+  .nav-style {
     @apply bg-white/90 backdrop-blur-md text-sm font-light;
   }
   
-  .apple-button {
+  .primary-button {
     @apply rounded-full px-4 py-1 text-sm font-medium transition-colors;
   }
   
-  .apple-hero {
+  .hero-section {
     @apply text-center py-12 md:py-20;
   }
   
-  .apple-hero-title {
+  .hero-title {
     @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight;
   }
   
-  .apple-hero-subtitle {
+  .hero-subtitle {
     @apply text-xl md:text-2xl font-light text-gray-600 mt-2;
   }
   
-  .apple-section {
+  .content-section {
     @apply text-center py-12;
   }
   
-  .apple-footer {
+  .page-footer {
     @apply text-xs text-gray-500 border-t border-gray-200;
+  }
+  
+  .shortcut-badge {
+    @apply bg-blue-900/50 text-white text-xs px-2 py-1 rounded-md inline-flex items-center;
   }
 }

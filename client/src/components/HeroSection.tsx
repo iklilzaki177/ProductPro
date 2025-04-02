@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Check, FileText, Type, ListOrdered } from 'lucide-react';
+import { ChevronRight, Check, FileText, Type, ListOrdered, Keyboard, Sparkles } from 'lucide-react';
 
 interface HeroSectionProps {
   onBuyNowClick: () => void;
@@ -9,25 +9,39 @@ interface HeroSectionProps {
 export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSectionProps) {
   return (
     <section className="pt-6 pb-12 bg-black text-white">
-      <div className="apple-hero">
-        {/* Navigation Tabs - For product packages */}
-        <div className="flex justify-center pt-5 pb-8">
-          <nav className="flex space-x-5 sm:space-x-8 overflow-x-auto p-2 text-xs sm:text-sm">
-            <a href="#" className="whitespace-nowrap font-medium border-b-2 border-white py-1 px-1">Basic</a>
-            <a href="#" className="whitespace-nowrap text-gray-400 hover:text-white transition-colors py-1 px-1">Lite</a>
-            <a href="#" className="whitespace-nowrap text-gray-400 hover:text-white transition-colors py-1 px-1">Ultimate</a>
-          </nav>
-        </div>
-        
+      <div className="hero-section">
         <div className="max-w-[600px] mx-auto px-4">
-          <h2 className="text-base text-blue-500 font-normal mb-2">Introducing</h2>
-          <h1 className="apple-hero-title mb-2">Easy.<span className="text-blue-500">kripsi</span></h1>
-          <p className="text-xs text-blue-400 mb-3">Developed by @Iklilzaki and @Bangdeniuss</p>
-          <h3 className="apple-hero-subtitle mb-4">Thesis formatting made simple.</h3>
-          <p className="text-gray-400 text-center mb-5">
-            Microsoft Word automation tool that helps you format your thesis perfectly
-          </p>
-          <div className="flex justify-center space-x-6 mt-5">
+          <h1 className="hero-title mb-2">Easy.<span className="text-blue-500">kripsi</span></h1>
+          <p className="text-xs text-blue-400">Developed by @Iklilzaki and @Bangdeniuss</p>
+          <h3 className="hero-subtitle my-4">Thesis formatting made simple.</h3>
+          
+          {/* Keyboard shortcuts highlight */}
+          <div className="bg-zinc-900 rounded-xl p-4 mt-4 mb-6">
+            <div className="flex items-center justify-center mb-2">
+              <Keyboard className="h-5 w-5 text-blue-500 mr-2" />
+              <h4 className="text-sm font-medium">Powerful Keyboard Shortcuts</h4>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + 1</div>
+                <span className="text-xs text-gray-400">Heading 1</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + 2-8</div>
+                <span className="text-xs text-gray-400">Heading 2-8</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + D</div>
+                <span className="text-xs text-gray-400">Table of Contents</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + Shift + K</div>
+                <span className="text-xs text-gray-400">Page Numbers</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex justify-center space-x-6 mt-6">
             <button 
               onClick={onBuyNowClick}
               className="text-blue-500 hover:underline font-medium text-xl flex items-center"
@@ -44,7 +58,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         </div>
         
         {/* Product Package Cards */}
-        <div className="mt-16 px-4">
+        <div className="mt-12 px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Basic Package */}
             <div className="bg-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105">
@@ -143,7 +157,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         </div>
         
         {/* Sample illustration */}
-        <div className="mt-24 text-center">
+        <div className="mt-20 text-center">
           <h2 className="text-2xl font-semibold mb-6">How Easy.kripsi saves you time</h2>
           <div className="bg-zinc-800 rounded-2xl p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center justify-center md:w-1/2 mb-8 md:mb-0">

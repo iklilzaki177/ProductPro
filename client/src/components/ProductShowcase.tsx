@@ -3,7 +3,7 @@ import { ChevronRight, FileText, Type, ListOrdered, CheckCircle, Table, Bookmark
 export default function ProductShowcase() {
   return (
     <section id="product" className="py-16 bg-white">
-      <div className="apple-container">
+      <div className="main-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-semibold mb-3">Choose your Easy.kripsi plan</h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">

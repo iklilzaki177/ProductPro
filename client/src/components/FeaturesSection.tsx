@@ -35,7 +35,7 @@ export default function FeaturesSection() {
 
   return (
     <section id="features" className="bg-black text-white py-24">
-      <div className="apple-container">
+      <div className="main-container">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-semibold mb-5">Thesis formatting that saves you hours.</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">

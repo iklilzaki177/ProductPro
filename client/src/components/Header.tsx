@@ -36,7 +36,7 @@ export default function Header({ onNavClick }: HeaderProps) {
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-white/90 backdrop-blur-md'}`}>
-      <div className="apple-container">
+      <div className="main-container">
         <div className="flex justify-between items-center h-12 md:h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
