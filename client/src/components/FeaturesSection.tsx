@@ -54,10 +54,13 @@ export default function FeaturesSection() {
               <Type className="w-32 h-32 text-blue-500" />
             </div>
             <h3 className="text-2xl font-semibold mb-3">Heading Automation</h3>
-            <p className="text-gray-400 leading-relaxed font-light">
+            <p className="text-gray-400 leading-relaxed font-light mb-3">
               Set up perfectly formatted headings according to your university's requirements. 
               Consistent formatting for all heading levels with a single click.
             </p>
+            <div className="flex justify-center my-2">
+              <span className="bg-blue-900/50 text-white text-sm px-3 py-1 rounded-full">Alt + 1-8</span>
+            </div>
           </div>
           
           <div className="text-center">
@@ -65,10 +68,13 @@ export default function FeaturesSection() {
               <ListOrdered className="w-32 h-32 text-blue-500" />
             </div>
             <h3 className="text-2xl font-semibold mb-3">Page Numbering</h3>
-            <p className="text-gray-400 leading-relaxed font-light">
+            <p className="text-gray-400 leading-relaxed font-light mb-3">
               Implement different page numbering styles (Roman, Arabic) for different sections of your 
               thesis, automatically handling complex pagination requirements.
             </p>
+            <div className="flex justify-center my-2">
+              <span className="bg-blue-900/50 text-white text-sm px-3 py-1 rounded-full">Alt + Shift + K</span>
+            </div>
           </div>
           
           <div className="text-center">
@@ -76,10 +82,13 @@ export default function FeaturesSection() {
               <Table className="w-32 h-32 text-blue-500" />
             </div>
             <h3 className="text-2xl font-semibold mb-3">Table of Contents</h3>
-            <p className="text-gray-400 leading-relaxed font-light">
+            <p className="text-gray-400 leading-relaxed font-light mb-3">
               Generate and update your table of contents, list of figures, and list of tables with perfect 
               formatting that matches your university's guidelines.
             </p>
+            <div className="flex justify-center my-2">
+              <span className="bg-blue-900/50 text-white text-sm px-3 py-1 rounded-full">Alt + D</span>
+            </div>
           </div>
         </div>
         

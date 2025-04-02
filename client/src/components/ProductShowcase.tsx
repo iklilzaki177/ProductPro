@@ -137,6 +137,64 @@ export default function ProductShowcase() {
           </div>
         </div>
         
+        {/* Keyboard Shortcuts Showcase */}
+        <div className="mt-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white rounded-3xl p-12">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-semibold mb-3">Powerful Keyboard Shortcuts</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Format your thesis in seconds with these time-saving shortcuts
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-medium mb-4 border-b border-blue-500 pb-2">Heading Formatting</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center">
+                  <div className="flex space-x-1 mr-4 w-24">
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">Alt</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">1</span>
+                  </div>
+                  <span className="text-gray-300">Apply Heading 1 style to selected text</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="flex space-x-1 mr-4 w-24">
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">Alt</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">2-8</span>
+                  </div>
+                  <span className="text-gray-300">Apply Heading 2-8 styles respectively</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-medium mb-4 border-b border-blue-500 pb-2">Page & Content Tools</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center">
+                  <div className="flex space-x-1 mr-4 w-24">
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">Alt</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">D</span>
+                  </div>
+                  <span className="text-gray-300">Generate Table of Contents ("Daftar Isi")</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="flex space-x-1 mr-4 w-24">
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">Alt</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">Shift</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">K</span>
+                  </div>
+                  <span className="text-gray-300">Auto-detect and format page numbers (center, bottom, top right)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
         {/* Word Integration Showcase */}
         <div className="mt-20 bg-gray-100 rounded-3xl p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
