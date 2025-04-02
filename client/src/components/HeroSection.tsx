@@ -22,6 +22,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         <div className="max-w-[600px] mx-auto px-4">
           <h2 className="text-base text-blue-500 font-normal mb-2">Introducing</h2>
           <h1 className="apple-hero-title mb-2">Easy.<span className="text-blue-500">kripsi</span></h1>
+          <p className="text-xs text-blue-400 mb-3">Developed by @Iklilzaki and @Bangdeniuss</p>
           <h3 className="apple-hero-subtitle mb-4">Thesis formatting made simple.</h3>
           <p className="text-gray-400 text-center mb-5">
             Microsoft Word automation tool that helps you format your thesis perfectly
