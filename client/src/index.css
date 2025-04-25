@@ -122,7 +122,12 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+    border: 1px solid rgba(96, 165, 250, 0.5);
+    color: white;
+    padding: 4px 12px;
+    font-size: 10px;
+    display: inline-block;
   }
 
   .glow-card {
