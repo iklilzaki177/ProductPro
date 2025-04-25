@@ -397,17 +397,26 @@ export default function ProductShowcase() {
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="p-3 border-b text-gray-700">Membuat caption (Alt+G/T/L)</td>
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Membuat caption (Alt+G/T/L)</div>
+                      <div className="text-xs text-gray-500 mt-1">Alt+G untuk gambar, Alt+T untuk tabel, Alt+L untuk lampiran</div>
+                    </td>
                     <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="p-3 border-b text-gray-700 font-medium">Caption dengan nomor BAB (Gambar 4.1)</td>
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Caption dengan nomor BAB (Gambar 4.1)</div>
+                      <div className="text-xs text-gray-500 mt-1">Penomoran otomatis sesuai dengan BAB (cth: "Gambar 4.1")</div>
+                    </td>
                     <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="p-3 border-b text-gray-700 font-medium">Daftar isi gambar/tabel/lampiran (Alt+Shift+G/T/L)</td>
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Daftar isi gambar/tabel/lampiran (Alt+Shift+G/T/L)</div>
+                      <div className="text-xs text-gray-500 mt-1">Tampilkan tabel daftar isi dari caption yang telah dibuat</div>
+                    </td>
                     <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>

@@ -65,6 +65,10 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 <span className="text-xs text-gray-400">Daftar Gambar/Tabel/Lampiran</span>
               </div>
             </div>
+            <div className="mt-3 text-xs text-gray-400 text-center px-2">
+              <p className="mb-1">Gunakan <span className="text-blue-400 font-medium">Alt+G</span> untuk caption gambar, <span className="text-blue-400 font-medium">Alt+T</span> untuk tabel, dan <span className="text-blue-400 font-medium">Alt+L</span> untuk lampiran.</p>
+              <p>Tekan <span className="text-blue-400 font-medium">Alt+Shift+G/T/L</span> untuk menampilkan tabel daftar isi dari caption yang telah dibuat.</p>
+            </div>
           </div>
           
           {/* CTA buttons */}
@@ -171,7 +175,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Caption gambar/tabel dengan nomor BAB (mis. Gambar 4.1)</span>
+                  <span className="text-gray-300">Caption gambar/tabel dengan nomor BAB (mis. Gambar 4.1) melalui Alt+G/T/L</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Daftar gambar/tabel/lampiran otomatis (Alt+Shift+G/T/L)</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
