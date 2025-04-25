@@ -45,7 +45,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       }}
       viewport={{ once: true, margin: "-5% 0px -5% 0px" }}
       className={cn(
-        "p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-hidden group h-full",
+        "min-w-0 p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-hidden group h-full",
         feature.highlight
           ? "bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-400/40 hover:border-blue-300/50"
           : feature.isAdvanced 
@@ -53,12 +53,12 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
             : "bg-gradient-to-br from-zinc-900/30 to-zinc-800/10 border-zinc-700/20 hover:border-gray-600/30"
       )}
     >
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full min-w-0 w-full">
         {/* Card header with icon and shortcut */}
-        <div className="flex items-center mb-2 sm:mb-3 relative z-10 flex-wrap">
+        <div className="flex items-center gap-2 mb-2 sm:mb-3 relative z-10 flex-wrap min-w-0 w-full">
           {/* Icon */}
           <div className={cn(
-            "p-1 sm:p-1.5 rounded-md flex items-center justify-center flex-shrink-0 mr-1.5 sm:mr-2",
+            "flex-shrink-0 p-1 sm:p-1.5 rounded-md flex items-center justify-center",
             feature.isAdvanced 
               ? "bg-blue-600/20 border border-blue-500/30" 
               : "bg-gray-800/40 border border-gray-700/30"
@@ -69,9 +69,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
             )} />
           </div>
 
-          {/* Shortcut label - flex-1 on small screens ensures proper wrapping */}
+          {/* Shortcut label - min-w-0 ensures proper truncation */}
           <div className={cn(
-            "inline-block text-xs xs:text-sm font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-md break-all",
+            "min-w-0 text-xs xs:text-sm font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-md truncate",
             feature.isAdvanced 
               ? "bg-blue-500/20 text-blue-200 border border-blue-500/30" 
               : "bg-gray-800/40 text-gray-300 border border-gray-700/30"
@@ -80,15 +80,17 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </div>
         </div>
         
-        {/* Description - Adjust font sizes for different screens */}
-        <p className={cn(
-          "text-xs sm:text-sm mt-1 leading-relaxed line-clamp-3 sm:line-clamp-none",
-          feature.highlight 
-            ? "text-blue-50 font-medium"
-            : feature.isAdvanced ? "text-blue-100" : "text-gray-300"
-        )}>
-          {feature.description}
-        </p>
+        {/* Description - using truncate and line clamp to prevent overflow */}
+        <div className="min-w-0 w-full">
+          <p className={cn(
+            "text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2 hyphens-auto overflow-wrap-anywhere",
+            feature.highlight 
+              ? "text-blue-50 font-medium"
+              : feature.isAdvanced ? "text-blue-100" : "text-gray-300"
+          )}>
+            {feature.description}
+          </p>
+        </div>
         
         {/* Badge for highlight features */}
         {feature.highlight && (
