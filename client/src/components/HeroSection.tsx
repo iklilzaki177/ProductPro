@@ -213,7 +213,6 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             {/* Basic Package - Understated Style */}
             <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 border border-zinc-800/50 relative overflow-hidden group md:transform md:scale-90">
               <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-gray-900/80 opacity-80 pointer-events-none"></div>
-              <div className="absolute inset-0 opacity-10 grid-pattern"></div>
               <div className="relative z-10">
                 <div className="inline-block bg-gray-800/80 px-3 py-1.5 rounded-full mb-4 border border-gray-700/50">
                   <h3 className="text-xl font-medium tracking-wide text-blue-100">Basic</h3>
@@ -263,7 +262,6 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             {/* Advanced Package - Enhanced Premium Style */}
             <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group md:transform md:scale-110 md:z-20">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
-              <div className="absolute inset-0 opacity-10 grid-pattern"></div>
               <div className="absolute -top-3 right-8 premium-badge text-xs py-1.5 px-4 shadow-lg">
                 PALING POPULER
               </div>
@@ -282,7 +280,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <h3 className="text-xl font-medium tracking-wide text-blue-100">Advance</h3>
                 </div>
                 <p className="text-blue-100 mb-4">Paket otomatisasi skripsi lengkap</p>
-                <p className="text-4xl font-semibold mb-2 text-white bg-gradient-to-r from-white to-blue-200 bg-clip-text">Rp 100.000</p>
+                <p className="text-4xl font-semibold mb-2 text-white">Rp 100.000</p>
                 <p className="text-blue-200 text-sm mb-8">Hemat waktu & tenaga bernilai jutaan</p>
                 
                 <div className="bg-blue-900/20 rounded-xl p-5 mb-8 text-left space-y-4 backdrop-blur-sm border border-blue-600/20">
@@ -334,15 +332,14 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   </div>
                 </div>
                 
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-70 blur-sm group-hover:opacity-100 transition-all duration-500"></div>
+                <div>
                   <a 
                     href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="techno-button relative inline-block py-3.5 px-10 font-medium"
+                    className="techno-button inline-block py-3.5 px-10 font-medium"
                   >
-                    <span className="relative z-10">Dapatkan Advance</span>
+                    Dapatkan Advance
                   </a>
                 </div>
               </div>
