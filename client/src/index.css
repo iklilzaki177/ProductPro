@@ -59,7 +59,7 @@
     @apply max-w-5xl mx-auto px-4 sm:px-6;
   }
   
-  /* Notion-style typography system */
+  /* Notion-style typography system with improved contrast */
   .notion-h1 {
     @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight;
   }
@@ -73,11 +73,11 @@
   }
   
   .notion-text {
-    @apply text-base text-gray-600 leading-relaxed;
+    @apply text-base text-gray-700 leading-relaxed;
   }
   
   .notion-text-sm {
-    @apply text-sm text-gray-500 leading-relaxed;
+    @apply text-sm text-gray-600 leading-relaxed;
   }
   
   /* Notion-inspired navigation */
@@ -89,21 +89,21 @@
     @apply text-sm font-medium bg-blue-50 text-blue-600 px-4 py-2 rounded-md;
   }
   
-  /* Notion-style buttons for uniformity across devices */
+  /* Notion-style buttons for uniformity across devices with improved contrast */
   .notion-btn {
     @apply inline-flex items-center justify-center text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none;
   }
   
   .notion-btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 rounded-md py-2 px-4 shadow-sm;
+    @apply bg-blue-700 text-white hover:bg-blue-800 rounded-md py-2 px-4 shadow-sm;
   }
   
   .notion-btn-secondary {
-    @apply bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 rounded-md py-2 px-4 shadow-sm;
+    @apply bg-white text-gray-800 hover:bg-gray-50 border border-gray-300 rounded-md py-2 px-4 shadow-sm;
   }
   
   .notion-btn-tertiary {
-    @apply text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md py-2 px-3;
+    @apply text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md py-2 px-3;
   }
   
   /* Mobile-optimized menu transitions */
@@ -141,18 +141,18 @@
     @apply py-8 sm:py-12 md:py-16;
   }
   
-  /* Notion-style highlighted text */
+  /* Notion-style highlighted text with improved contrast */
   .notion-highlight {
-    @apply bg-yellow-100 px-1 py-0.5 rounded text-yellow-800;
+    @apply bg-yellow-100 px-1 py-0.5 rounded text-yellow-900;
   }
   
-  /* Notion-style callout component */
+  /* Notion-style callout component with improved contrast */
   .notion-callout {
-    @apply bg-gray-100 rounded-md p-4 flex items-start;
+    @apply bg-gray-100 rounded-md p-4 flex items-start border border-gray-300;
   }
   
   .notion-callout-icon {
-    @apply mr-3 flex-shrink-0 mt-1 text-gray-500;
+    @apply mr-3 flex-shrink-0 mt-1 text-gray-700;
   }
   
   /* Smooth animations for scroll-triggered elements - optimized for mobile */
@@ -255,9 +255,9 @@
     @apply notion-btn notion-btn-primary;
   }
   
-  /* Simpler badge style */
+  /* Simpler badge style with improved contrast */
   .premium-badge {
-    @apply inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded;
+    @apply inline-flex items-center bg-blue-200 text-blue-900 text-xs font-medium px-2 py-1 rounded border border-blue-300;
   }
   
   .feature-card {
@@ -314,25 +314,25 @@
     @apply px-5 py-3 bg-gray-50 border-t border-gray-200;
   }
   
-  /* VS comparison component */
+  /* VS comparison component with improved contrast */
   .notion-vs-container {
     @apply flex flex-col md:flex-row items-center justify-center gap-8 my-8 relative;
   }
   
   .notion-vs-divider {
-    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-gray-500 border border-gray-200 shadow-sm;
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-gray-700 border border-gray-300 shadow-sm;
   }
   
   .notion-vs-card {
-    @apply w-full md:w-1/2 rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm;
+    @apply w-full md:w-1/2 rounded-xl border border-gray-300 overflow-hidden bg-white shadow-sm;
   }
   
   .notion-vs-card-basic {
-    @apply border-gray-300;
+    @apply border-gray-400;
   }
   
   .notion-vs-card-advanced {
-    @apply border-blue-300;
+    @apply border-blue-500;
   }
   
   .notion-vs-header {
@@ -347,17 +347,17 @@
     @apply text-base font-medium;
   }
   
-  /* Keyboard shortcut styling */
+  /* Keyboard shortcut styling with better contrast */
   .notion-kbd {
-    @apply inline-flex items-center justify-center min-w-[1.8rem] h-7 px-1.5 bg-gray-100 text-gray-800 text-sm font-medium rounded border border-gray-300 shadow-sm;
+    @apply inline-flex items-center justify-center min-w-[1.8rem] h-7 px-1.5 bg-gray-200 text-gray-900 text-sm font-medium rounded border border-gray-400 shadow-sm;
   }
   
   .notion-kbd-description {
-    @apply ml-2 text-gray-600;
+    @apply ml-2 text-gray-700;
   }
   
   .notion-shortcut-item {
-    @apply flex items-center py-2 border-b border-gray-100 last:border-0;
+    @apply flex items-center py-2 border-b border-gray-200 last:border-0;
   }
   
   /* Feature list displays */
@@ -377,21 +377,21 @@
     @apply text-gray-700;
   }
   
-  /* Comparison table styling */
+  /* Comparison table styling with improved contrast */
   .notion-compare-table {
-    @apply w-full border-collapse;
+    @apply w-full border-collapse border border-gray-300 rounded overflow-hidden;
   }
   
   .notion-compare-table th {
-    @apply text-left p-3 text-sm font-medium text-gray-500;
+    @apply text-left p-3 text-sm font-medium text-gray-700 bg-gray-100 border-b border-gray-300;
   }
   
   .notion-compare-table tr:not(:last-child) td {
-    @apply border-b border-gray-200;
+    @apply border-b border-gray-300;
   }
   
   .notion-compare-table td {
-    @apply p-3 text-sm;
+    @apply p-3 text-sm text-gray-700;
   }
   
   .notion-compare-table td:first-child {
@@ -399,11 +399,11 @@
   }
   
   .notion-compare-check {
-    @apply text-green-500;
+    @apply text-green-600;
   }
   
   .notion-compare-x {
-    @apply text-gray-400;
+    @apply text-gray-500;
   }
 
   /* Mobile optimizations */

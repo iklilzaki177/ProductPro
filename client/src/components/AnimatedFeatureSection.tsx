@@ -249,7 +249,11 @@ export default function AnimatedFeatureSection() {
       {/* Notion-styled callout */}
       <div className="notion-callout mt-12 mb-12 bg-blue-50 border border-blue-100">
         <div className="notion-callout-icon text-blue-500">
-          <Info className="h-5 w-5" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
         </div>
         <div>
           <p className="font-medium mb-1 text-blue-800">Pengguna sudah 1600+ sejak 2022</p>
