@@ -60,14 +60,16 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
     >
       {/* Card layout changed to vertical arrangement for better readability */}
       <div className="flex flex-col">
-        {/* Keyboard shortcut on top with larger font */}
-        <div className={cn(
-          "self-start text-base font-mono mb-4 px-4 py-2.5 rounded-lg shadow-md font-bold tracking-wider",
-          feature.isAdvanced 
-            ? "bg-blue-500/40 text-blue-100 shadow-blue-500/20" 
-            : "bg-gray-800/60 text-gray-100 shadow-gray-900/20"
-        )}>
-          {feature.shortcut}
+        {/* Keyboard shortcut - now better aligned with overall layout */}
+        <div className="flex items-center mb-4">
+          <div className={cn(
+            "text-base font-mono px-4 py-2.5 rounded-lg shadow-md font-bold tracking-wider",
+            feature.isAdvanced 
+              ? "bg-blue-500/40 text-blue-100 shadow-blue-500/20" 
+              : "bg-gray-800/60 text-gray-100 shadow-gray-900/20"
+          )}>
+            {feature.shortcut}
+          </div>
         </div>
         
         {/* Description in middle with larger font and better line height */}
@@ -90,9 +92,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </p>
         </div>
         
-        {/* Package indicator at bottom with improved styling */}
+        {/* Package indicator at bottom with improved styling - now left aligned */}
         {feature.isAdvanced && (
-          <div className="mt-2 flex items-center self-end">
+          <div className="mt-2 flex items-center self-start">
             <div className="flex items-center justify-center h-5 w-5 bg-blue-500/20 rounded-full mr-2">
               <Check className="h-3 w-3 text-blue-300" />
             </div>
