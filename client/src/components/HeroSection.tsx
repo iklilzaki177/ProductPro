@@ -68,19 +68,19 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Automatic heading formatting</span>
+                  <span className="text-gray-300">Auto-heading formatting with Alt+1, Alt+2, etc.</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Page number automation</span>
+                  <span className="text-gray-300">Table of contents with Alt+D shortcut</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Basic citation assistance</span>
+                  <span className="text-gray-300">Image/Table captions with BAB numbering (e.g., Gambar 4.1)</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Table of contents generation</span>
+                  <span className="text-gray-300">Basic page numbering features</span>
                 </li>
               </ul>
               <a 
@@ -102,23 +102,23 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Everything in Basic</span>
+                  <span className="text-gray-300">Everything in Basic package</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Reference management system</span>
+                  <span className="text-gray-300">Advanced page numbering with center bottom/top right options</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Template library with university formats</span>
+                  <span className="text-gray-300">Auto-switcher for roman and arabic numbers in different sections</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">AI-powered proofreading</span>
+                  <span className="text-gray-300">Enhanced image/table/attachment captioning (Ctrl+Alt+G/T/L)</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Priority thesis formatting support</span>
+                  <span className="text-gray-300">Quick-selection klik-pilih-done dialog windows</span>
                 </li>
               </ul>
               <a 

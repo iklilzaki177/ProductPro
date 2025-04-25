@@ -220,9 +220,9 @@ export default function ProductShowcase() {
                     <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
                     <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">Alt</span>
                     <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">+</span>
-                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">G</span>
+                    <span className="bg-gray-700 text-white text-xs py-1 px-2 rounded">G/T/L</span>
                   </div>
-                  <span className="text-gray-300">2-digit numbered image captions</span>
+                  <span className="text-gray-300">Auto-numbered captions linked to chapter numbers (e.g., Gambar 4.1 in BAB IV)</span>
                 </li>
                 <li className="flex items-center">
                   <div className="flex space-x-1 mr-4 w-24">
@@ -347,7 +347,7 @@ export default function ProductShowcase() {
                 <h3 className="text-xl font-medium pb-2 w-full">Enhanced Image & Table References</h3>
               </div>
               
-              <p className="text-blue-100 mb-4">Advance version supports 2-digit image, table, and appendix numbering with <span className="bg-blue-800 px-2 py-1 rounded">Ctrl + Alt + G</span></p>
+              <p className="text-blue-100 mb-4">Advance version automatically links caption numbers to chapters (BAB). For example, if you're in BAB IV, pressing <span className="bg-blue-800 px-2 py-1 rounded">Ctrl + Alt + G/T/L</span> creates captions like "Gambar 4.1", "Tabel 4.2", etc.</p>
               
               <div className="grid grid-cols-1 gap-4 mt-6">
                 <div className="bg-blue-800/50 p-4 rounded">
