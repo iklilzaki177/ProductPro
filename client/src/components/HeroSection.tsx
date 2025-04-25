@@ -422,85 +422,10 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           </div>
         </div>
         
-        {/* Sample illustration - Futuristic Style */}
-        <div className="mt-20 text-center px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-semibold mb-3 text-white">Bagaimana Easy.kripsi Menghemat Waktu Anda</h2>
-            <p className="text-blue-200/80 max-w-2xl mx-auto">Format profesional dengan beberapa klik saja</p>
-          </div>
-          
-          <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between shadow-lg border border-zinc-800/50 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent opacity-30 pointer-events-none"></div>
-            
-            <div className="flex items-center justify-center md:w-1/2 mb-8 md:mb-0 relative z-10">
-              <div className="relative">
-                <FileText className="w-36 h-36 sm:w-48 sm:h-48 text-blue-400" />
-                <div className="absolute top-1/4 left-1/4 right-1/4 bottom-1/4 flex items-center justify-center">
-                  <div className="w-full h-1/2 flex flex-col space-y-2">
-                    <div className="h-2 bg-blue-500 rounded-full w-3/4"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-full"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-5/6"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-2/3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="md:w-1/2 text-left relative z-10">
-              <h3 className="text-xl font-medium mb-5 text-white tracking-wide">Format Skripsi dengan Satu Klik</h3>
-              <div className="space-y-4">
-                <div className="flex items-start bg-blue-900/20 p-3 rounded-xl backdrop-blur-sm border border-blue-800/20 hover:border-blue-600/30 transition-all duration-300">
-                  <div className="rounded-full bg-blue-800/70 p-1.5 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
-                    <Type className="h-4 w-4" />
-                  </div>
-                  <span className="text-blue-100 text-sm">Gaya heading otomatis sesuai pedoman universitas Anda</span>
-                </div>
-                <div className="flex items-start bg-blue-900/20 p-3 rounded-xl backdrop-blur-sm border border-blue-800/20 hover:border-blue-600/30 transition-all duration-300">
-                  <div className="rounded-full bg-blue-800/70 p-1.5 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
-                    <ListOrdered className="h-4 w-4" />
-                  </div>
-                  <span className="text-blue-100 text-sm">Penomoran halaman pintar dengan format berbeda untuk berbagai bagian</span>
-                </div>
-                <div className="flex items-start bg-blue-900/20 p-3 rounded-xl backdrop-blur-sm border border-blue-800/20 hover:border-blue-600/30 transition-all duration-300">
-                  <div className="rounded-full bg-blue-800/70 p-1.5 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
-                    <FileText className="h-4 w-4" />
-                  </div>
-                  <span className="text-blue-100 text-sm">Hemat berjam-jam format manual dengan beberapa klik saja</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Final CTA Section - Cleaner Style */}
-        <div className="mt-24 mb-10 px-4">
-          <div className="glass-effect rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-lg border border-blue-800/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 opacity-80 pointer-events-none"></div>
-            <div className="relative z-10">
-              <h2 className="text-3xl font-semibold mb-3 text-white">Siap Menghemat Waktu Format Skripsi?</h2>
-              <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a 
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3.5 px-10 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all shadow-lg transform hover:scale-105 duration-300"
-                >
-                  Basic (Rp 50.000)
-                </a>
-                <a 
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105"
-                >
-                  Advance (Rp 100.000)
-                </a>
-              </div>
-              <div className="mt-6 text-sm text-blue-200/70">
-                Developed by @Iklilzaki and @Bangdeniuss
-              </div>
-            </div>
+        {/* Developer credits - kept from previous section */}
+        <div className="mt-20 mb-10 text-center">
+          <div className="text-sm text-blue-200/70">
+            Developed by @Iklilzaki and @Bangdeniuss
           </div>
         </div>
       </div>
