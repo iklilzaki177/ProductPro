@@ -33,10 +33,10 @@ export default function Home() {
       <Header onNavClick={handleScroll} />
       <main className="flex-grow">
         <HeroSection onLearnMoreClick={() => handleScroll('features')} onBuyNowClick={() => handleScroll('product')} />
-        <ProductShowcase />
         <div id="features">
           <AnimatedFeatureSection />
         </div>
+        <ProductShowcase />
       </main>
       <Footer onNavClick={handleScroll} />
     </div>
