@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProductShowcase from '@/components/ProductShowcase';
 import Footer from '@/components/Footer';
-import ResponsiveProductCards from '@/components/ResponsiveProductCards';
 import ResponsiveFeatureTable from '@/components/ResponsiveFeatureTable';
 import ResponsiveTestimonials from '@/components/ResponsiveTestimonials';
 
@@ -37,9 +36,8 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection onLearnMoreClick={() => handleScroll('features')} onBuyNowClick={() => handleScroll('product')} />
         
-        <div id="product">
-          <ResponsiveProductCards />
-        </div>
+        {/* Product section is now handled in the HeroSection */}
+        <div id="product"></div>
         
         <div id="compare">
           <ResponsiveFeatureTable />
