@@ -33,12 +33,12 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
           </div>
           
-          {/* Keyboard shortcuts highlight - More Compact Version */}
+          {/* Keyboard shortcuts highlight - Center aligned like image */}
           <div className="glass-effect rounded-xl p-5 mt-6 mb-6 shadow-lg border border-zinc-800/50 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
             
             <div className="relative z-10">
-              <div className="flex items-center justify-center mb-3">
+              <div className="flex items-center justify-center mb-4">
                 <div className="bg-blue-500 p-1.5 rounded-full shadow-lg shadow-blue-500/40 mr-3">
                   <Keyboard className="h-5 w-5 text-white" />
                 </div>
@@ -46,7 +46,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </div>
               
               {/* Compact Basic Package Shortcuts */}
-              <div className="mb-4">
+              <div className="mb-5">
                 <div className="flex items-center mb-3">
                   <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-3 py-1 rounded-full text-xs font-medium text-blue-300 mr-1.5 border border-gray-700">
                     <span className="mr-1.5">⬤</span>BASIC
@@ -54,35 +54,37 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-3">
-                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + 1</div>
-                      <span className="text-xs text-gray-300 mt-1">BAB I PENDAHULUAN</span>
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + 1</div>
+                        <p className="text-xs text-gray-300 mx-auto">BAB I<br/>PENDAHULUAN</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + 2-8</div>
-                      <span className="text-xs text-gray-300 mt-1">Sub-Heading</span>
+                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + 2-8</div>
+                        <p className="text-xs text-gray-300">Sub-Heading</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + D</div>
-                      <span className="text-xs text-gray-300 mt-1">Daftar Isi</span>
+                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + D</div>
+                        <p className="text-xs text-gray-300">Daftar Isi</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + G</div>
-                      <span className="text-xs text-gray-300 mt-1">Caption Gambar</span>
+                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + G</div>
+                        <p className="text-xs text-gray-300">Caption<br/>Gambar</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + T</div>
-                      <span className="text-xs text-gray-300 mt-1">Caption Tabel</span>
+                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + T</div>
+                        <p className="text-xs text-gray-300">Caption Tabel</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -97,68 +99,72 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Ctrl+Alt+G</div>
-                      <span className="text-xs text-blue-200 mt-1">Caption BAB (4.1)</span>
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-2">
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+G</div>
+                        <p className="text-xs text-blue-200">Caption BAB<br/>(4.1)</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Alt+K</div>
-                      <span className="text-xs text-blue-200 mt-1">Halaman Latin</span>
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Alt+K</div>
+                        <p className="text-xs text-blue-200">Halaman<br/>Latin</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Alt+R</div>
-                      <span className="text-xs text-blue-200 mt-1">Halaman Romawi</span>
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Alt+R</div>
+                        <p className="text-xs text-blue-200">Halaman<br/>Romawi</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-400/50 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono">Alt+Q</div>
-                      <span className="text-xs text-blue-100 mt-1 font-medium">Format Copy</span>
+                    <div className="futuristic-card border-blue-400/50 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono inline-block mb-1.5">Alt+Q</div>
+                        <p className="text-xs text-blue-100 font-medium">Format Copy</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-400/50 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono">Alt+W</div>
-                      <span className="text-xs text-blue-100 mt-1 font-medium">Format Paste</span>
+                    <div className="futuristic-card border-blue-400/50 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono inline-block mb-1.5">Alt+W</div>
+                        <p className="text-xs text-blue-100 font-medium">Format Paste</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mt-2">
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Shift+Alt+K</div>
-                      <span className="text-xs text-blue-200 mt-1">Format Auto</span>
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Shift+Alt+K</div>
+                        <p className="text-xs text-blue-200">Format Auto</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Alt+C</div>
-                      <span className="text-xs text-blue-200 mt-1">Hapus Halaman</span>
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Alt+C</div>
+                        <p className="text-xs text-blue-200">Hapus<br/>Halaman</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Ctrl+Alt+K</div>
-                      <span className="text-xs text-blue-200 mt-1">Posisi Nomor Hal.</span>
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+K</div>
+                        <p className="text-xs text-blue-200">Posisi Nomor<br/>Hal.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Ctrl+Alt+T</div>
-                      <span className="text-xs text-blue-200 mt-1">Tabel BAB (4.1)</span>
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+T</div>
+                        <p className="text-xs text-blue-200">Tabel BAB<br/>(4.1)</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
-                    <div className="flex flex-col">
-                      <div className="shortcut-badge text-xs border-blue-400/40">Ctrl+Alt+L</div>
-                      <span className="text-xs text-blue-200 mt-1">Lampiran BAB</span>
+                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
+                      <div className="text-center">
+                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+L</div>
+                        <p className="text-xs text-blue-200">Lampiran BAB</p>
+                      </div>
                     </div>
                   </div>
                 </div>
