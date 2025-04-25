@@ -1,4 +1,4 @@
-import { ChevronRight, FileText, Type, ListOrdered, CheckCircle, Table, Bookmark } from 'lucide-react';
+import { ChevronRight, FileText, Type, ListOrdered, CheckCircle, Table, Bookmark, X } from 'lucide-react';
 import panelAdvanceImg from '@assets/panel advance.png';
 import panelAdvance1Img from '@assets/panel advance1.png';
 import panelAtasBawahImg from '@assets/4. panel atas + bawah.png';
@@ -363,12 +363,80 @@ export default function ProductShowcase() {
             </div>
           </div>
           
+          {/* Feature Comparison Table */}
+          <div className="mt-16 overflow-hidden">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center">Perbandingan Fitur Basic vs Advance</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-md">
+                <thead>
+                  <tr className="bg-blue-50">
+                    <th className="p-3 text-left text-gray-700 border-b">Fitur</th>
+                    <th className="p-3 text-center text-gray-700 border-b">Basic</th>
+                    <th className="p-3 text-center text-blue-800 border-b bg-blue-100/50">Advance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Format heading otomatis (Alt+1, Alt+2)</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Daftar isi otomatis (Alt+D)</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Nomor halaman dasar</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Caption gambar & tabel sederhana</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Caption dengan nomor BAB (Gambar 4.1)</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Penomoran halaman campuran (Arab, Romawi)</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Opsi posisi nomor halaman (tengah bawah/kanan atas)</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Dialog klik-pilih-selesai</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Template universitas</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="p-3 font-semibold text-gray-800">Harga</td>
+                    <td className="p-3 text-center font-medium">Rp 50.000</td>
+                    <td className="p-3 text-center font-medium bg-blue-100/50 text-blue-800">Rp 100.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
           <div className="mt-10 text-center">
             <a 
               href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block font-medium"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block font-medium shadow-lg transition-all hover:scale-105"
             >
               Dapatkan Versi Advance - Rp 100.000
             </a>
