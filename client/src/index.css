@@ -135,4 +135,54 @@
     border-color: rgba(96, 165, 250, 0.7);
     transform: translateY(-5px);
   }
+  
+  /* Mobile menu animations */
+  .animate-in {
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+  }
+  
+  .slide-in-from-right {
+    animation-name: slideInFromRight;
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Touch-friendly mobile tweaks */
+  @media (max-width: 767px) {
+    .mobile-tap-area {
+      min-height: 44px; /* Ensure touch targets are at least 44px */
+    }
+    
+    .button-icon {
+      display: block; /* Make icon buttons easier to tap */
+      padding: 10px;
+    }
+    
+    /* Improve spacing for mobile */
+    .main-container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    /* Fix text sizing on small screens */
+    .hero-title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    
+    /* Increase touch areas for mobile navigation items */
+    .mobile-nav-item {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
 }
