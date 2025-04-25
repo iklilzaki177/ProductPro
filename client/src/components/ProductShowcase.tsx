@@ -32,8 +32,7 @@ export default function ProductShowcase() {
               <img 
                 src={panelAtasBawahImg} 
                 alt="Advanced page numbering panel with tengah bawah, kanan atas option" 
-                className="w-full h-auto object-contain" 
-                style={{ maxHeight: '600px' }}
+                className="w-full h-auto px-4 py-6" 
               />
             </div>
           </div>
