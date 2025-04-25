@@ -34,7 +34,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           </div>
           
           {/* Keyboard shortcuts highlight - Futuristic Style */}
-          <div className="glass-effect rounded-xl p-6 mt-8 mb-8 shadow-lg neon-border grid-pattern relative overflow-hidden">
+          <div className="glass-effect rounded-xl p-6 mt-8 mb-8 shadow-lg border border-zinc-800/50 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
             
             {/* Diagonal corner ribbon highlight for klik-pilih-done feature */}
@@ -268,7 +268,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             
             {/* Advanced Package - Enhanced Premium Style */}
-            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group neon-border pulse-border md:transform md:scale-110 md:z-20 float-animation">
+            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group md:transform md:scale-110 md:z-20">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
               <div className="absolute inset-0 opacity-10 grid-pattern"></div>
               <div className="absolute -top-3 right-8 premium-badge text-xs py-1.5 px-4 shadow-lg">
@@ -280,9 +280,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 Fitur Klik-Pilih-Done!
               </div>
               
-              {/* Glow effects and animations */}
-              <div className="absolute -right-12 -top-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-              <div className="absolute -left-12 -bottom-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+              {/* Subtle glow effect */}
+              <div className="absolute -right-12 -top-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
+              <div className="absolute -left-12 -bottom-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
               
               <div className="relative z-10">
                 <div className="inline-block bg-blue-900/80 px-4 py-2 rounded-full mb-5 border border-blue-700/50 shadow-lg shadow-blue-500/20">
@@ -372,7 +372,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         {/* Testimonials - Futuristic Style */}
         <div className="mt-20 px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Apa Kata Pengguna Kami</h2>
+            <h2 className="text-3xl font-semibold mb-3 text-white">Apa Kata Pengguna Kami</h2>
             <p className="text-blue-200/80 max-w-2xl mx-auto">Cerita pengalaman dari pengguna yang telah berhasil menghemat waktu</p>
           </div>
           
@@ -432,24 +432,22 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         {/* Sample illustration - Futuristic Style */}
         <div className="mt-20 text-center px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Bagaimana Easy.kripsi Menghemat Waktu Anda</h2>
+            <h2 className="text-3xl font-semibold mb-3 text-white">Bagaimana Easy.kripsi Menghemat Waktu Anda</h2>
             <p className="text-blue-200/80 max-w-2xl mx-auto">Format profesional dengan beberapa klik saja</p>
           </div>
           
-          <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between shadow-xl neon-border relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent opacity-50 pointer-events-none"></div>
-            <div className="absolute inset-0 opacity-5 grid-pattern"></div>
+          <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between shadow-lg border border-zinc-800/50 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent opacity-30 pointer-events-none"></div>
             
             <div className="flex items-center justify-center md:w-1/2 mb-8 md:mb-0 relative z-10">
               <div className="relative">
-                <div className="absolute -inset-1 bg-blue-500 opacity-20 blur-xl rounded-full"></div>
                 <FileText className="w-36 h-36 sm:w-48 sm:h-48 text-blue-400" />
                 <div className="absolute top-1/4 left-1/4 right-1/4 bottom-1/4 flex items-center justify-center">
                   <div className="w-full h-1/2 flex flex-col space-y-2">
-                    <div className="h-2 bg-blue-500 rounded-full w-3/4 shadow-sm shadow-blue-500/50"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-full shadow-sm shadow-blue-500/50"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-5/6 shadow-sm shadow-blue-500/50"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-2/3 shadow-sm shadow-blue-500/50"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-3/4"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-full"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-5/6"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-2/3"></div>
                   </div>
                 </div>
               </div>
@@ -481,20 +479,19 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           </div>
         </div>
         
-        {/* Final CTA Section - Futuristic Style */}
+        {/* Final CTA Section - Cleaner Style */}
         <div className="mt-24 mb-10 px-4">
-          <div className="glass-effect rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-2xl neon-border relative overflow-hidden group">
+          <div className="glass-effect rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-lg border border-blue-800/30 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 opacity-80 pointer-events-none"></div>
-            <div className="absolute inset-0 opacity-10 grid-pattern"></div>
             <div className="relative z-10">
-              <h2 className="text-3xl font-semibold mb-3 glow-text text-white">Siap Menghemat Waktu Format Skripsi?</h2>
+              <h2 className="text-3xl font-semibold mb-3 text-white">Siap Menghemat Waktu Format Skripsi?</h2>
               <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
               <div className="flex flex-wrap justify-center gap-6">
                 <a 
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3.5 px-10 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all shadow-lg hover:shadow-white/20 transform hover:scale-105 duration-300"
+                  className="py-3.5 px-10 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all shadow-lg transform hover:scale-105 duration-300"
                 >
                   Basic (Rp 50.000)
                 </a>
@@ -502,9 +499,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="techno-button py-3.5 px-10 font-medium"
+                  className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105"
                 >
-                  <span className="relative z-10">Advance (Rp 100.000)</span>
+                  Advance (Rp 100.000)
                 </a>
               </div>
               <div className="mt-6 text-sm text-blue-200/70">
