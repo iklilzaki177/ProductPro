@@ -212,10 +212,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
 {/* Badge sudah dihilangkan */}
               
-              {/* Feature ribbon - adjusted position */}
-              <div className="absolute right-0 top-24 bg-gradient-to-r from-blue-600 to-blue-400 py-2 px-4 text-white text-xs font-bold transform rotate-45 translate-x-12 shadow-lg z-20">
-                Fitur Klik-Pilih-Done!
-              </div>
+{/* Feature ribbon sudah dihilangkan */}
               
               {/* Subtle glow effect */}
               <div className="absolute -right-12 -top-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
