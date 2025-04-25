@@ -14,12 +14,12 @@ export default function ProductShowcase() {
           </p>
         </div>
         
-        {/* Example of Easy.kripsi in Action - FIRST SECTION */}
+        {/* Advanced Features Showcase - FIRST SECTION */}
         <div className="mt-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-white">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-semibold mb-3">See Easy.kripsi in Action</h2>
+            <h2 className="text-3xl font-semibold mb-3">Introducing our most advanced features yet</h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Simple, efficient thesis formatting with one-click solutions
+              The Advance version gives you even more powerful tools for thesis formatting
             </p>
             <div className="mt-4 py-1 px-4 bg-white text-blue-700 rounded-full inline-block text-sm font-bold">
               klik-pilih-done
@@ -29,8 +29,8 @@ export default function ProductShowcase() {
           <div className="flex justify-center">
             <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl">
               <img 
-                src={iPhoneImg} 
-                alt="Easy.kripsi interface example" 
+                src={panelAdvance1Img} 
+                alt="Advanced page numbering panel" 
                 className="w-full h-auto" 
               />
             </div>
@@ -301,111 +301,74 @@ export default function ProductShowcase() {
           </div>
         </div>
         
-        {/* Advance Version Showcase - FOURTH SECTION */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-white">
+        {/* Additional Features - FOURTH SECTION */}
+        <div className="mt-20 bg-gray-100 rounded-3xl p-12">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-3">Introducing our most advanced features yet</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              The Advance version gives you even more powerful tools for thesis formatting
+            <h2 className="text-3xl font-semibold mb-3">More powerful features in the Advance version</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Take your thesis formatting to the next level with these exclusive features
             </p>
-            <div className="mt-4 py-1 px-4 bg-white text-blue-700 rounded-full inline-block text-sm font-bold">
-              klik-pilih-done
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-green-500 text-white rounded-sm p-1">✓</span>
+                <h3 className="text-xl font-medium border-b border-blue-500 pb-2 w-full">Automatic Citations</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Format citations and references in APA, MLA, or any custom style with just a few clicks. Never worry about manual formatting again.
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
+                  <span>Automatic in-text citation formatting</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
+                  <span>Generates complete reference lists</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
+                  <span>Multiple citation styles supported</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-green-500 text-white rounded-sm p-1">✓</span>
+                <h3 className="text-xl font-medium border-b border-blue-500 pb-2 w-full">University Templates</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Pre-formatted templates that match the requirements of universities in Indonesia. Start your thesis with the right format from day one.
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
+                  <span>Pre-configured margins and spacing</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
+                  <span>Correct font styles and sizes</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
+                  <span>University-specific cover pages</span>
+                </li>
+              </ul>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 gap-10">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-green-500 rounded-sm p-1">✓</span>
-                <h3 className="text-xl font-medium pb-2 w-full">Advanced Page Numbering</h3>
-              </div>
-              
-              {/* Displaying the actual panel images from the posters */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                <div>
-                  <p className="text-blue-100 mb-4">Simply press <span className="bg-blue-800 px-2 py-1 rounded">Alt + Shift + K</span> and choose from multiple page number styles:</p>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-white rounded-full"></div>
-                      <span>LATIN (standard numbering)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                      </div>
-                      <span>TENGAH BAWAH, KANAN ATAS (center bottom, top right)</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6 text-center">
-                    <a 
-                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
-                    >
-                      Upgrade to Advance
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src={panelAdvanceImg} 
-                    alt="Advanced page numbering panel" 
-                    className="w-full h-auto object-contain" 
-                  />
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-green-500 rounded-sm p-1">✓</span>
-                <h3 className="text-xl font-medium pb-2 w-full">Enhanced Image & Table References</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                <div>
-                  <p className="text-blue-100 mb-4">Advance version automatically links caption numbers to chapters (BAB). For example, if you're in BAB IV, pressing <span className="bg-blue-800 px-2 py-1 rounded">Ctrl + Alt + G/T/L</span> creates captions like "Gambar 4.1", "Tabel 4.2", etc.</p>
-                  
-                  <div className="space-y-3 mb-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-white rounded-full"></div>
-                      <span>Gambar (for images/figures)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-white rounded-full"></div>
-                      <span>Tabel (for tables)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-white rounded-full"></div>
-                      <span>Lampiran (for appendices)</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6 text-center">
-                    <a 
-                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
-                    >
-                      Upgrade to Advance
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src={panelAdvance1Img} 
-                    alt="Advanced caption reference panel" 
-                    className="w-full h-auto object-contain" 
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="mt-10 text-center">
+            <a 
+              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block font-medium"
+            >
+              Get Advance Version for Rp 100.000
+            </a>
           </div>
         </div>
         
