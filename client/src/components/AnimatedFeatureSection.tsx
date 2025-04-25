@@ -45,7 +45,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       }}
       viewport={{ once: true, margin: "-5% 0px -5% 0px" }}
       className={cn(
-        "p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-hidden group h-full",
+        "p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-hidden group h-full",
         feature.highlight
           ? "bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-400/40 hover:border-blue-300/50"
           : feature.isAdvanced 
@@ -55,23 +55,23 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
     >
       <div className="flex flex-col h-full">
         {/* Card header with icon and shortcut */}
-        <div className="flex items-center mb-3 relative z-10">
+        <div className="flex items-center mb-2 sm:mb-3 relative z-10 flex-wrap">
           {/* Icon */}
           <div className={cn(
-            "p-1.5 rounded-md flex items-center justify-center flex-shrink-0 mr-2",
+            "p-1 sm:p-1.5 rounded-md flex items-center justify-center flex-shrink-0 mr-1.5 sm:mr-2",
             feature.isAdvanced 
               ? "bg-blue-600/20 border border-blue-500/30" 
               : "bg-gray-800/40 border border-gray-700/30"
           )}>
             <Keyboard className={cn(
-              "h-3.5 w-3.5",
+              "h-3 w-3 sm:h-3.5 sm:w-3.5",
               feature.isAdvanced ? "text-blue-300" : "text-gray-300"
             )} />
           </div>
 
-          {/* Shortcut label */}
+          {/* Shortcut label - flex-1 on small screens ensures proper wrapping */}
           <div className={cn(
-            "inline-block text-sm font-mono font-medium px-2 py-0.5 rounded-md",
+            "inline-block text-xs xs:text-sm font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-md break-all",
             feature.isAdvanced 
               ? "bg-blue-500/20 text-blue-200 border border-blue-500/30" 
               : "bg-gray-800/40 text-gray-300 border border-gray-700/30"
@@ -80,9 +80,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </div>
         </div>
         
-        {/* Description */}
+        {/* Description - Adjust font sizes for different screens */}
         <p className={cn(
-          "text-sm mt-1 leading-relaxed",
+          "text-xs sm:text-sm mt-1 leading-relaxed line-clamp-3 sm:line-clamp-none",
           feature.highlight 
             ? "text-blue-50 font-medium"
             : feature.isAdvanced ? "text-blue-100" : "text-gray-300"
@@ -92,9 +92,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         
         {/* Badge for highlight features */}
         {feature.highlight && (
-          <div className="mt-auto pt-3">
+          <div className="mt-auto pt-2 sm:pt-3">
             <span 
-              className="inline-block px-2 py-0.5 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-medium text-white rounded-full"
+              className="inline-block px-1.5 sm:px-2 py-0.5 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-medium text-white rounded-full"
             >
               Format Painter
             </span>
@@ -102,9 +102,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         )}
       </div>
       
-      {/* Subtle glow effect */}
+      {/* Subtle glow effect - Only visible on larger screens */}
       {feature.isAdvanced && (
-        <div className="absolute -right-8 -bottom-8 w-16 h-16 bg-blue-500 rounded-full blur-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+        <div className="absolute -right-8 -bottom-8 w-16 h-16 bg-blue-500 rounded-full blur-2xl opacity-5 group-hover:opacity-10 transition-opacity hidden sm:block"></div>
       )}
     </motion.div>
   );
@@ -119,19 +119,19 @@ export default function AnimatedFeatureSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="py-16 px-4 max-w-7xl mx-auto relative overflow-hidden"
+      className="py-10 sm:py-16 px-2 sm:px-4 max-w-7xl mx-auto relative overflow-hidden"
     >
       {/* Background elements for visual appeal */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-gray-950 pointer-events-none"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
       
-      {/* Decorative background elements */}
-      <div className="absolute -left-64 top-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute -right-64 bottom-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Decorative background elements - Hidden on small screens */}
+      <div className="absolute -left-64 top-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none hidden sm:block"></div>
+      <div className="absolute -right-64 bottom-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none hidden sm:block"></div>
       
       <div className="relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,10 +141,10 @@ export default function AnimatedFeatureSection() {
             }}
             viewport={{ once: true, margin: "-10% 0px" }}
           >
-            <h2 className="text-3xl font-semibold mb-3 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-2 sm:mb-3 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
               Pintasan Keyboard Powerful
             </h2>
-            <p className="text-blue-200/90 max-w-2xl mx-auto text-sm">
+            <p className="text-blue-200/90 max-w-2xl mx-auto text-xs sm:text-sm px-2">
               Gunakan pintasan keyboard intuitive untuk mempercepat format skripsi Anda
             </p>
           </motion.div>
@@ -155,7 +155,7 @@ export default function AnimatedFeatureSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-10 glass-effect rounded-2xl p-8 border border-zinc-800/50"
+          className="mb-6 sm:mb-10 glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-5 md:p-8 border border-zinc-800/50"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -165,15 +165,15 @@ export default function AnimatedFeatureSection() {
               ease: [0.22, 1, 0.36, 1]
             }}
             viewport={{ once: true }}
-            className="flex items-center mb-8"
+            className="flex items-center mb-4 sm:mb-8"
           >
-            <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-4 py-1.5 rounded-full text-sm font-medium text-blue-300 mr-3 border border-gray-700 shadow-md">
+            <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium text-blue-300 mr-2 sm:mr-3 border border-gray-700 shadow-md">
               Basic Package
             </div>
             <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
             {basicShortcuts.map((feature, index) => (
               <FeatureCard key={feature.shortcut} feature={feature} index={index} />
             ))}
@@ -185,7 +185,7 @@ export default function AnimatedFeatureSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.1 }}
           viewport={{ once: true }}
-          className="mb-10 glass-effect rounded-2xl p-8 border border-blue-800/20"
+          className="mb-6 sm:mb-10 glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-5 md:p-8 border border-blue-800/20"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -196,15 +196,15 @@ export default function AnimatedFeatureSection() {
               delay: 0.1
             }}
             viewport={{ once: true }}
-            className="flex items-center mb-8"
+            className="flex items-center mb-4 sm:mb-8"
           >
-            <div className="bg-gradient-to-r from-blue-700 to-blue-600 px-4 py-1.5 rounded-full text-sm font-medium text-white mr-3 shadow-md shadow-blue-500/30 border border-blue-500/50">
+            <div className="bg-gradient-to-r from-blue-700 to-blue-600 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium text-white mr-2 sm:mr-3 shadow-md shadow-blue-500/30 border border-blue-500/50">
               Advanced Package
             </div>
             <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
             {advancedShortcuts.map((feature, index) => (
               <FeatureCard key={feature.shortcut} feature={feature} index={index + 10} />
             ))}
@@ -221,14 +221,14 @@ export default function AnimatedFeatureSection() {
             delay: 0.2
           }}
           viewport={{ once: true, margin: "-5% 0px" }}
-          className="mt-12 text-center"
+          className="mt-6 sm:mt-12 text-center"
         >
-          <p className="text-blue-200/80 mb-6 text-sm max-w-2xl mx-auto">
+          <p className="text-blue-200/80 mb-4 sm:mb-6 text-xs sm:text-sm max-w-2xl mx-auto px-2">
             <span className="text-white font-medium">Advance Package</span> menyediakan fitur penomoran halaman lanjutan, 
             penomoran otomatis dengan deteksi bab, dan Format Painter untuk memformat dengan lebih cepat.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
             <motion.a 
               href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
               target="_blank"
@@ -236,7 +236,7 @@ export default function AnimatedFeatureSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="py-2.5 px-6 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all duration-300 shadow-lg text-sm"
+              className="py-2 sm:py-2.5 px-4 sm:px-6 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all duration-300 shadow-lg text-xs sm:text-sm"
             >
               Basic (Rp 50.000)
             </motion.a>
@@ -247,7 +247,7 @@ export default function AnimatedFeatureSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="py-2.5 px-6 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg text-sm"
+              className="py-2 sm:py-2.5 px-4 sm:px-6 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg text-xs sm:text-sm"
             >
               Advance (Rp 100.000)
             </motion.a>
