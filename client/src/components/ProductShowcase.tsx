@@ -14,8 +14,55 @@ export default function ProductShowcase() {
           </p>
         </div>
         
-        {/* Grid layout for product displays */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Example of Easy.kripsi in Action - FIRST SECTION */}
+        <div className="mt-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-white">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-semibold mb-3">See Easy.kripsi in Action</h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Simple, efficient thesis formatting with one-click solutions
+            </p>
+            <div className="mt-4 py-1 px-4 bg-white text-blue-700 rounded-full inline-block text-sm font-bold">
+              klik-pilih-done
+            </div>
+          </div>
+          
+          <div className="flex justify-center">
+            <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl">
+              <img 
+                src={iPhoneImg} 
+                alt="Easy.kripsi interface example" 
+                className="w-full h-auto" 
+              />
+            </div>
+          </div>
+            
+          <div className="mt-8 text-center">
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6">
+              Auto-format your thesis with powerful keyboard shortcuts and smart tools
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
+              >
+                Get Basic (Rp 50.000)
+              </a>
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/90 border-2 border-white text-blue-700 hover:bg-white px-6 py-2 rounded-full inline-block font-medium"
+              >
+                Get Advance (Rp 100.000)
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Grid layout for product displays - SECOND SECTION */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Basic package */}
           <div className="bg-gray-100 rounded-3xl p-10 text-center overflow-hidden relative transition-all duration-300 hover:shadow-xl">
             <div className="mb-8">
@@ -114,7 +161,7 @@ export default function ProductShowcase() {
           </div>
         </div>
         
-        {/* Keyboard Shortcuts Showcase */}
+        {/* Keyboard Shortcuts Showcase - THIRD SECTION */}
         <div className="mt-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white rounded-3xl p-12">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-semibold mb-3">Powerful Keyboard Shortcuts</h2>
@@ -254,7 +301,7 @@ export default function ProductShowcase() {
           </div>
         </div>
         
-        {/* Advance Version Showcase */}
+        {/* Advance Version Showcase - FOURTH SECTION */}
         <div className="mt-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-white">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold mb-3">Introducing our most advanced features yet</h2>
@@ -360,40 +407,9 @@ export default function ProductShowcase() {
               </div>
             </div>
           </div>
-          
-          <div className="mt-10 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-green-500 rounded-sm p-1">✓</span>
-              <h3 className="text-xl font-medium pb-2 w-full">Example of Easy.kripsi in Action</h3>
-            </div>
-            
-            <div className="flex justify-center">
-              <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl">
-                <img 
-                  src={iPhoneImg} 
-                  alt="Easy.kripsi interface example" 
-                  className="w-full h-auto" 
-                />
-              </div>
-            </div>
-            
-            <div className="mt-8 text-center">
-              <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6">
-                "klik-pilih-done" - Simple, fast, and efficient thesis formatting
-              </p>
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-full inline-block font-medium text-lg"
-              >
-                Get Advance Version Now
-              </a>
-            </div>
-          </div>
         </div>
         
-        {/* Word Integration Showcase */}
+        {/* Word Integration Showcase - FIFTH SECTION */}
         <div className="mt-20 bg-gray-100 rounded-3xl p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
@@ -456,14 +472,41 @@ export default function ProductShowcase() {
           </div>
         </div>
         
-        {/* Additional marketing message */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-500 mb-4 max-w-xl mx-auto">
-            All plans include a 14-day free trial. No credit card required.
-          </p>
-          <a href="#" className="text-blue-500 hover:underline font-medium inline-flex items-center">
-            Compare all Easy.kripsi features <ChevronRight className="h-5 w-5 ml-0.5" />
-          </a>
+        {/* Purchase options - FINAL SECTION */}
+        <div className="mt-16 bg-gradient-to-br from-blue-50 to-gray-100 p-10 rounded-3xl shadow-sm">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-semibold mb-3">Ready to transform your thesis formatting experience?</h2>
+            <p className="text-gray-600 text-lg mb-3 max-w-2xl mx-auto">
+              Choose the Easy.kripsi package that's right for you and say goodbye to formatting headaches
+            </p>
+            <p className="text-gray-500">
+              Developed by <span className="font-semibold">@Iklilzaki</span> and <span className="font-semibold">@Bangdeniuss</span>
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-col items-center">
+              <div className="text-2xl font-bold mb-3">Rp 50.000</div>
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-3 px-8 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors inline-block"
+              >
+                Get Basic
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-2xl font-bold mb-3">Rp 100.000</div>
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-3 px-8 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full hover:from-blue-700 hover:to-blue-600 transition-colors inline-block"
+              >
+                Get Advance
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
