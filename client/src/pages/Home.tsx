@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ProductShowcase from '@/components/ProductShowcase';
 import Footer from '@/components/Footer';
+import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
 
 export default function Home() {
   const sectionsRef = useRef<Record<string, HTMLElement | null>>({});
@@ -32,9 +33,8 @@ export default function Home() {
       <Header onNavClick={handleScroll} />
       <main className="flex-grow">
         <HeroSection onLearnMoreClick={() => handleScroll('features')} onBuyNowClick={() => handleScroll('product')} />
-        <div id="features">
-          <ProductShowcase />
-        </div>
+        <div id="features"></div>
+        <ProductShowcase />
       </main>
       <Footer onNavClick={handleScroll} />
     </div>
