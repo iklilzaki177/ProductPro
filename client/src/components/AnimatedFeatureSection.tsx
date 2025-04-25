@@ -32,14 +32,17 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,
-      y: 100,
+      y: 30,
+      scale: 0.95,
     },
     animate: (index: number) => ({
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: {
-        delay: 0.05 * index,
+        delay: 0.03 * index,
         duration: 0.5,
+        ease: [0.22, 1, 0.36, 1], // Custom ease curve similar to phamilypharma.com
       },
     }),
   };
@@ -49,13 +52,15 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.3 }}
       custom={index}
       className={cn(
         "p-6 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1",
-        feature.isAdvanced 
-          ? "bg-blue-900/10 border-blue-500/20 hover:border-blue-400/30" 
-          : "bg-gray-900/10 border-zinc-700/20 hover:border-gray-600/30"
+        feature.highlight
+          ? "bg-blue-900/20 border-blue-400/40 hover:border-blue-300/50 ring-2 ring-blue-500/20"
+          : feature.isAdvanced 
+            ? "bg-blue-900/10 border-blue-500/20 hover:border-blue-400/30" 
+            : "bg-gray-900/10 border-zinc-700/20 hover:border-gray-600/30"
       )}
     >
       <div className="flex items-start space-x-4">
@@ -80,19 +85,29 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </div>
           <p className={cn(
             "text-sm",
-            feature.isAdvanced ? "text-blue-100" : "text-gray-300"
+            feature.highlight 
+              ? "text-blue-50 font-medium"
+              : feature.isAdvanced ? "text-blue-100" : "text-gray-300"
           )}>
             {feature.description}
           </p>
           
-          {feature.isAdvanced && (
-            <div className="mt-2 flex items-center">
-              <div className="flex items-center justify-center h-5 w-5 bg-blue-500/20 rounded-full mr-2">
-                <Check className="h-3 w-3 text-blue-300" />
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            {feature.isAdvanced && (
+              <div className="flex items-center">
+                <div className="flex items-center justify-center h-5 w-5 bg-blue-500/20 rounded-full mr-2">
+                  <Check className="h-3 w-3 text-blue-300" />
+                </div>
+                <span className="text-xs text-blue-300">Advanced Package</span>
               </div>
-              <span className="text-xs text-blue-300">Advanced Package</span>
-            </div>
-          )}
+            )}
+            
+            {feature.highlight && (
+              <span className="px-2 py-0.5 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-medium text-white rounded-full">
+                Format Painter
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
@@ -104,7 +119,7 @@ export default function AnimatedFeatureSection() {
   const advancedShortcuts = shortcuts.filter(feature => feature.isAdvanced);
 
   return (
-    <div className="py-20 px-4 max-w-7xl mx-auto">
+    <div className="py-24 px-4 max-w-7xl mx-auto bg-gradient-to-b from-black via-black to-gray-950">
       <div className="text-center mb-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
