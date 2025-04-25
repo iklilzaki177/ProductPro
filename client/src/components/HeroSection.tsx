@@ -58,8 +58,10 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         </div>
         
         {/* Animated Feature Section - Full Width */}
-        <div className="mt-12">
-          <AnimatedFeatureSection />
+        <div className="mt-12 py-10 bg-gradient-to-b from-blue-950/50 to-blue-900/30 border-y border-blue-800/30">
+          <div className="max-w-7xl mx-auto">
+            <AnimatedFeatureSection />
+          </div>
         </div>
         
         {/* Key benefits - Futuristic Style */}

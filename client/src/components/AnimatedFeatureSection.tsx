@@ -52,16 +52,16 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       viewport={{ once: true }}
       custom={index}
       className={cn(
-        "p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1",
+        "p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
         feature.isAdvanced 
-          ? "bg-blue-900/10 border-blue-500/20 hover:border-blue-400/30" 
-          : "bg-gray-900/10 border-zinc-700/20 hover:border-gray-600/30"
+          ? "bg-blue-900/30 border-blue-500/30 hover:border-blue-400/50 hover:shadow-blue-500/20" 
+          : "bg-gray-900/30 border-zinc-700/30 hover:border-gray-600/50 hover:shadow-gray-700/20"
       )}
     >
       <div className="flex items-start space-x-4">
         <div className={cn(
-          "p-2 rounded-full flex items-center justify-center",
-          feature.isAdvanced ? "bg-blue-500/20" : "bg-gray-800/40"
+          "p-2 rounded-full flex items-center justify-center shadow-md",
+          feature.isAdvanced ? "bg-blue-500/40 shadow-blue-500/20" : "bg-gray-800/60 shadow-gray-900/20"
         )}>
           <Keyboard className={cn(
             "h-4 w-4",
@@ -71,10 +71,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
 
         <div className="flex-1">
           <div className={cn(
-            "inline-block text-sm font-mono mb-2 px-2.5 py-1 rounded-md",
+            "inline-block text-sm font-mono mb-2 px-2.5 py-1 rounded-md shadow-sm font-medium",
             feature.isAdvanced 
-              ? "bg-blue-500/20 text-blue-200" 
-              : "bg-gray-800/40 text-gray-300"
+              ? "bg-blue-500/40 text-blue-100 shadow-blue-500/20" 
+              : "bg-gray-800/60 text-gray-100 shadow-gray-900/20"
           )}>
             {feature.shortcut}
           </div>
@@ -104,16 +104,16 @@ export default function AnimatedFeatureSection() {
   const advancedShortcuts = shortcuts.filter(feature => feature.isAdvanced);
 
   return (
-    <div className="py-6 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-8">
+    <div className="px-4">
+      <div className="mb-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-semibold mb-3 text-white">Pintasan Keyboard Powerful</h2>
-          <p className="text-blue-200/80 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-3 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Pintasan Keyboard Powerful</h2>
+          <p className="text-blue-200/90 max-w-3xl text-lg">
             Gunakan pintasan keyboard intuitive untuk mempercepat format skripsi Anda
           </p>
         </motion.div>
@@ -127,7 +127,7 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-4 py-1.5 rounded-full text-sm font-medium text-blue-300 mr-3 border border-gray-700">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-5 py-2 rounded-full text-base font-semibold text-blue-300 mr-3 border border-gray-700 shadow-md shadow-gray-900/20">
             Basic Package
           </div>
           <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
@@ -148,7 +148,7 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="premium-badge px-4 py-1.5 text-sm font-medium text-white mr-3 shadow-md shadow-blue-500/30">
+          <div className="premium-badge px-5 py-2 text-base font-semibold text-white mr-3 shadow-lg shadow-blue-500/40">
             Advanced Package
           </div>
           <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
@@ -167,7 +167,7 @@ export default function AnimatedFeatureSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="mt-16 text-center"
+        className="mt-16 text-center bg-gradient-to-r from-blue-950/50 to-blue-900/20 py-10 px-6 rounded-2xl border border-blue-800/30 shadow-lg"
       >
         <p className="text-blue-200/70 mb-8">
           <span className="text-white font-medium">Advance Package</span> includes all Basic features plus advanced pagination, 
