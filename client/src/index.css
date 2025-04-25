@@ -122,12 +122,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
-    border: 1px solid rgba(96, 165, 250, 0.5);
-    color: white;
-    padding: 4px 12px;
-    font-size: 10px;
-    display: inline-block;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
   }
 
   .glow-card {
@@ -139,38 +134,5 @@
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
     border-color: rgba(96, 165, 250, 0.7);
     transform: translateY(-5px);
-  }
-
-  /* Custom utilities for responsive designs and text handling */
-  .overflow-wrap-anywhere {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  .min-w-0 {
-    min-width: 0;
-  }
-
-  .text-ellipsis {
-    text-overflow: ellipsis;
-  }
-
-  .break-all {
-    word-break: break-all;
-  }
-
-  .hyphens-auto {
-    hyphens: auto;
-  }
-  
-  .keep-words-together {
-    white-space: normal;
-    word-spacing: 0;
-    word-break: keep-all;
-    overflow-wrap: normal;
-  }
-  
-  .no-word-break {
-    word-break: keep-all;
   }
 }

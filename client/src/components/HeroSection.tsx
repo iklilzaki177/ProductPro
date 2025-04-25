@@ -24,70 +24,13 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           <div className="bg-blue-900/30 rounded-lg p-3 mt-5 mb-4 flex justify-center">
             <div className="flex items-center space-x-3 text-sm text-gray-300">
               <div className="flex">
-                <Clock className="h-4 w-4 text-blue-400 mr-1" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
               </div>
-              <span>Dipercaya oleh 1600+ pengguna sejak 2022 • Lihat di <a href="https://www.tiktok.com/@iklilzaki_" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline underline-offset-2">TikTok @iklilzaki_</a></span>
-            </div>
-          </div>
-          
-          {/* TikTok Proof Content */}
-          <div className="mt-6 mb-6">
-            <div className="bg-blue-950/30 rounded-xl p-4 backdrop-blur-sm border border-blue-800/20 transition-all hover:border-blue-700/30">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="h-8 w-8 rounded-full bg-gradient-to-r from-black to-blue-800 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" className="fill-white">
-                    <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-white font-medium text-sm">@iklilzaki_</p>
-                  <p className="text-gray-400 text-xs">3500+ followers</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-300 mb-3">
-                "Templates ini sudah digunakan oleh ribuan mahasiswa di seluruh Indonesia untuk mempercepat pengerjaan skripsi. Saksikan demo dan tutorial lengkapnya di TikTok kami!"
-              </p>
-              <div className="grid grid-cols-2 gap-2">
-                <a 
-                  href="https://www.tiktok.com/@iklilzaki_/video/7448477605449272592" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="rounded-md h-20 overflow-hidden relative bg-blue-900/20 flex items-center justify-center group"
-                >
-                  <span className="text-xs text-white absolute z-10 transition-transform group-hover:scale-105">Tutorial Format Otomatis</span>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white opacity-80 absolute group-hover:scale-110 transition-transform">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
-                  </svg>
-                </a>
-                <a 
-                  href="https://www.tiktok.com/@iklilzaki_/video/7279650787340016922" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="rounded-md h-20 overflow-hidden relative bg-blue-900/20 flex items-center justify-center group"
-                >
-                  <span className="text-xs text-white absolute z-10 transition-transform group-hover:scale-105">Demo Paket Advance</span>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white opacity-80 absolute group-hover:scale-110 transition-transform">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
-                  </svg>
-                </a>
-              </div>
-              <div className="mt-3 text-center">
-                <a 
-                  href="https://www.tiktok.com/@iklilzaki_" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-blue-300 hover:text-blue-200 inline-flex items-center"
-                >
-                  Lihat lebih banyak tutorial di TikTok
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3 ml-1">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                  </svg>
-                </a>
-              </div>
+              <span>4.8/5 dari 100+ pengguna</span>
             </div>
           </div>
           
@@ -210,9 +153,14 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             {/* Advanced Package - Enhanced Premium Style */}
             <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group md:transform md:scale-110 md:z-20">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
-{/* Badge sudah dihilangkan */}
+              <div className="absolute -top-3 right-8 premium-badge text-xs py-1.5 px-4 shadow-lg">
+                PALING POPULER
+              </div>
               
-{/* Feature ribbon sudah dihilangkan */}
+              {/* Feature ribbon */}
+              <div className="absolute right-0 top-24 bg-gradient-to-r from-blue-600 to-blue-400 py-2 px-4 text-white text-xs font-bold transform rotate-45 translate-x-8 shadow-lg z-20">
+                Fitur Klik-Pilih-Done!
+              </div>
               
               {/* Subtle glow effect */}
               <div className="absolute -right-12 -top-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
