@@ -54,8 +54,8 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       )}
     >
       <div className="flex flex-col h-full min-w-0 w-full">
-        {/* Card header with icon and shortcut */}
-        <div className="flex items-center gap-2 mb-2 sm:mb-3 relative z-10 flex-wrap min-w-0 w-full">
+        {/* Card header with icon and shortcut - Text left aligned */}
+        <div className="flex items-start justify-start gap-2 mb-2 sm:mb-3 relative z-10 flex-wrap min-w-0 w-full">
           {/* Icon */}
           <div className={cn(
             "flex-shrink-0 p-1 sm:p-1.5 rounded-md flex items-center justify-center",
@@ -71,7 +71,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
 
           {/* Shortcut label - min-w-0 ensures proper truncation */}
           <div className={cn(
-            "min-w-0 text-xs xs:text-sm font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-md truncate",
+            "min-w-0 text-xs xs:text-sm font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-md truncate text-left",
             feature.isAdvanced 
               ? "bg-blue-500/20 text-blue-200 border border-blue-500/30" 
               : "bg-gray-800/40 text-gray-300 border border-gray-700/30"
@@ -83,7 +83,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Description - using truncate and line clamp to prevent overflow */}
         <div className="min-w-0 w-full">
           <p className={cn(
-            "text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2 hyphens-auto overflow-wrap-anywhere",
+            "text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2 hyphens-auto overflow-wrap-anywhere text-left",
             feature.highlight 
               ? "text-blue-50 font-medium"
               : feature.isAdvanced ? "text-blue-100" : "text-gray-300"
@@ -92,9 +92,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </p>
         </div>
         
-        {/* Badge for highlight features */}
+        {/* Badge for highlight features - Left aligned */}
         {feature.highlight && (
-          <div className="mt-auto pt-2 sm:pt-3">
+          <div className="mt-auto pt-2 sm:pt-3 text-left">
             <span 
               className="inline-block px-1.5 sm:px-2 py-0.5 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-medium text-white rounded-full"
             >
