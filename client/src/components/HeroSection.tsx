@@ -24,13 +24,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           <div className="bg-blue-900/30 rounded-lg p-3 mt-5 mb-4 flex justify-center">
             <div className="flex items-center space-x-3 text-sm text-gray-300">
               <div className="flex">
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Clock className="h-4 w-4 text-blue-400 mr-1" />
               </div>
-              <span>4.8/5 dari 100+ pengguna</span>
+              <span>Dipercaya oleh 1600+ pengguna sejak 2022 • Lihat di <a href="https://tiktok.com/@iklilzaki" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline underline-offset-2">TikTok @iklilzaki</a></span>
             </div>
           </div>
           
