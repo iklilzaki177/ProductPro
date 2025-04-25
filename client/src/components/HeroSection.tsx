@@ -162,7 +162,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             
             {/* Advanced Package - Enhanced Premium Style */}
-            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group md:transform md:scale-110 md:z-20">
+            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group md:transform md:scale-110">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
               
               {/* Subtle glow effect */}
@@ -240,8 +240,8 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             
             {/* Comparison annotation */}
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-20 hidden md:block">
-              <div className="bg-blue-600/90 px-3 py-1 rounded-full text-xs font-medium shadow-md">
+            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-20 hidden md:block z-30">
+              <div className="bg-blue-600 px-4 py-1.5 rounded-full text-xs text-white font-bold shadow-lg border border-blue-400">
                 VS
               </div>
             </div>
