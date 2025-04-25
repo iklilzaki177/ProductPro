@@ -143,7 +143,7 @@ export default function Header({ onNavClick }: HeaderProps) {
                 onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
                 className="text-black hover:text-primary transition-colors px-2 py-1 text-lg ml-4"
               >
-                Ultimate
+                Advance
               </a>
               <a 
                 href="#" 
