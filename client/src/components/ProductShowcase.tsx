@@ -397,7 +397,17 @@ export default function ProductShowcase() {
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
                   <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Membuat caption (Alt+G/T/L)</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
                     <td className="p-3 border-b text-gray-700 font-medium">Caption dengan nomor BAB (Gambar 4.1)</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Daftar isi gambar/tabel/lampiran (Alt+Shift+G/T/L)</td>
                     <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>

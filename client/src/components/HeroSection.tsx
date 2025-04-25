@@ -39,7 +39,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               <Keyboard className="h-5 w-5 text-blue-400 mr-2" />
               <h4 className="text-sm font-medium">Pintasan Keyboard Powerfull</h4>
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               <div className="flex flex-col items-center">
                 <div className="shortcut-badge mb-1">Alt + 1</div>
                 <span className="text-xs text-gray-400">BAB I PENDAHULUAN</span>
@@ -55,6 +55,14 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               <div className="flex flex-col items-center">
                 <div className="shortcut-badge mb-1">Alt + Shift + K</div>
                 <span className="text-xs text-gray-400">Nomor Halaman</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + G/T/L</div>
+                <span className="text-xs text-gray-400">Gambar/Tabel/Lampiran</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + Shift + G/T/L</div>
+                <span className="text-xs text-gray-400">Daftar Gambar/Tabel/Lampiran</span>
               </div>
             </div>
           </div>
