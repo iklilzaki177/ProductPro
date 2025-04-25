@@ -52,48 +52,53 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       viewport={{ once: true }}
       custom={index}
       className={cn(
-        "p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
+        "p-5 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
         feature.isAdvanced 
           ? "bg-blue-900/30 border-blue-500/30 hover:border-blue-400/50 hover:shadow-blue-500/20" 
           : "bg-gray-900/30 border-zinc-700/30 hover:border-gray-600/50 hover:shadow-gray-700/20"
       )}
     >
-      <div className="flex items-start space-x-4">
+      {/* Card layout changed to vertical arrangement for better readability */}
+      <div className="flex flex-col">
+        {/* Keyboard shortcut on top with larger font */}
         <div className={cn(
-          "p-2 rounded-full flex items-center justify-center shadow-md",
-          feature.isAdvanced ? "bg-blue-500/40 shadow-blue-500/20" : "bg-gray-800/60 shadow-gray-900/20"
+          "self-start text-base font-mono mb-4 px-4 py-2.5 rounded-lg shadow-md font-bold tracking-wider",
+          feature.isAdvanced 
+            ? "bg-blue-500/40 text-blue-100 shadow-blue-500/20" 
+            : "bg-gray-800/60 text-gray-100 shadow-gray-900/20"
         )}>
-          <Keyboard className={cn(
-            "h-4 w-4",
-            feature.isAdvanced ? "text-blue-300" : "text-gray-300"
-          )} />
+          {feature.shortcut}
         </div>
-
-        <div className="flex-1">
+        
+        {/* Description in middle with larger font and better line height */}
+        <div className="flex items-start mb-3">
           <div className={cn(
-            "inline-block text-sm font-mono mb-2 px-2.5 py-1 rounded-md shadow-sm font-medium",
-            feature.isAdvanced 
-              ? "bg-blue-500/40 text-blue-100 shadow-blue-500/20" 
-              : "bg-gray-800/60 text-gray-100 shadow-gray-900/20"
+            "p-2 rounded-full flex items-center justify-center shadow-md mr-3",
+            feature.isAdvanced ? "bg-blue-500/40 shadow-blue-500/20" : "bg-gray-800/60 shadow-gray-900/20"
           )}>
-            {feature.shortcut}
+            <Keyboard className={cn(
+              "h-4 w-4",
+              feature.isAdvanced ? "text-blue-300" : "text-gray-300"
+            )} />
           </div>
+          
           <p className={cn(
-            "text-sm",
+            "flex-1 text-base leading-relaxed",
             feature.isAdvanced ? "text-blue-100" : "text-gray-300"
           )}>
             {feature.description}
           </p>
-          
-          {feature.isAdvanced && (
-            <div className="mt-2 flex items-center">
-              <div className="flex items-center justify-center h-5 w-5 bg-blue-500/20 rounded-full mr-2">
-                <Check className="h-3 w-3 text-blue-300" />
-              </div>
-              <span className="text-xs text-blue-300">Advanced Package</span>
-            </div>
-          )}
         </div>
+        
+        {/* Package indicator at bottom with improved styling */}
+        {feature.isAdvanced && (
+          <div className="mt-2 flex items-center self-end">
+            <div className="flex items-center justify-center h-5 w-5 bg-blue-500/20 rounded-full mr-2">
+              <Check className="h-3 w-3 text-blue-300" />
+            </div>
+            <span className="text-sm text-blue-300 font-medium">Advanced</span>
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -112,14 +117,16 @@ export default function AnimatedFeatureSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-3 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Pintasan Keyboard Powerful</h2>
-          <p className="text-blue-200/90 max-w-3xl text-lg">
+          <h2 className="text-4xl font-bold mb-5 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200 tracking-tight leading-tight">
+            Pintasan Keyboard <span className="text-blue-300">Powerful</span>
+          </h2>
+          <p className="text-blue-200/90 max-w-3xl text-xl font-light leading-relaxed">
             Gunakan pintasan keyboard intuitive untuk mempercepat format skripsi Anda
           </p>
         </motion.div>
       </div>
 
-      <div className="mb-12">
+      <div className="mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,20 +134,24 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-5 py-2 rounded-full text-base font-semibold text-blue-300 mr-3 border border-gray-700 shadow-md shadow-gray-900/20">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-2.5 rounded-full text-lg font-semibold text-blue-300 mr-4 border border-gray-700 shadow-md shadow-gray-900/20">
             Basic Package
           </div>
           <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
           {basicShortcuts.map((feature, index) => (
             <FeatureCard key={feature.shortcut} feature={feature} index={index} />
           ))}
         </div>
+        
+        <div className="text-gray-400 text-sm ml-2 italic">
+          *Fitur dasar untuk pemformatan skripsi
+        </div>
       </div>
 
-      <div className="mb-12">
+      <div className="mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,16 +159,20 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="premium-badge px-5 py-2 text-base font-semibold text-white mr-3 shadow-lg shadow-blue-500/40">
+          <div className="premium-badge px-6 py-2.5 rounded-full text-lg font-bold text-white mr-4 shadow-lg shadow-blue-500/40">
             Advanced Package
           </div>
           <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
           {advancedShortcuts.map((feature, index) => (
             <FeatureCard key={feature.shortcut} feature={feature} index={index} />
           ))}
+        </div>
+        
+        <div className="text-blue-400 text-sm ml-2 italic">
+          *Fitur profesional dengan penomoran 2-digit dan format painter
         </div>
       </div>
 
@@ -167,30 +182,42 @@ export default function AnimatedFeatureSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="mt-16 text-center bg-gradient-to-r from-blue-950/50 to-blue-900/20 py-10 px-6 rounded-2xl border border-blue-800/30 shadow-lg"
+        className="mt-20 bg-gradient-to-r from-blue-950/60 to-blue-900/30 py-12 px-8 rounded-2xl border border-blue-700/30 shadow-xl"
       >
-        <p className="text-blue-200/70 mb-8">
-          <span className="text-white font-medium">Advance Package</span> includes all Basic features plus advanced pagination, 
-          automatic chapter-aware numbering, and the powerful Format Painter for seamless formatting.
-        </p>
-        
-        <div className="flex flex-wrap justify-center gap-6">
-          <a 
-            href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-3 px-6 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all duration-300 shadow-lg"
-          >
-            Basic (Rp 50.000)
-          </a>
-          <a 
-            href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg"
-          >
-            Advance (Rp 100.000)
-          </a>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          {/* Left Column - Text */}
+          <div className="text-left md:w-2/3">
+            <h3 className="text-2xl font-bold mb-4 text-white">Beli sekarang dan hemat waktu Anda!</h3>
+            <p className="text-blue-200/80 mb-4 text-lg leading-relaxed">
+              <span className="text-white font-semibold">Advance Package</span> memberikan semua fitur Basic plus penomoran halaman lanjutan, 
+              penomoran otomatis dengan deteksi bab, dan Format Painter untuk pemformatan yang sempurna.
+            </p>
+            <p className="text-blue-300 text-base font-medium">
+              Format skripsi Anda 3x lebih cepat dengan Easy.kripsi!
+            </p>
+          </div>
+          
+          {/* Right Column - Buttons */}
+          <div className="flex flex-col gap-4 w-full md:w-auto">
+            <a 
+              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-4 px-8 bg-white text-blue-900 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg text-center"
+            >
+              <div className="text-lg font-bold">Basic Package</div>
+              <div className="text-blue-700">Rp 50.000</div>
+            </a>
+            <a 
+              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-4 px-8 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg text-center"
+            >
+              <div className="text-lg font-bold">Advance Package</div>
+              <div className="text-blue-100">Rp 100.000</div>
+            </a>
+          </div>
         </div>
       </motion.div>
     </div>
