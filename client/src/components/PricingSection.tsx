@@ -71,16 +71,18 @@ export default function PricingSection() {
                 ))}
               </ul>
               
-              <Button 
-                variant={plan.isPopular ? "default" : "outline"} 
-                className={`w-full ${
+              <a 
+                href={`https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-${plan.title.toLowerCase()}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-block w-full py-3 px-4 rounded-lg text-center ${
                   plan.isPopular 
                     ? 'bg-primary hover:bg-blue-600 text-white' 
-                    : 'border-primary text-primary hover:bg-primary hover:text-white'
+                    : 'border border-primary text-primary hover:bg-primary hover:text-white'
                 }`}
               >
                 Get {plan.title}
-              </Button>
+              </a>
             </div>
           ))}
         </div>

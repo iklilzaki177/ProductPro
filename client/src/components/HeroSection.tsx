@@ -83,12 +83,14 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <span className="text-gray-300">Table of contents generation</span>
                 </li>
               </ul>
-              <button 
-                onClick={onBuyNowClick}
-                className="w-full py-2.5 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors inline-block text-center"
               >
                 Get Basic
-              </button>
+              </a>
             </div>
             
             {/* Advanced Package */}
@@ -119,12 +121,14 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <span className="text-gray-300">Priority thesis formatting support</span>
                 </li>
               </ul>
-              <button 
-                onClick={onBuyNowClick}
-                className="w-full py-2.5 px-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:from-blue-700 hover:to-blue-500 transition-colors"
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 px-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:from-blue-700 hover:to-blue-500 transition-colors inline-block text-center"
               >
                 Get Advance
-              </button>
+              </a>
             </div>
           </div>
         </div>
