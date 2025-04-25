@@ -37,7 +37,6 @@ export default function Home() {
         <div id="features">
           <AnimatedFeatureSection />
         </div>
-        <FeaturesSection />
       </main>
       <Footer onNavClick={handleScroll} />
     </div>

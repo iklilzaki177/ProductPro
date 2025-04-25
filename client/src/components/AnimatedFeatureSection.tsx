@@ -32,16 +32,16 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,
-      y: 30,
-      scale: 0.95,
+      y: 15,
+      scale: 0.98,
     },
     animate: (index: number) => ({
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        delay: 0.03 * index,
-        duration: 0.5,
+        delay: 0.015 * index, // Reduced delay for more subtle staggering
+        duration: 0.35, // Reduced duration
         ease: [0.22, 1, 0.36, 1], // Custom ease curve similar to phamilypharma.com
       },
     }),
@@ -52,7 +52,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.15 }}
       custom={index}
       className={cn(
         "p-6 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1",
