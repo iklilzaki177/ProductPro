@@ -3,7 +3,9 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProductShowcase from '@/components/ProductShowcase';
 import Footer from '@/components/Footer';
-import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
+import ResponsiveProductCards from '@/components/ResponsiveProductCards';
+import ResponsiveFeatureTable from '@/components/ResponsiveFeatureTable';
+import ResponsiveTestimonials from '@/components/ResponsiveTestimonials';
 
 export default function Home() {
   const sectionsRef = useRef<Record<string, HTMLElement | null>>({});
@@ -23,7 +25,9 @@ export default function Home() {
     // Initialize refs object with section IDs
     sectionsRef.current = {
       features: document.getElementById('features'),
-      product: document.getElementById('product')
+      product: document.getElementById('product'),
+      compare: document.getElementById('compare'),
+      testimonials: document.getElementById('testimonials')
     };
   }, []);
 
@@ -32,8 +36,21 @@ export default function Home() {
       <Header onNavClick={handleScroll} />
       <main className="flex-grow">
         <HeroSection onLearnMoreClick={() => handleScroll('features')} onBuyNowClick={() => handleScroll('product')} />
+        
+        <div id="product">
+          <ResponsiveProductCards />
+        </div>
+        
+        <div id="compare">
+          <ResponsiveFeatureTable />
+        </div>
+        
         <div id="features">
           <ProductShowcase />
+        </div>
+        
+        <div id="testimonials">
+          <ResponsiveTestimonials />
         </div>
       </main>
       <Footer onNavClick={handleScroll} />
