@@ -332,16 +332,7 @@ export default function ProductShowcase() {
             </div>
           </div>
           
-          <div className="mt-10 text-center">
-            <a 
-              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full inline-block font-medium shadow-lg transition-all hover:scale-105"
-            >
-              Dapatkan Versi Advance - Rp 100.000
-            </a>
-          </div>
+          {/* Purchase button removed to avoid duplication with HeroSection */}
         </div>
         
         {/* Word Integration Showcase - FIFTH SECTION */}
@@ -407,42 +398,7 @@ export default function ProductShowcase() {
           </div>
         </div>
         
-        {/* Purchase options - FINAL SECTION */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-br from-blue-50 to-gray-100 p-6 sm:p-10 rounded-3xl shadow-sm">
-          <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-3">Siap mengubah pengalaman format skripsi Anda?</h2>
-            <p className="text-gray-600 text-base sm:text-lg mb-3 max-w-2xl mx-auto">
-              Pilih paket Easy.kripsi yang tepat untuk Anda dan ucapkan selamat tinggal pada masalah pemformatan
-            </p>
-            <p className="text-gray-500">
-              Dikembangkan oleh <span className="font-semibold">@Iklilzaki</span> dan <span className="font-semibold">@Bangdeniuss</span>
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-            <div className="flex flex-col items-center">
-              <div className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Rp 50.000</div>
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-2 sm:py-3 px-6 sm:px-8 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors inline-block"
-              >
-                Dapatkan Basic
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Rp 100.000</div>
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-2 sm:py-3 px-6 sm:px-8 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full hover:from-blue-700 hover:to-blue-600 transition-colors inline-block"
-              >
-                Dapatkan Advance
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Purchase options section removed to avoid duplication with HeroSection */}
       </div>
     </section>
   );
