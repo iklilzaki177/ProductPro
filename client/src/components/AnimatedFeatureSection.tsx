@@ -47,10 +47,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       className={cn(
         "min-w-0 p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-hidden group h-full",
         feature.highlight
-          ? "bg-gradient-to-br from-blue-900/30 to-blue-800/20 border-blue-400/40 hover:border-blue-300/50"
+          ? "bg-gradient-to-br from-blue-800/80 to-blue-900/70 border-blue-400/50 hover:border-blue-300/60"
           : feature.isAdvanced 
-            ? "bg-gradient-to-br from-blue-900/20 to-blue-800/10 border-blue-500/20 hover:border-blue-400/30" 
-            : "bg-gradient-to-br from-zinc-900/30 to-zinc-800/10 border-zinc-700/20 hover:border-gray-600/30"
+            ? "bg-gradient-to-br from-blue-900/70 to-blue-950/60 border-blue-500/40 hover:border-blue-400/50" 
+            : "bg-gradient-to-br from-zinc-800/80 to-zinc-900/70 border-zinc-600/40 hover:border-gray-500/50"
       )}
     >
       <div className="flex flex-col h-full min-w-0 w-full">
@@ -58,23 +58,23 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         <div className="flex items-start justify-start gap-2 mb-2 sm:mb-3 relative z-10 flex-wrap min-w-0 w-full">
           {/* Icon */}
           <div className={cn(
-            "flex-shrink-0 p-1 sm:p-1.5 rounded-md flex items-center justify-center",
+            "flex-shrink-0 p-1.5 sm:p-2 rounded-md flex items-center justify-center",
             feature.isAdvanced 
-              ? "bg-blue-600/20 border border-blue-500/30" 
-              : "bg-gray-800/40 border border-gray-700/30"
+              ? "bg-blue-600/40 border border-blue-400/50" 
+              : "bg-gray-700/60 border border-gray-500/50"
           )}>
             <Keyboard className={cn(
-              "h-3 w-3 sm:h-3.5 sm:w-3.5",
-              feature.isAdvanced ? "text-blue-300" : "text-gray-300"
+              "h-3.5 w-3.5 sm:h-4 sm:w-4",
+              feature.isAdvanced ? "text-blue-200" : "text-gray-200"
             )} />
           </div>
 
           {/* Shortcut label - min-w-0 ensures proper truncation */}
           <div className={cn(
-            "min-w-0 text-xs xs:text-sm font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-md truncate text-left",
+            "min-w-0 text-xs xs:text-sm font-mono font-medium px-2 sm:px-3 py-0.5 rounded-md truncate text-left",
             feature.isAdvanced 
-              ? "bg-blue-500/20 text-blue-200 border border-blue-500/30" 
-              : "bg-gray-800/40 text-gray-300 border border-gray-700/30"
+              ? "bg-blue-500/30 text-blue-100 border border-blue-400/40" 
+              : "bg-gray-700/50 text-gray-100 border border-gray-600/40"
           )}>
             {feature.shortcut}
           </div>
@@ -83,10 +83,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Description - using truncate and line clamp to prevent overflow */}
         <div className="min-w-0 w-full">
           <p className={cn(
-            "text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2 hyphens-auto overflow-wrap-anywhere text-left",
+            "text-xs sm:text-sm mt-2 leading-relaxed line-clamp-2 hyphens-auto overflow-wrap-anywhere text-left font-medium",
             feature.highlight 
-              ? "text-blue-50 font-medium"
-              : feature.isAdvanced ? "text-blue-100" : "text-gray-300"
+              ? "text-blue-50"
+              : feature.isAdvanced ? "text-blue-100" : "text-gray-100"
           )}>
             {feature.description}
           </p>
