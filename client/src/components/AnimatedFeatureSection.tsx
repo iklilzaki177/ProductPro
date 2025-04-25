@@ -45,7 +45,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       }}
       viewport={{ once: true, margin: "-5% 0px -5% 0px" }}
       className={cn(
-        "min-w-0 p-4 xs:p-5 sm:p-6 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-visible group h-full",
+        "rounded-xl border backdrop-blur-sm transition-all duration-300 relative group h-full",
         feature.highlight
           ? "bg-gradient-to-br from-blue-800/80 to-blue-900/70 border-blue-400/50 hover:border-blue-300/60"
           : feature.isAdvanced 
@@ -53,25 +53,24 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
             : "bg-gradient-to-br from-zinc-800/80 to-zinc-900/70 border-zinc-600/40 hover:border-gray-500/50"
       )}
     >
-      <div className="flex flex-col h-full w-full overflow-visible">
-        {/* Card header dengan overflow visible agar teks tidak terpotong */}
-        <div className="flex items-start justify-start gap-2 mb-2 sm:mb-3 relative z-10 flex-wrap min-w-0 w-full">
-          {/* Icon */}
+      {/* Background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-blue-900/10 opacity-80 pointer-events-none"></div>
+      
+      {/* Card content */}
+      <div className="p-4 sm:p-5 relative z-10">
+        {/* Shortcut header - Simplified to make stable */}
+        <div className="flex items-center gap-2 mb-4">
           <div className={cn(
-            "flex-shrink-0 p-1.5 sm:p-2 rounded-md flex items-center justify-center",
+            "flex-shrink-0 p-1.5 rounded-md flex items-center justify-center",
             feature.isAdvanced 
               ? "bg-blue-600/40 border border-blue-400/50" 
               : "bg-gray-700/60 border border-gray-500/50"
           )}>
-            <Keyboard className={cn(
-              "h-3.5 w-3.5 sm:h-4 sm:w-4",
-              feature.isAdvanced ? "text-blue-200" : "text-gray-200"
-            )} />
+            <Keyboard className={cn("h-4 w-4", feature.isAdvanced ? "text-blue-200" : "text-gray-200")} />
           </div>
-
-          {/* Shortcut label - dengan overflow visible agar tidak terpotong */}
+          
           <div className={cn(
-            "text-xs xs:text-sm font-mono font-medium px-2 sm:px-3 py-0.5 rounded-md text-left overflow-visible",
+            "text-xs font-mono font-medium px-2 py-1 rounded-md",
             feature.isAdvanced 
               ? "bg-blue-500/30 text-blue-100 border border-blue-400/40" 
               : "bg-gray-700/50 text-gray-100 border border-gray-600/40"
@@ -80,31 +79,37 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </div>
         </div>
         
-        {/* Description - dengan word-break yang tepat dan kata utuh */}
-        <div className="min-w-0 w-full">
-          <p className={cn(
-            "text-xs sm:text-sm mt-2 leading-relaxed whitespace-normal keep-words-together overflow-visible text-left font-medium",
+        {/* Feature description as list item */}
+        <div className="flex items-start mt-3 bg-black/10 rounded-lg p-2.5 border border-blue-800/10">
+          <div className={cn(
+            "rounded-full p-1 flex-shrink-0 mr-2",
+            feature.isAdvanced 
+              ? "bg-blue-500/30 text-blue-300" 
+              : "bg-gray-700/60 text-gray-300"
+          )}>
+            <Check className="h-3.5 w-3.5" />
+          </div>
+          <span className={cn(
+            "text-xs sm:text-sm",
             feature.highlight 
               ? "text-blue-50"
               : feature.isAdvanced ? "text-blue-100" : "text-gray-100"
           )}>
             {feature.description}
-          </p>
+          </span>
         </div>
         
-        {/* Badge for highlight features - Left aligned */}
+        {/* Badge for highlight features */}
         {feature.highlight && (
-          <div className="mt-auto pt-2 sm:pt-3 text-left">
-            <span 
-              className="inline-block px-1.5 sm:px-2 py-0.5 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-medium text-white rounded-full"
-            >
+          <div className="mt-3 text-left">
+            <span className="inline-block px-2 py-0.5 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-medium text-white rounded-full">
               Format Painter
             </span>
           </div>
         )}
       </div>
       
-      {/* Subtle glow effect - Only visible on larger screens */}
+      {/* Subtle glow effect */}
       {feature.isAdvanced && (
         <div className="absolute -right-8 -bottom-8 w-16 h-16 bg-blue-500 rounded-full blur-2xl opacity-5 group-hover:opacity-10 transition-opacity hidden sm:block"></div>
       )}
