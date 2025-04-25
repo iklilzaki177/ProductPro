@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import FeaturesSection from '@/components/FeaturesSection';
 import ProductShowcase from '@/components/ProductShowcase';
 import Footer from '@/components/Footer';
 import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
@@ -35,7 +34,6 @@ export default function Home() {
         <HeroSection onLearnMoreClick={() => handleScroll('features')} onBuyNowClick={() => handleScroll('product')} />
         <div id="features">
           <ProductShowcase />
-          <FeaturesSection />
         </div>
       </main>
       <Footer onNavClick={handleScroll} />
