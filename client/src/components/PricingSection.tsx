@@ -5,38 +5,28 @@ import { Button } from '@/components/ui/button';
 export default function PricingSection() {
   const pricingPlans: PricingPlan[] = [
     {
-      title: "Basic Package",
-      price: 49,
-      description: "Perfect for those getting started with our product.",
+      title: "Basic",
+      price: 50000,
+      description: "Essential formatting tools for students.",
       features: [
-        "Standard product features",
-        "Basic support",
-        "30-day warranty"
+        "Automatic heading formatting",
+        "Page number automation",
+        "Basic citation assistance",
+        "Table of contents generation"
       ]
     },
     {
-      title: "Premium Package",
-      price: 89,
-      description: "Our most popular option with advanced features.",
+      title: "Advance",
+      price: 100000,
+      description: "Complete thesis automation suite.",
       features: [
-        "All standard features",
-        "Premium materials upgrade",
-        "Priority support",
-        "1-year extended warranty"
+        "Everything in Basic",
+        "Reference management system",
+        "Template library with university formats",
+        "AI-powered proofreading",
+        "Priority thesis formatting support"
       ],
       isPopular: true
-    },
-    {
-      title: "Ultimate Package",
-      price: 149,
-      description: "The complete experience with exclusive perks.",
-      features: [
-        "All premium features",
-        "Luxury materials edition",
-        "24/7 VIP support",
-        "Lifetime warranty",
-        "Free accessories included"
-      ]
     }
   ];
 
@@ -50,7 +40,7 @@ export default function PricingSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <div 
               key={index} 
@@ -62,14 +52,13 @@ export default function PricingSection() {
             >
               {plan.isPopular && (
                 <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
-                  Most Popular
+                  RECOMMENDED
                 </div>
               )}
               
               <h3 className="text-xl font-bold text-dark mb-4 font-heading">{plan.title}</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-dark">${plan.price}</span>
-                <span className="text-gray-500">/each</span>
+                <span className="text-4xl font-bold text-dark">Rp {plan.price.toLocaleString('id-ID')}</span>
               </div>
               <p className="text-gray-600 mb-6">{plan.description}</p>
               
@@ -90,7 +79,7 @@ export default function PricingSection() {
                     : 'border-primary text-primary hover:bg-primary hover:text-white'
                 }`}
               >
-                Buy Now
+                Get {plan.title}
               </Button>
             </div>
           ))}

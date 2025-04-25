@@ -12,13 +12,13 @@ export default function ProductShowcase() {
         </div>
         
         {/* Grid layout for product displays */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Basic package */}
           <div className="bg-gray-100 rounded-3xl p-10 text-center overflow-hidden relative transition-all duration-300 hover:shadow-xl">
             <div className="mb-8">
               <h2 className="text-3xl font-semibold mb-2">Basic</h2>
               <p className="text-xl text-gray-500 font-light">Essential formatting for students.</p>
-              <p className="text-3xl font-semibold mt-4">$9.99<span className="text-lg font-normal text-gray-500">/mo</span></p>
+              <p className="text-3xl font-semibold mt-4">Rp 50.000</p>
               <div className="mt-6 flex justify-center space-x-6">
                 <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
                   Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
@@ -41,63 +41,27 @@ export default function ProductShowcase() {
                 <FileText className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0" />
                 <span className="text-gray-600">Basic citation assistance</span>
               </div>
-            </div>
-            <div className="mt-10">
-              <button className="w-full py-3 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                Choose Basic
-              </button>
-            </div>
-          </div>
-          
-          {/* Lite package */}
-          <div className="bg-gray-100 rounded-3xl p-10 text-center overflow-hidden relative transition-all duration-300 hover:shadow-xl">
-            <div className="mb-8">
-              <h2 className="text-3xl font-semibold mb-2">Lite</h2>
-              <p className="text-xl text-gray-500 font-light">Advanced tools for graduate students.</p>
-              <p className="text-3xl font-semibold mt-4">$19.99<span className="text-lg font-normal text-gray-500">/mo</span></p>
-              <div className="mt-6 flex justify-center space-x-6">
-                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
-                  Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
-                </a>
-                <a href="#" className="text-blue-500 hover:underline font-medium flex items-center">
-                  Buy <ChevronRight className="h-5 w-5 ml-0.5" />
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col items-start space-y-4 text-left mt-8">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-gray-600">Everything in Basic</span>
-              </div>
               <div className="flex items-start">
                 <Table className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0" />
                 <span className="text-gray-600">Table of contents generation</span>
               </div>
-              <div className="flex items-start">
-                <Bookmark className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-gray-600">Figure & table captions</span>
-              </div>
-              <div className="flex items-start">
-                <FileText className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-gray-600">Multiple citation styles</span>
-              </div>
             </div>
             <div className="mt-10">
               <button className="w-full py-3 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                Choose Lite
+                Get Basic
               </button>
             </div>
           </div>
           
-          {/* Ultimate package */}
+          {/* Advance package */}
           <div className="bg-gradient-to-b from-blue-900 to-blue-950 text-white rounded-3xl p-10 text-center overflow-hidden relative transition-all duration-300 hover:shadow-xl ring-2 ring-blue-500">
             <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold py-1 px-3 rounded-full">
-              MOST POPULAR
+              RECOMMENDED
             </div>
             <div className="mb-8">
-              <h2 className="text-3xl font-semibold mb-2">Ultimate</h2>
+              <h2 className="text-3xl font-semibold mb-2">Advance</h2>
               <p className="text-xl text-gray-300 font-light">Complete thesis automation suite.</p>
-              <p className="text-3xl font-semibold mt-4">$39.99<span className="text-lg font-normal text-gray-300">/mo</span></p>
+              <p className="text-3xl font-semibold mt-4">Rp 100.000</p>
               <div className="mt-6 flex justify-center space-x-6">
                 <a href="#" className="text-blue-400 hover:underline font-medium flex items-center">
                   Learn more <ChevronRight className="h-5 w-5 ml-0.5" />
@@ -110,7 +74,7 @@ export default function ProductShowcase() {
             <div className="flex flex-col items-start space-y-4 text-left mt-8">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">Everything in Lite</span>
+                <span className="text-gray-300">Everything in Basic</span>
               </div>
               <div className="flex items-start">
                 <FileText className="h-6 w-6 text-blue-400 mr-3 flex-shrink-0" />
@@ -131,7 +95,7 @@ export default function ProductShowcase() {
             </div>
             <div className="mt-10">
               <button className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:from-blue-700 hover:to-blue-500 transition-colors">
-                Choose Ultimate
+                Get Advance
               </button>
             </div>
           </div>

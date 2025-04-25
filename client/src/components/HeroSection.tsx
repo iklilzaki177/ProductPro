@@ -59,12 +59,12 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         
         {/* Product Package Cards */}
         <div className="mt-12 px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Basic Package */}
             <div className="bg-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105">
               <h3 className="text-2xl font-medium mb-3">Basic</h3>
               <p className="text-gray-400 mb-4">Essential formatting tools for students</p>
-              <p className="text-xl font-semibold mb-6">$9.99<span className="text-sm font-normal text-gray-400">/mo</span></p>
+              <p className="text-xl font-semibold mb-6">Rp 50.000</p>
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -78,56 +78,29 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Basic citation assistance</span>
                 </li>
-              </ul>
-              <button 
-                onClick={onBuyNowClick}
-                className="w-full py-2.5 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </button>
-            </div>
-            
-            {/* Lite Package */}
-            <div className="bg-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105">
-              <h3 className="text-2xl font-medium mb-3">Lite</h3>
-              <p className="text-gray-400 mb-4">Advanced tools for graduate students</p>
-              <p className="text-xl font-semibold mb-6">$19.99<span className="text-sm font-normal text-gray-400">/mo</span></p>
-              <ul className="text-left mb-6 space-y-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Everything in Basic</span>
-                </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Table of contents generation</span>
                 </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Figure & table caption tools</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Multiple citation styles</span>
-                </li>
               </ul>
               <button 
                 onClick={onBuyNowClick}
                 className="w-full py-2.5 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
               >
-                Choose Lite
+                Get Basic
               </button>
             </div>
             
-            {/* Ultimate Package */}
+            {/* Advanced Package */}
             <div className="bg-gradient-to-b from-blue-900 to-zinc-900 rounded-2xl p-6 text-center transition-transform hover:scale-105 ring-2 ring-blue-500">
-              <div className="bg-blue-600 text-xs font-bold py-1 px-3 rounded-full inline-block mb-2">MOST POPULAR</div>
-              <h3 className="text-2xl font-medium mb-3">Ultimate</h3>
+              <div className="bg-blue-600 text-xs font-bold py-1 px-3 rounded-full inline-block mb-2">RECOMMENDED</div>
+              <h3 className="text-2xl font-medium mb-3">Advance</h3>
               <p className="text-gray-300 mb-4">Complete thesis automation suite</p>
-              <p className="text-xl font-semibold mb-6">$39.99<span className="text-sm font-normal text-gray-300">/mo</span></p>
+              <p className="text-xl font-semibold mb-6">Rp 100.000</p>
               <ul className="text-left mb-6 space-y-3">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Everything in Lite</span>
+                  <span className="text-gray-300">Everything in Basic</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -150,7 +123,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 onClick={onBuyNowClick}
                 className="w-full py-2.5 px-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:from-blue-700 hover:to-blue-500 transition-colors"
               >
-                Choose Ultimate
+                Get Advance
               </button>
             </div>
           </div>
