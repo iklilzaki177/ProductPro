@@ -33,335 +33,422 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
           </div>
           
-          {/* Keyboard shortcuts highlight */}
-          <div className="bg-zinc-900/80 backdrop-blur-sm rounded-xl p-4 mt-6 mb-6 shadow-lg">
-            <div className="flex items-center justify-center mb-3">
-              <Keyboard className="h-5 w-5 text-blue-400 mr-2" />
-              <h4 className="text-sm font-medium">Pintasan Keyboard Powerfull</h4>
-            </div>
-            
-            {/* Basic Package Shortcuts */}
-            <div>
-              <div className="flex items-center mb-2 border-b border-blue-800 pb-1">
-                <div className="bg-zinc-800 px-2 py-0.5 rounded text-xs font-medium text-blue-400 mr-1">Basic</div>
-                <div className="h-px flex-grow bg-zinc-700"></div>
+          {/* Keyboard shortcuts highlight - Futuristic Style */}
+          <div className="glass-effect rounded-xl p-6 mt-8 mb-8 shadow-lg neon-border grid-pattern relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-5">
+                <div className="bg-blue-500 p-1.5 rounded-full shadow-lg shadow-blue-500/40 mr-3">
+                  <Keyboard className="h-5 w-5 text-white" />
+                </div>
+                <h4 className="text-md font-medium tracking-wide glow-text text-blue-100">PINTASAN KEYBOARD</h4>
               </div>
               
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + 1</div>
-                  <span className="text-xs text-gray-400">BAB I PENDAHULUAN</span>
+              {/* Basic Package Shortcuts */}
+              <div className="mb-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-3 py-1 rounded-full text-xs font-medium text-blue-300 mr-1.5 border border-gray-700">
+                    <span className="mr-1.5">⬤</span>BASIC
+                  </div>
+                  <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + 2-8</div>
-                  <span className="text-xs text-gray-400">Sub-Heading</span>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-6">
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + 1</div>
+                    <span className="text-xs text-blue-200">BAB I PENDAHULUAN</span>
+                  </div>
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + 2-8</div>
+                    <span className="text-xs text-blue-200">Sub-Heading</span>
+                  </div>
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + D</div>
+                    <span className="text-xs text-blue-200">Daftar Isi</span>
+                  </div>
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + G</div>
+                    <span className="text-xs text-blue-200">Caption Gambar</span>
+                  </div>
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + T</div>
+                    <span className="text-xs text-blue-200">Caption Tabel</span>
+                  </div>
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + L</div>
+                    <span className="text-xs text-blue-200">Caption Lampiran</span>
+                  </div>
+                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="shortcut-badge mb-2">Alt + Shift + G/T/L</div>
+                    <span className="text-xs text-blue-200">Daftar Gambar/Tabel</span>
+                  </div>
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + D</div>
-                  <span className="text-xs text-gray-400">Daftar Isi</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + G</div>
-                  <span className="text-xs text-gray-400">Caption Gambar</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + T</div>
-                  <span className="text-xs text-gray-400">Caption Tabel</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + L</div>
-                  <span className="text-xs text-gray-400">Caption Lampiran</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="shortcut-badge mb-1">Alt + Shift + G/T/L</div>
-                  <span className="text-xs text-gray-400">Daftar Gambar/Tabel</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Advanced Package Shortcuts */}
-            <div>
-              <div className="flex items-center mb-2 border-b border-blue-600 pb-1">
-                <div className="bg-blue-900 px-2 py-0.5 rounded text-xs font-medium text-blue-200 mr-1">Advance</div>
-                <div className="h-px flex-grow bg-blue-800/50"></div>
               </div>
               
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Ctrl + Alt + G/T/L</div>
-                  <span className="text-xs text-gray-300">Caption 2 Digit (4.1)</span>
+              {/* Advanced Package Shortcuts */}
+              <div>
+                <div className="flex items-center mb-4">
+                  <div className="bg-gradient-to-r from-blue-800 to-blue-900 px-3 py-1 rounded-full text-xs font-medium text-blue-100 mr-1.5 border border-blue-700 shadow-md shadow-blue-500/20">
+                    <span className="mr-1.5 text-blue-400">⬤</span>ADVANCE
+                  </div>
+                  <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
                 </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Alt + K</div>
-                  <span className="text-xs text-gray-300">Halaman Latin</span>
-                </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Alt + R</div>
-                  <span className="text-xs text-gray-300">Halaman Romawi</span>
-                </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Alt + Shift + K</div>
-                  <span className="text-xs text-gray-300">No. Halaman Auto</span>
-                </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Ctrl + Alt + K</div>
-                  <span className="text-xs text-gray-300">Posisi Halaman</span>
-                </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Alt + C</div>
-                  <span className="text-xs text-gray-300">Hapus No. Halaman</span>
-                </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Alt + Q</div>
-                  <span className="text-xs text-gray-300">Format Painter Copy</span>
-                </div>
-                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
-                  <div className="shortcut-badge mb-1">Alt + W</div>
-                  <span className="text-xs text-gray-300">Format Painter Paste</span>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Ctrl + Alt + G/T/L</div>
+                    <span className="text-xs text-blue-200">Caption 2 Digit (4.1)</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + K</div>
+                    <span className="text-xs text-blue-200">Halaman Latin</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + R</div>
+                    <span className="text-xs text-blue-200">Halaman Romawi</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + Shift + K</div>
+                    <span className="text-xs text-blue-200">No. Halaman Auto</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Ctrl + Alt + K</div>
+                    <span className="text-xs text-blue-200">Posisi Halaman</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + C</div>
+                    <span className="text-xs text-blue-200">Hapus No. Halaman</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + Q</div>
+                    <span className="text-xs text-blue-200">Format Painter Copy</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
+                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + W</div>
+                    <span className="text-xs text-blue-200">Format Painter Paste</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* CTA buttons */}
-          <div className="flex justify-center space-x-4 mt-8">
+          {/* CTA buttons - Futuristic Style */}
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
             <button 
               onClick={onBuyNowClick}
-              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium text-lg shadow-lg transition-all flex items-center hover:scale-105"
+              className="techno-button px-8 py-3.5 text-lg font-medium flex items-center"
             >
-              Beli sekarang <ChevronRight className="h-5 w-5 ml-0.5" />
+              <span className="relative z-10 flex items-center">
+                Beli Sekarang <ChevronRight className="h-5 w-5 ml-1" />
+              </span>
             </button>
             <button 
               onClick={onLearnMoreClick}
-              className="text-white hover:text-blue-400 border border-blue-500 px-4 py-3 rounded-full font-medium text-lg flex items-center hover:bg-blue-900/20 transition-all"
+              className="glass-effect text-white px-8 py-3.5 rounded-full font-medium text-lg flex items-center transition-all duration-300 hover:border-blue-400 border border-blue-600/30 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              Pelajari lebih lanjut <ChevronRight className="h-5 w-5 ml-0.5" />
+              <span className="flex items-center">
+                Pelajari Lebih Lanjut <ChevronRight className="h-5 w-5 ml-1" />
+              </span>
             </button>
           </div>
         </div>
         
-        {/* Key benefits */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto mt-12 px-4">
-          <div className="bg-blue-950/50 rounded-xl p-5 text-center shadow-lg">
-            <div className="rounded-full bg-blue-900/50 w-12 h-12 mx-auto mb-3 flex items-center justify-center">
-              <Zap className="h-6 w-6 text-blue-400" />
+        {/* Key benefits - Futuristic Style */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16 px-4">
+          <div className="glass-effect rounded-xl p-6 text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 border border-zinc-800/30 relative overflow-hidden group transform hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-30 pointer-events-none"></div>
+            <div className="rounded-full bg-gradient-to-r from-blue-600 to-blue-500 w-14 h-14 mx-auto mb-4 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <Zap className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-lg font-medium mb-2">Format Sekejap</h3>
-            <p className="text-sm text-gray-300">Ubah skripsi Anda menjadi dokumen profesional hanya dengan beberapa klik</p>
+            <h3 className="text-lg font-medium mb-3 text-white">Format Sekejap</h3>
+            <p className="text-sm text-blue-100">Ubah skripsi Anda menjadi dokumen profesional hanya dengan beberapa klik</p>
           </div>
-          <div className="bg-blue-950/50 rounded-xl p-5 text-center shadow-lg">
-            <div className="rounded-full bg-blue-900/50 w-12 h-12 mx-auto mb-3 flex items-center justify-center">
-              <Clock className="h-6 w-6 text-blue-400" />
+          
+          <div className="glass-effect rounded-xl p-6 text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 border border-zinc-800/30 relative overflow-hidden group transform hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-30 pointer-events-none"></div>
+            <div className="rounded-full bg-gradient-to-r from-blue-600 to-blue-500 w-14 h-14 mx-auto mb-4 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <Clock className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-lg font-medium mb-2">Hemat Waktu</h3>
-            <p className="text-sm text-gray-300">Kurangi waktu format skripsi dari berjam-jam menjadi hanya beberapa menit</p>
+            <h3 className="text-lg font-medium mb-3 text-white">Hemat Waktu</h3>
+            <p className="text-sm text-blue-100">Kurangi waktu format skripsi dari berjam-jam menjadi hanya beberapa menit</p>
           </div>
-          <div className="bg-blue-950/50 rounded-xl p-5 text-center shadow-lg">
-            <div className="rounded-full bg-blue-900/50 w-12 h-12 mx-auto mb-3 flex items-center justify-center">
-              <ThumbsUp className="h-6 w-6 text-blue-400" />
+          
+          <div className="glass-effect rounded-xl p-6 text-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 border border-zinc-800/30 relative overflow-hidden group transform hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-30 pointer-events-none"></div>
+            <div className="rounded-full bg-gradient-to-r from-blue-600 to-blue-500 w-14 h-14 mx-auto mb-4 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <ThumbsUp className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-lg font-medium mb-2">Sesuai Standar</h3>
-            <p className="text-sm text-gray-300">Format otomatis sesuai standar universitas untuk hasil yang profesional</p>
+            <h3 className="text-lg font-medium mb-3 text-white">Sesuai Standar</h3>
+            <p className="text-sm text-blue-100">Format otomatis sesuai standar universitas untuk hasil yang profesional</p>
           </div>
         </div>
         
-        {/* Product Package Cards */}
-        <div className="mt-16 px-4">
-          <h2 className="text-2xl font-semibold mb-8 text-center">Pilih Paket yang Tepat untuk Anda</h2>
+        {/* Product Package Cards - Futuristic Style */}
+        <div className="mt-20 px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Pilih Paket yang Tepat untuk Anda</h2>
+            <p className="text-blue-200/80 max-w-2xl mx-auto">Sesuaikan pilihan dengan kebutuhan skripsi atau tesis Anda</p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Basic Package */}
-            <div className="bg-gradient-to-b from-zinc-900 to-zinc-950 rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/20 border border-zinc-800">
-              <h3 className="text-2xl font-medium mb-3">Basic</h3>
-              <p className="text-gray-400 mb-4">Alat format esensial untuk mahasiswa</p>
-              <p className="text-3xl font-semibold mb-2">Rp 50.000</p>
-              <p className="text-gray-500 text-sm mb-6">Pembayaran sekali, pemakaian selamanya</p>
-              <ul className="text-left mb-6 space-y-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Format heading otomatis dengan Alt+1, Alt+2, dll.</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Daftar isi otomatis dengan pintasan Alt+D</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Caption gambar & tabel sederhana</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Penomoran halaman dasar</span>
-                </li>
-              </ul>
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 px-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 inline-block text-center font-medium shadow-lg hover:scale-105"
-              >
-                Dapatkan Basic
-              </a>
+            {/* Basic Package - Futuristic Style */}
+            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 border border-zinc-800/50 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-gray-900/80 opacity-80 pointer-events-none"></div>
+              <div className="absolute inset-0 opacity-10 grid-pattern"></div>
+              <div className="relative z-10">
+                <div className="inline-block bg-gray-800/80 px-3 py-1.5 rounded-full mb-4 border border-gray-700/50">
+                  <h3 className="text-xl font-medium tracking-wide text-blue-100">Basic</h3>
+                </div>
+                <p className="text-gray-300 mb-4">Alat format esensial untuk mahasiswa</p>
+                <p className="text-4xl font-semibold mb-2 text-white">Rp 50.000</p>
+                <p className="text-gray-400 text-sm mb-8">Pembayaran sekali, pemakaian selamanya</p>
+                
+                <div className="bg-zinc-900/50 rounded-xl p-4 mb-8 text-left space-y-3 backdrop-blur-sm">
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-900/30 text-blue-400 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-gray-300 text-sm">Format heading otomatis dengan Alt+1, Alt+2, dll.</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-900/30 text-blue-400 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-gray-300 text-sm">Daftar isi otomatis dengan pintasan Alt+D</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-900/30 text-blue-400 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-gray-300 text-sm">Caption gambar & tabel sederhana</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-900/30 text-blue-400 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-gray-300 text-sm">Penomoran halaman dasar</span>
+                  </div>
+                </div>
+                
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-3 px-8 bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full transition-all duration-300 shadow-lg group-hover:shadow-blue-500/30 hover:scale-105 font-medium"
+                >
+                  Dapatkan Basic
+                </a>
+              </div>
             </div>
             
-            {/* Advanced Package */}
-            <div className="bg-gradient-to-b from-blue-900 to-blue-950 rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-2xl hover:shadow-blue-600/30 border border-blue-800 relative">
-              <div className="absolute -top-3 right-6 bg-gradient-to-r from-blue-600 to-blue-500 text-xs font-bold py-1 px-4 rounded-full shadow-lg">
+            {/* Advanced Package - Futuristic Style */}
+            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group neon-border">
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
+              <div className="absolute inset-0 opacity-10 grid-pattern"></div>
+              <div className="absolute -top-3 right-8 bg-gradient-to-r from-blue-600 to-blue-400 text-xs font-bold py-1.5 px-4 rounded-full shadow-lg">
                 PALING POPULER
               </div>
-              <h3 className="text-2xl font-medium mb-3">Advance</h3>
-              <p className="text-gray-300 mb-4">Paket otomatisasi skripsi lengkap</p>
-              <p className="text-3xl font-semibold mb-2">Rp 100.000</p>
-              <p className="text-blue-300 text-sm mb-6">Hemat waktu & tenaga bernilai jutaan</p>
-              <ul className="text-left mb-6 space-y-3">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Semua fitur paket Basic</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Penomoran halaman lanjutan dengan opsi tengah bawah/kanan atas</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Penomoran halaman otomatis (Alt+Shift+K) dengan deteksi posisi bab</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Opsi halaman latin (Alt+K) dan romawi (Alt+R) untuk berbagai bagian</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Caption gambar/tabel dengan nomor BAB (mis. Gambar 4.1) melalui Alt+G/T/L</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Caption 2-digit dengan auto-deteksi bab (Ctrl+Alt+G/T/L)</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Daftar gambar/tabel/lampiran otomatis (Alt+Shift+G/T/L)</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Format painter (Alt+Q/W) dan dialog klik-pilih-selesai</span>
-                </li>
-              </ul>
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:from-blue-700 hover:to-blue-500 transition-all duration-300 inline-block text-center font-medium shadow-lg hover:scale-105"
-              >
-                Dapatkan Advance
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        {/* Testimonials */}
-        <div className="mt-16 px-4">
-          <h2 className="text-2xl font-semibold mb-6 text-center">Apa Kata Pengguna Kami</h2>
-          <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-b from-zinc-900 to-zinc-950 rounded-xl p-5 max-w-md shadow-lg">
-              <div className="flex mb-3">
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-              </div>
-              <p className="text-gray-300 mb-4 italic">"Saya menghemat sekitar 10 jam untuk format skripsi berkat Easy.kripsi. Menu yang sangat intuitif dan pintasan keyboard sangat membantu!"</p>
-              <div className="flex items-center">
-                <div className="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-sm font-medium mr-3">
-                  AD
+              <div className="relative z-10">
+                <div className="inline-block bg-blue-900/80 px-3 py-1.5 rounded-full mb-4 border border-blue-700/50">
+                  <h3 className="text-xl font-medium tracking-wide text-blue-100">Advance</h3>
                 </div>
-                <div>
-                  <p className="text-sm font-medium">Adi Darmawan</p>
-                  <p className="text-xs text-gray-400">Mahasiswa Teknik, Universitas Indonesia</p>
+                <p className="text-blue-100 mb-4">Paket otomatisasi skripsi lengkap</p>
+                <p className="text-4xl font-semibold mb-2 text-white">Rp 100.000</p>
+                <p className="text-blue-200 text-sm mb-8">Hemat waktu & tenaga bernilai jutaan</p>
+                
+                <div className="bg-blue-900/20 rounded-xl p-4 mb-8 text-left space-y-3 backdrop-blur-sm">
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-blue-100 text-sm">Semua fitur paket Basic</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-blue-100 text-sm">Penomoran halaman lanjutan dengan opsi tengah bawah/kanan atas</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-blue-100 text-sm">Penomoran halaman otomatis (Alt+Shift+K) dengan deteksi posisi bab</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-blue-100 text-sm">Opsi halaman latin (Alt+K) dan romawi (Alt+R) untuk berbagai bagian</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-blue-100 text-sm">Caption gambar/tabel dengan nomor BAB (Gambar 4.1) otomatis</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                      <Check className="h-4 w-4" />
+                    </div>
+                    <span className="text-blue-100 text-sm">Format painter (Alt+Q/W) dan dialog klik-pilih-selesai</span>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-b from-zinc-900 to-zinc-950 rounded-xl p-5 max-w-md shadow-lg">
-              <div className="flex mb-3">
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-              </div>
-              <p className="text-gray-300 mb-4 italic">"Format caption dengan BAB di paket Advance sangat membantu. Bayangkan klik sekali dan semua caption gambar dan tabel jadi Gambar 4.1, Tabel 4.2, dst. Sangat menghemat waktu!"</p>
-              <div className="flex items-center">
-                <div className="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-sm font-medium mr-3">
-                  SR
-                </div>
-                <div>
-                  <p className="text-sm font-medium">Siti Rahayu</p>
-                  <p className="text-xs text-gray-400">Mahasiswa S2, Universitas Gadjah Mada</p>
-                </div>
+                
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="techno-button inline-block py-3 px-8 font-medium"
+                >
+                  <span className="relative z-10">Dapatkan Advance</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Sample illustration */}
-        <div className="mt-20 text-center px-4">
-          <h2 className="text-2xl font-semibold mb-6">Bagaimana Easy.kripsi Menghemat Waktu Anda</h2>
-          <div className="bg-gradient-to-b from-zinc-900 to-zinc-950 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between shadow-xl">
-            <div className="flex items-center justify-center md:w-1/2 mb-8 md:mb-0">
-              <div className="relative">
-                <FileText className="w-36 h-36 sm:w-48 sm:h-48 text-blue-400 opacity-70" />
-                <div className="absolute top-1/4 left-1/4 right-1/4 bottom-1/4 flex items-center justify-center">
-                  <div className="w-full h-1/2 flex flex-col space-y-2">
-                    <div className="h-2 bg-blue-500 rounded-full w-3/4"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-full"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-5/6"></div>
-                    <div className="h-2 bg-blue-500 rounded-full w-2/3"></div>
+        {/* Testimonials - Futuristic Style */}
+        <div className="mt-20 px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Apa Kata Pengguna Kami</h2>
+            <p className="text-blue-200/80 max-w-2xl mx-auto">Cerita pengalaman dari pengguna yang telah berhasil menghemat waktu</p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+            <div className="glass-effect rounded-xl p-6 max-w-md hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 border border-zinc-800/30 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent opacity-50 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="flex mb-4 text-yellow-400">
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                </div>
+                <div className="bg-blue-950/30 p-4 rounded-xl mb-5 backdrop-blur-sm">
+                  <p className="text-gray-200 italic text-sm leading-relaxed">"Saya menghemat sekitar 10 jam untuk format skripsi berkat Easy.kripsi. Menu yang sangat intuitif dan pintasan keyboard sangat membantu!"</p>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-700 to-blue-500 flex items-center justify-center text-sm font-medium mr-3 shadow-md">
+                    AD
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-white">Adi Darmawan</p>
+                    <p className="text-xs text-blue-300">Mahasiswa Teknik, Universitas Indonesia</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 text-left">
-              <h3 className="text-xl font-medium mb-4">Format skripsi dengan satu klik</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <Type className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Gaya heading otomatis sesuai pedoman universitas Anda</span>
-                </li>
-                <li className="flex items-start">
-                  <ListOrdered className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Penomoran halaman pintar dengan format berbeda untuk berbagai bagian</span>
-                </li>
-                <li className="flex items-start">
-                  <FileText className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Hemat berjam-jam format manual dengan beberapa klik saja</span>
-                </li>
-              </ul>
+            
+            <div className="glass-effect rounded-xl p-6 max-w-md hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 border border-zinc-800/30 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent opacity-50 pointer-events-none"></div>
+              <div className="relative z-10">
+                <div className="flex mb-4 text-yellow-400">
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                  <Star className="h-5 w-5 fill-yellow-400" />
+                </div>
+                <div className="bg-blue-950/30 p-4 rounded-xl mb-5 backdrop-blur-sm">
+                  <p className="text-gray-200 italic text-sm leading-relaxed">"Format caption dengan BAB di paket Advance sangat membantu. Bayangkan klik sekali dan semua caption gambar dan tabel jadi Gambar 4.1, Tabel 4.2, dst. Sangat menghemat waktu!"</p>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-700 to-blue-500 flex items-center justify-center text-sm font-medium mr-3 shadow-md">
+                    SR
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-white">Siti Rahayu</p>
+                    <p className="text-xs text-blue-300">Mahasiswa S2, Universitas Gadjah Mada</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         
-        {/* Final CTA Section */}
-        <div className="mt-20 px-4">
-          <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-8 max-w-3xl mx-auto text-center shadow-2xl">
-            <h2 className="text-2xl font-semibold mb-3">Siap Menghemat Waktu Format Skripsi?</h2>
-            <p className="text-lg text-gray-200 mb-6">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-3 px-6 bg-white text-blue-900 font-medium rounded-full hover:bg-gray-100 transition-colors"
-              >
-                Basic (Rp 50.000)
-              </a>
-              <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-500 transition-colors shadow-lg"
-              >
-                Advance (Rp 100.000)
-              </a>
+        {/* Sample illustration - Futuristic Style */}
+        <div className="mt-20 text-center px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Bagaimana Easy.kripsi Menghemat Waktu Anda</h2>
+            <p className="text-blue-200/80 max-w-2xl mx-auto">Format profesional dengan beberapa klik saja</p>
+          </div>
+          
+          <div className="glass-effect rounded-2xl p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between shadow-xl neon-border relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-transparent opacity-50 pointer-events-none"></div>
+            <div className="absolute inset-0 opacity-5 grid-pattern"></div>
+            
+            <div className="flex items-center justify-center md:w-1/2 mb-8 md:mb-0 relative z-10">
+              <div className="relative">
+                <div className="absolute -inset-1 bg-blue-500 opacity-20 blur-xl rounded-full"></div>
+                <FileText className="w-36 h-36 sm:w-48 sm:h-48 text-blue-400" />
+                <div className="absolute top-1/4 left-1/4 right-1/4 bottom-1/4 flex items-center justify-center">
+                  <div className="w-full h-1/2 flex flex-col space-y-2">
+                    <div className="h-2 bg-blue-500 rounded-full w-3/4 shadow-sm shadow-blue-500/50"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-full shadow-sm shadow-blue-500/50"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-5/6 shadow-sm shadow-blue-500/50"></div>
+                    <div className="h-2 bg-blue-500 rounded-full w-2/3 shadow-sm shadow-blue-500/50"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="md:w-1/2 text-left relative z-10">
+              <h3 className="text-xl font-medium mb-5 text-white tracking-wide">Format Skripsi dengan Satu Klik</h3>
+              <div className="space-y-4">
+                <div className="flex items-start bg-blue-900/20 p-3 rounded-xl backdrop-blur-sm border border-blue-800/20 hover:border-blue-600/30 transition-all duration-300">
+                  <div className="rounded-full bg-blue-800/70 p-1.5 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
+                    <Type className="h-4 w-4" />
+                  </div>
+                  <span className="text-blue-100 text-sm">Gaya heading otomatis sesuai pedoman universitas Anda</span>
+                </div>
+                <div className="flex items-start bg-blue-900/20 p-3 rounded-xl backdrop-blur-sm border border-blue-800/20 hover:border-blue-600/30 transition-all duration-300">
+                  <div className="rounded-full bg-blue-800/70 p-1.5 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
+                    <ListOrdered className="h-4 w-4" />
+                  </div>
+                  <span className="text-blue-100 text-sm">Penomoran halaman pintar dengan format berbeda untuk berbagai bagian</span>
+                </div>
+                <div className="flex items-start bg-blue-900/20 p-3 rounded-xl backdrop-blur-sm border border-blue-800/20 hover:border-blue-600/30 transition-all duration-300">
+                  <div className="rounded-full bg-blue-800/70 p-1.5 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
+                    <FileText className="h-4 w-4" />
+                  </div>
+                  <span className="text-blue-100 text-sm">Hemat berjam-jam format manual dengan beberapa klik saja</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Final CTA Section - Futuristic Style */}
+        <div className="mt-24 mb-10 px-4">
+          <div className="glass-effect rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-2xl neon-border relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 opacity-80 pointer-events-none"></div>
+            <div className="absolute inset-0 opacity-10 grid-pattern"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-semibold mb-3 glow-text text-white">Siap Menghemat Waktu Format Skripsi?</h2>
+              <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3.5 px-10 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all shadow-lg hover:shadow-white/20 transform hover:scale-105 duration-300"
+                >
+                  Basic (Rp 50.000)
+                </a>
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="techno-button py-3.5 px-10 font-medium"
+                >
+                  <span className="relative z-10">Advance (Rp 100.000)</span>
+                </a>
+              </div>
+              <div className="mt-6 text-sm text-blue-200/70">
+                Developed by @Iklilzaki and @Bangdeniuss
+              </div>
             </div>
           </div>
         </div>

@@ -53,6 +53,64 @@
   }
   
   .shortcut-badge {
-    @apply bg-blue-900/50 text-white text-xs px-2 py-1 rounded-md inline-flex items-center;
+    @apply bg-gradient-to-r from-blue-900/80 to-blue-800/60 text-white text-xs px-2 py-1 rounded-md inline-flex items-center font-mono border border-blue-600/30 shadow;
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 5px theme('colors.blue.400'), 0 0 10px theme('colors.blue.500/50');
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(13, 18, 30, 0.75);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .futuristic-card {
+    background: linear-gradient(135deg, rgba(23, 33, 50, 0.9), rgba(17, 24, 39, 0.95));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(4px);
+  }
+  
+  .grid-pattern {
+    background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .techno-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg transform hover:scale-105;
+  }
+  
+  .techno-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3b82f6, #1e40af, #3b82f6);
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 100px;
+  }
+  
+  .techno-button:hover::before {
+    opacity: 1;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
