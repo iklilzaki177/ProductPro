@@ -55,36 +55,36 @@ export default function Header({ onNavClick }: HeaderProps) {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-white/90 backdrop-blur-md'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-zinc-800' : 'bg-black/80 backdrop-blur-sm'}`}>
       <div className="main-container">
         <div className="flex justify-between items-center h-12 md:h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-black font-medium text-lg" onClick={(e) => { e.preventDefault(); }}>
-              <span className="text-lg font-semibold tracking-tight">Easy.<span className="text-blue-600">kripsi</span></span>
+            <a href="#" className="text-white font-medium text-lg" onClick={(e) => { e.preventDefault(); }}>
+              <span className="text-lg font-semibold tracking-tight">Easy.<span className="text-blue-400">kripsi</span></span>
             </a>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 text-xs text-gray-800 justify-center flex-grow">
+          <nav className="hidden md:flex space-x-8 text-xs justify-center flex-grow">
             <a 
               href="#features" 
               onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-              className="hover:text-primary transition-colors whitespace-nowrap"
+              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
             >
               Features
             </a>
             <a 
               href="#product" 
               onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-              className="hover:text-primary transition-colors whitespace-nowrap"
+              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
             >
               Products
             </a>
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-              className="hover:text-primary transition-colors whitespace-nowrap"
+              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
             >
               Basic
             </a>
@@ -92,14 +92,14 @@ export default function Header({ onNavClick }: HeaderProps) {
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-              className="hover:text-primary transition-colors whitespace-nowrap"
+              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
             >
               Advance
             </a>
             <a 
               href="#" 
               onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-              className="hover:text-primary transition-colors whitespace-nowrap"
+              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
             >
               Support
             </a>
@@ -107,11 +107,11 @@ export default function Header({ onNavClick }: HeaderProps) {
           
           {/* Icons */}
           <div className="flex items-center space-x-6">
-            <button className="text-black hover:text-primary focus:outline-none">
+            <button className="text-blue-200 hover:text-blue-400 focus:outline-none">
               <Search className="h-4 w-4" />
             </button>
             <button 
-              className="text-black hover:text-primary focus:outline-none"
+              className="text-blue-200 hover:text-blue-400 focus:outline-none"
               onClick={() => handleNavClick('buy-now')}
             >
               <ShoppingBag className="h-4 w-4" />
@@ -122,7 +122,7 @@ export default function Header({ onNavClick }: HeaderProps) {
               <button 
                 type="button" 
                 onClick={toggleMobileMenu}
-                className="text-black hover:text-primary focus:outline-none"
+                className="text-blue-200 hover:text-blue-400 focus:outline-none"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -139,12 +139,12 @@ export default function Header({ onNavClick }: HeaderProps) {
             <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={toggleMobileMenu}></div>
             
             {/* Mobile menu panel */}
-            <div className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-lg flex flex-col animate-in slide-in-from-right">
+            <div className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-black/95 shadow-lg flex flex-col animate-in slide-in-from-right">
               {/* Menu header */}
-              <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                <span className="text-lg font-semibold">Menu</span>
+              <div className="flex items-center justify-between p-4 border-b border-zinc-800">
+                <span className="text-lg font-semibold text-white">Menu</span>
                 <button 
-                  className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="p-2 rounded-full hover:bg-blue-900/30 text-blue-200 transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   <X className="h-5 w-5" />
@@ -157,40 +157,40 @@ export default function Header({ onNavClick }: HeaderProps) {
                   <a 
                     href="#features" 
                     onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                    className="text-black hover:bg-blue-50 hover:text-blue-600 transition-colors px-6 py-3 text-base border-b border-gray-100"
+                    className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base border-b border-zinc-800"
                   >
                     Features
                   </a>
                   <a 
                     href="#product" 
                     onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                    className="text-black hover:bg-blue-50 hover:text-blue-600 transition-colors px-6 py-3 text-base border-b border-gray-100"
+                    className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base border-b border-zinc-800"
                   >
                     Products
                   </a>
-                  <div className="bg-gray-50 border-b border-gray-100">
-                    <div className="px-6 py-2 text-xs text-gray-500 uppercase">Paket</div>
+                  <div className="bg-blue-900/20 border-b border-zinc-800">
+                    <div className="px-6 py-2 text-xs text-blue-400 uppercase">Paket</div>
                     <a 
                       href="#" 
                       onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                      className="text-black hover:bg-blue-50 hover:text-blue-600 transition-colors px-6 py-3 text-base border-b border-gray-100 flex items-center"
+                      className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base border-b border-zinc-800 flex items-center"
                     >
-                      <div className="h-2 w-2 rounded-full bg-blue-600 mr-2"></div>
+                      <div className="h-2 w-2 rounded-full bg-blue-500 mr-2"></div>
                       Basic
                     </a>
                     <a 
                       href="#" 
                       onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                      className="text-black hover:bg-blue-50 hover:text-blue-600 transition-colors px-6 py-3 text-base flex items-center"
+                      className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base flex items-center"
                     >
-                      <div className="h-2 w-2 rounded-full bg-blue-600 mr-2"></div>
+                      <div className="h-2 w-2 rounded-full bg-blue-500 mr-2"></div>
                       Advance
                     </a>
                   </div>
                   <a 
                     href="#" 
                     onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                    className="text-black hover:bg-blue-50 hover:text-blue-600 transition-colors px-6 py-3 text-base"
+                    className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base"
                   >
                     Support
                   </a>
@@ -198,11 +198,11 @@ export default function Header({ onNavClick }: HeaderProps) {
               </div>
               
               {/* Menu footer */}
-              <div className="p-4 border-t border-gray-100">
+              <div className="p-4 border-t border-zinc-800">
                 <a 
                   href="#"
                   onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                  className="w-full flex items-center justify-center bg-blue-600 text-white py-3 rounded-lg font-medium"
+                  className="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors"
                 >
                   <ShoppingBag className="h-4 w-4 mr-2" />
                   Beli Sekarang
