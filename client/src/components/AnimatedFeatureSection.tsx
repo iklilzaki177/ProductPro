@@ -13,11 +13,11 @@ interface ShortcutFeature {
 const shortcuts: ShortcutFeature[] = [
   { shortcut: 'Alt + 1', description: 'BAB I PENDAHULUAN' },
   { shortcut: 'Alt + 2-8', description: 'Sub-Heading level 2-8' },
-  { shortcut: 'Alt + D', description: 'Generate Daftar Isi otomatis' },
+  { shortcut: 'Alt + D', description: 'Buat Daftar Isi otomatis' },
   { shortcut: 'Alt + G', description: 'Caption Gambar sederhana' },
   { shortcut: 'Alt + T', description: 'Caption Tabel sederhana' },
   { shortcut: 'Alt + L', description: 'Caption Lampiran sederhana' },
-  { shortcut: 'Alt + Shift + G/T/L', description: 'Generate Daftar Gambar/Tabel' },
+  { shortcut: 'Alt + Shift + G/T/L', description: 'Buat Daftar Gambar/Tabel' },
   { shortcut: 'Ctrl + Alt + G/T/L', description: 'Caption 2 Digit dengan nomor BAB (4.1)', isAdvanced: true },
   { shortcut: 'Alt + K', description: 'Halaman Latin (a, b, c)', isAdvanced: true },
   { shortcut: 'Alt + R', description: 'Halaman Romawi (i, ii, iii)', isAdvanced: true },
@@ -45,7 +45,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       }}
       viewport={{ once: true, margin: "-5% 0px -5% 0px" }}
       className={cn(
-        "min-w-0 p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-visible group h-full",
+        "min-w-0 p-4 xs:p-5 sm:p-6 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-visible group h-full",
         feature.highlight
           ? "bg-gradient-to-br from-blue-800/80 to-blue-900/70 border-blue-400/50 hover:border-blue-300/60"
           : feature.isAdvanced 
@@ -80,10 +80,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </div>
         </div>
         
-        {/* Description - dengan overflow visible agar semua teks tampil */}
+        {/* Description - dengan word-break yang tepat dan kata utuh */}
         <div className="min-w-0 w-full">
           <p className={cn(
-            "text-xs sm:text-sm mt-2 leading-relaxed break-words overflow-visible text-left font-medium",
+            "text-xs sm:text-sm mt-2 leading-relaxed whitespace-normal keep-words-together overflow-visible text-left font-medium",
             feature.highlight 
               ? "text-blue-50"
               : feature.isAdvanced ? "text-blue-100" : "text-gray-100"

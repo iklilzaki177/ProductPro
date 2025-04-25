@@ -162,4 +162,15 @@
   .hyphens-auto {
     hyphens: auto;
   }
+  
+  .keep-words-together {
+    white-space: normal;
+    word-spacing: 0;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  
+  .no-word-break {
+    word-break: keep-all;
+  }
 }
