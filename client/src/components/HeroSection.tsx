@@ -37,10 +37,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           <div className="glass-effect rounded-xl p-6 mt-8 mb-8 shadow-lg border border-zinc-800/50 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
             
-            {/* Diagonal corner ribbon highlight for klik-pilih-done feature */}
-            <div className="absolute -top-2 -right-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-xs font-bold py-1 px-12 transform rotate-45 shadow-md z-20">
-              EXCLUSIVE ADVANCE
-            </div>
+{/* Removed misplaced ribbon */}
             
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-5">
@@ -94,10 +91,8 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               {/* Advanced Package Shortcuts - Enhanced */}
               <div>
                 <div className="flex items-center mb-4">
-                  <div className="premium-badge px-4 py-1.5 text-xs font-medium text-white mr-2 shadow-md shadow-blue-500/30 flex items-center relative">
-                    <span className="absolute w-4 h-4 bg-blue-400 rounded-full top-1/2 -left-2 transform -translate-y-1/2 animate-pulse"></span>
-                    <span className="absolute w-2 h-2 bg-blue-300 rounded-full top-1/2 -left-1 transform -translate-y-1/2"></span>
-                    <span className="ml-1">ADVANCE FEATURES</span>
+                  <div className="premium-badge px-4 py-1.5 text-xs font-medium text-white mr-2 shadow-md shadow-blue-500/30 flex items-center">
+                    <span>ADVANCE FEATURES</span>
                   </div>
                   <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
                 </div>
@@ -131,12 +126,10 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <div className="futuristic-card border-blue-400/50 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-400/60 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-800/40 to-blue-700/20 hover:border-blue-300/60 glow-card">
                     <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-1 rounded-md shadow-sm shadow-blue-400/40 text-xs font-mono mb-2 text-white">Alt + Q</div>
                     <span className="text-xs text-blue-100 font-medium">Format Painter Copy</span>
-                    <span className="absolute top-0 right-0 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                   </div>
                   <div className="futuristic-card border-blue-400/50 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-400/60 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-800/40 to-blue-700/20 hover:border-blue-300/60 glow-card">
                     <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-1 rounded-md shadow-sm shadow-blue-400/40 text-xs font-mono mb-2 text-white">Alt + W</div>
                     <span className="text-xs text-blue-100 font-medium">Format Painter Paste</span>
-                    <span className="absolute top-0 right-0 w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-75"></span>
                   </div>
                 </div>
                 
@@ -212,7 +205,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           <div className="absolute left-1/2 top-1/2 w-px h-40 bg-gradient-to-b from-blue-500 to-transparent hidden md:block"></div>
           
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Pilih Paket yang Tepat untuk Anda</h2>
+            <h2 className="text-3xl font-semibold mb-3 text-white">Pilih Paket yang Tepat untuk Anda</h2>
             <p className="text-blue-200/80 max-w-2xl mx-auto">Sesuaikan pilihan dengan kebutuhan skripsi atau tesis Anda</p>
           </div>
           
