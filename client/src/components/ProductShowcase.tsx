@@ -1,6 +1,7 @@
 import { ChevronRight, FileText, Type, ListOrdered, CheckCircle, Table, Bookmark } from 'lucide-react';
 import panelAdvanceImg from '@assets/panel advance.png';
 import panelAdvance1Img from '@assets/panel advance1.png';
+import panelAtasBawahImg from '@assets/4. panel atas + bawah.png';
 import iPhoneImg from '@assets/iPhone 14 & 15 Pro - 3.png';
 
 export default function ProductShowcase() {
@@ -27,10 +28,10 @@ export default function ProductShowcase() {
           </div>
           
           <div className="flex justify-center">
-            <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl">
+            <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl bg-white">
               <img 
-                src={panelAdvance1Img} 
-                alt="Advanced page numbering panel" 
+                src={panelAtasBawahImg} 
+                alt="Advanced page numbering panel with tengah bawah, kanan atas option" 
                 className="w-full h-auto" 
               />
             </div>
