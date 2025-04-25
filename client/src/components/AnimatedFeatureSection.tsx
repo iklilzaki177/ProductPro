@@ -178,47 +178,41 @@ export default function AnimatedFeatureSection() {
         </div>
       </div>
 
-      {/* Comparison Call to Action */}
+      {/* Comparison Call to Action - Copied from HeroSection */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="mt-20 bg-gradient-to-r from-blue-950/60 to-blue-900/30 py-12 px-8 rounded-2xl border border-blue-700/30 shadow-xl"
       >
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          {/* Left Column - Text */}
-          <div className="text-left md:w-2/3">
-            <h3 className="text-2xl font-bold mb-4 text-white">Beli sekarang dan hemat waktu Anda!</h3>
-            <p className="text-blue-200/80 mb-4 text-lg leading-relaxed">
-              <span className="text-white font-semibold">Advance Package</span> memberikan semua fitur Basic plus penomoran halaman lanjutan, 
-              penomoran otomatis dengan deteksi bab, dan Format Painter untuk pemformatan yang sempurna.
-            </p>
-            <p className="text-blue-300 text-base font-medium">
-              Format skripsi Anda 3x lebih cepat dengan Easy.kripsi!
-            </p>
-          </div>
-          
-          {/* Right Column - Buttons */}
-          <div className="flex flex-col gap-4 w-full md:w-auto">
-            <a 
-              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-4 px-8 bg-white text-blue-900 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg text-center"
-            >
-              <div className="text-lg font-bold">Basic Package</div>
-              <div className="text-blue-700">Rp 50.000</div>
-            </a>
-            <a 
-              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-4 px-8 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg text-center"
-            >
-              <div className="text-lg font-bold">Advance Package</div>
-              <div className="text-blue-100">Rp 100.000</div>
-            </a>
+        <div className="mt-24 mb-10 px-4">
+          <div className="glass-effect rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-lg border border-blue-800/30 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 opacity-80 pointer-events-none"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-semibold mb-3 text-white">Siap Menghemat Waktu Format Skripsi?</h2>
+              <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3.5 px-10 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all shadow-lg transform hover:scale-105 duration-300"
+                >
+                  Basic (Rp 50.000)
+                </a>
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105"
+                >
+                  Advance (Rp 100.000)
+                </a>
+              </div>
+              <div className="mt-6 text-sm text-blue-200/70">
+                Developed by @Iklilzaki and @Bangdeniuss
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
