@@ -33,140 +33,116 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
           </div>
           
-          {/* Keyboard shortcuts highlight - Center aligned like image */}
-          <div className="glass-effect rounded-xl p-5 mt-6 mb-6 shadow-lg border border-zinc-800/50 relative overflow-hidden">
+          {/* Keyboard shortcuts highlight - Futuristic Style */}
+          <div className="glass-effect rounded-xl p-6 mt-8 mb-8 shadow-lg border border-zinc-800/50 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
             
+{/* Removed misplaced ribbon */}
+            
             <div className="relative z-10">
-              <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center justify-center mb-5">
                 <div className="bg-blue-500 p-1.5 rounded-full shadow-lg shadow-blue-500/40 mr-3">
                   <Keyboard className="h-5 w-5 text-white" />
                 </div>
                 <h4 className="text-md font-medium tracking-wide glow-text text-blue-100">PINTASAN KEYBOARD</h4>
               </div>
               
-              {/* Compact Basic Package Shortcuts */}
-              <div className="mb-5">
-                <div className="flex items-center mb-3">
+              {/* Basic Package Shortcuts */}
+              <div className="mb-8">
+                <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-3 py-1 rounded-full text-xs font-medium text-blue-300 mr-1.5 border border-gray-700">
                     <span className="mr-1.5">⬤</span>BASIC
                   </div>
                   <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
                 </div>
                 
-                <div className="flex justify-center">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
-                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + 1</div>
-                        <p className="text-xs text-gray-300 mx-auto">BAB I<br/>PENDAHULUAN</p>
-                      </div>
-                    </div>
-                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + 2-8</div>
-                        <p className="text-xs text-gray-300">Sub-Heading</p>
-                      </div>
-                    </div>
-                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + D</div>
-                        <p className="text-xs text-gray-300">Daftar Isi</p>
-                      </div>
-                    </div>
-                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + G</div>
-                        <p className="text-xs text-gray-300">Caption<br/>Gambar</p>
-                      </div>
-                    </div>
-                    <div className="bg-zinc-900/60 flex items-center justify-center p-2.5 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono inline-block mb-1.5">Alt + T</div>
-                        <p className="text-xs text-gray-300">Caption Tabel</p>
-                      </div>
-                    </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-4 opacity-80">
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + 1</div>
+                    <span className="text-xs text-gray-300">BAB I PENDAHULUAN</span>
+                  </div>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + 2-8</div>
+                    <span className="text-xs text-gray-300">Sub-Heading</span>
+                  </div>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + D</div>
+                    <span className="text-xs text-gray-300">Daftar Isi</span>
+                  </div>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + G</div>
+                    <span className="text-xs text-gray-300">Caption Gambar</span>
+                  </div>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + T</div>
+                    <span className="text-xs text-gray-300">Caption Tabel</span>
+                  </div>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + L</div>
+                    <span className="text-xs text-gray-300">Caption Lampiran</span>
+                  </div>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + Shift + G/T/L</div>
+                    <span className="text-xs text-gray-300">Daftar Gambar/Tabel</span>
                   </div>
                 </div>
               </div>
               
-              {/* Compact Advanced Package Shortcuts */}
+              {/* Advanced Package Shortcuts - Enhanced */}
               <div>
-                <div className="flex items-center mb-3">
-                  <div className="premium-badge px-3 py-1 text-xs font-medium text-white mr-2 shadow-md shadow-blue-500/30 flex items-center">
-                    <span>ADVANCE</span>
+                <div className="flex items-center mb-4">
+                  <div className="premium-badge px-4 py-1.5 text-xs font-medium text-white mr-2 shadow-md shadow-blue-500/30 flex items-center">
+                    <span>ADVANCE FEATURES</span>
                   </div>
                   <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
                 </div>
                 
-                <div className="flex justify-center">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-2">
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+G</div>
-                        <p className="text-xs text-blue-200">Caption BAB<br/>(4.1)</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Alt+K</div>
-                        <p className="text-xs text-blue-200">Halaman<br/>Latin</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Alt+R</div>
-                        <p className="text-xs text-blue-200">Halaman<br/>Romawi</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-400/50 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono inline-block mb-1.5">Alt+Q</div>
-                        <p className="text-xs text-blue-100 font-medium">Format Copy</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-400/50 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono inline-block mb-1.5">Alt+W</div>
-                        <p className="text-xs text-blue-100 font-medium">Format Paste</p>
-                      </div>
-                    </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Ctrl + Alt + G/T/L</div>
+                    <span className="text-xs text-blue-200 font-medium">Caption 2 Digit (4.1)</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + K</div>
+                    <span className="text-xs text-blue-200 font-medium">Halaman Latin</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + R</div>
+                    <span className="text-xs text-blue-200 font-medium">Halaman Romawi</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + Shift + K</div>
+                    <span className="text-xs text-blue-200 font-medium">No. Halaman Auto</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Ctrl + Alt + K</div>
+                    <span className="text-xs text-blue-200 font-medium">Posisi Halaman</span>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + C</div>
+                    <span className="text-xs text-blue-200 font-medium">Hapus No. Halaman</span>
+                  </div>
+                  {/* Highlighted Format Painter Feature */}
+                  <div className="futuristic-card border-blue-400/50 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-400/60 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-800/40 to-blue-700/20 hover:border-blue-300/60 glow-card">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-1 rounded-md shadow-sm shadow-blue-400/40 text-xs font-mono mb-2 text-white">Alt + Q</div>
+                    <span className="text-xs text-blue-100 font-medium">Format Painter Copy</span>
+                  </div>
+                  <div className="futuristic-card border-blue-400/50 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-400/60 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-800/40 to-blue-700/20 hover:border-blue-300/60 glow-card">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-1 rounded-md shadow-sm shadow-blue-400/40 text-xs font-mono mb-2 text-white">Alt + W</div>
+                    <span className="text-xs text-blue-100 font-medium">Format Painter Paste</span>
                   </div>
                 </div>
                 
-                <div className="flex justify-center">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Shift+Alt+K</div>
-                        <p className="text-xs text-blue-200">Format Auto</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Alt+C</div>
-                        <p className="text-xs text-blue-200">Hapus<br/>Halaman</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+K</div>
-                        <p className="text-xs text-blue-200">Posisi Nomor<br/>Hal.</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+T</div>
-                        <p className="text-xs text-blue-200">Tabel BAB<br/>(4.1)</p>
-                      </div>
-                    </div>
-                    <div className="futuristic-card border-blue-500/30 flex items-center justify-center p-2.5 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1 h-[72px] w-[132px]">
-                      <div className="text-center">
-                        <div className="shortcut-badge text-xs border-blue-400/40 inline-block mb-1.5">Ctrl+Alt+L</div>
-                        <p className="text-xs text-blue-200">Lampiran BAB</p>
-                      </div>
-                    </div>
-                  </div>
+                {/* Call-to-action for Advance */}
+                <div className="mt-5 text-center">
+                  <a 
+                    href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm text-blue-300 hover:text-blue-200 underline underline-offset-2"
+                  >
+                    Gunakan semua pintasan advanced ini dengan hanya Rp 100.000 →
+                  </a>
                 </div>
               </div>
             </div>
