@@ -30,7 +30,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                 <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
               </div>
-              <span>4.8/5 dari 100+ pengguna</span>
+              <span>Pengguna sudah 1600+ sejak 2022</span>
             </div>
           </div>
           
@@ -366,7 +366,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         <div className="mt-20 px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-semibold mb-3 text-white">Apa Kata Pengguna Kami</h2>
-            <p className="text-blue-200/80 max-w-2xl mx-auto">Cerita pengalaman dari pengguna yang telah berhasil menghemat waktu</p>
+            <p className="text-blue-200/80 max-w-2xl mx-auto">Dari 1600+ pengguna sejak 2022 yang telah berhasil menghemat waktu</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">

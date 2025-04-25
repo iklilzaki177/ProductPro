@@ -34,7 +34,7 @@ export default function ResponsiveTestimonials() {
     <div className="mt-20 px-4">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-semibold mb-3 text-white">Apa Kata Pengguna Kami</h2>
-        <p className="text-blue-200/80 max-w-2xl mx-auto">Cerita pengalaman dari pengguna yang telah berhasil menghemat waktu</p>
+        <p className="text-blue-200/80 max-w-2xl mx-auto">Dari 1600+ pengguna sejak 2022 yang telah berhasil menghemat waktu</p>
       </div>
       
       {/* Mobile Scrollable Testimonials */}
