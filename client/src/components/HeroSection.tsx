@@ -253,9 +253,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           </div>
           
           {/* Feature Comparison Table - Added from ProductShowcase */}
-          <div className="mt-16 overflow-hidden">
-            <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-white">Perbandingan Fitur Basic vs Advance</h3>
-            <div className="overflow-x-auto">
+          <div className="mt-16 overflow-hidden max-w-5xl mx-auto px-4">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-left text-white">Perbandingan Fitur Basic vs Advance</h3>
+            <div className="overflow-x-auto glass-effect p-4 rounded-lg">
               <table className="w-full border-collapse bg-white rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-blue-50">
