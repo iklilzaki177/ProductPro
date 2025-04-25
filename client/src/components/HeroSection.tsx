@@ -58,8 +58,15 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         </div>
         
         {/* Animated Feature Section - Full Width */}
-        <div className="mt-12 py-10 bg-gradient-to-b from-blue-950/50 to-blue-900/30 border-y border-blue-800/30">
-          <div className="max-w-7xl mx-auto">
+        <div className="mt-16 py-12 bg-gradient-to-b from-blue-950/60 to-blue-900/40 border-y border-blue-600/20 shadow-lg relative">
+          {/* Decorative elements for visual enhancement */}
+          <div className="absolute left-0 top-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>
+          <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+          
+          {/* Subtle background patterns */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDRhODAiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzBhNiA2IDAgMSAxLTEyIDAgNiA2IDAgMCAxIDEyIDB6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
             <AnimatedFeatureSection />
           </div>
         </div>
