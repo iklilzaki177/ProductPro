@@ -193,26 +193,7 @@ export default function ResponsiveFeatureTable() {
           </table>
         </div>
       </div>
-      
-      {/* Purchase links - Desktop only */}
-      <div className="hidden md:flex justify-center mt-6 space-x-6">
-        <a 
-          href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-3 px-8 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium rounded-lg transition-colors"
-        >
-          Beli Basic
-        </a>
-        <a 
-          href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-md"
-        >
-          Beli Advance
-        </a>
-      </div>
+
     </div>
   );
 }
