@@ -34,10 +34,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
           </div>
           
-          {/* Animated Feature Section */}
-          <div className="mt-8 mb-8">
-            <AnimatedFeatureSection />
-          </div>
+
           
           {/* CTA buttons - Futuristic Style */}
           <div className="flex flex-wrap justify-center gap-4 mt-10">
@@ -58,6 +55,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </span>
             </button>
           </div>
+        </div>
+        
+        {/* Animated Feature Section - Full Width */}
+        <div className="mt-12">
+          <AnimatedFeatureSection />
         </div>
         
         {/* Key benefits - Futuristic Style */}

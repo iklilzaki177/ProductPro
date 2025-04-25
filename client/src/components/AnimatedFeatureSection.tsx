@@ -52,7 +52,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       viewport={{ once: true }}
       custom={index}
       className={cn(
-        "p-6 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1",
+        "p-4 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1",
         feature.isAdvanced 
           ? "bg-blue-900/10 border-blue-500/20 hover:border-blue-400/30" 
           : "bg-gray-900/10 border-zinc-700/20 hover:border-gray-600/30"
@@ -60,11 +60,11 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
     >
       <div className="flex items-start space-x-4">
         <div className={cn(
-          "p-3 rounded-full flex items-center justify-center",
+          "p-2 rounded-full flex items-center justify-center",
           feature.isAdvanced ? "bg-blue-500/20" : "bg-gray-800/40"
         )}>
           <Keyboard className={cn(
-            "h-5 w-5",
+            "h-4 w-4",
             feature.isAdvanced ? "text-blue-300" : "text-gray-300"
           )} />
         </div>
