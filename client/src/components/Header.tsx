@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Search, ShoppingBag, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, ExternalLink, Info, ShoppingBag } from 'lucide-react';
 
 interface HeaderProps {
   onNavClick: (id: string) => void;
@@ -57,65 +57,55 @@ export default function Header({ onNavClick }: HeaderProps) {
   return (
     <header 
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-md bg-white/90 shadow-sm' : 'bg-white/90'
+        isScrolled ? 'bg-white border-b border-gray-200' : 'bg-white'
       }`}
     >
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 md:h-16">
+      <div className="notion-container">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex items-center">
             <a 
               href="#" 
-              className="text-black font-medium flex items-center" 
+              className="flex items-center" 
               onClick={(e) => { e.preventDefault(); }}
             >
-              <span className="text-lg md:text-xl font-semibold tracking-tight">
+              <span className="text-lg md:text-xl font-semibold text-gray-900">
                 Easy.<span className="text-blue-600">kripsi</span>
               </span>
             </a>
           </div>
           
-          {/* Desktop Navigation - Linear style with minimal design */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <div className="flex space-x-1 bg-gray-100 rounded-full p-1">
-              <a 
-                href="#features" 
-                onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                className="px-4 py-1.5 text-sm text-gray-800 hover:text-blue-600 rounded-full transition-colors"
-              >
-                Features
-              </a>
-              <a 
-                href="#product" 
-                onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                className="px-4 py-1.5 text-sm text-gray-800 hover:text-blue-600 rounded-full transition-colors"
-              >
-                Pricing
-              </a>
-              <a 
-                href="#compare" 
-                onClick={(e) => { e.preventDefault(); handleNavClick('compare'); }}
-                className="px-4 py-1.5 text-sm text-gray-800 hover:text-blue-600 rounded-full transition-colors"
-              >
-                Compare
-              </a>
-            </div>
+          {/* Desktop Navigation - Notion style with minimal design */}
+          <nav className="hidden md:flex items-center space-x-2">
+            <a 
+              href="#features" 
+              onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
+              className="notion-nav-item rounded-md"
+            >
+              Fitur
+            </a>
+            <a 
+              href="#product" 
+              onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
+              className="notion-nav-item rounded-md"
+            >
+              Harga
+            </a>
+            <a 
+              href="#compare" 
+              onClick={(e) => { e.preventDefault(); handleNavClick('compare'); }}
+              className="notion-nav-item rounded-md"
+            >
+              Perbandingan
+            </a>
             
-            <div className="flex space-x-3 items-center">
-              <a 
-                href="#features" 
-                onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                Support
-              </a>
-              
-              <Button 
+            <div className="ml-2">
+              <button 
                 onClick={() => handleNavClick('product')}
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-4 py-1.5 text-sm font-medium"
+                className="notion-btn notion-btn-primary"
               >
-                Get Easy.kripsi
-              </Button>
+                Dapatkan Easy.kripsi
+              </button>
             </div>
           </nav>
           
@@ -124,139 +114,173 @@ export default function Header({ onNavClick }: HeaderProps) {
             <button 
               type="button" 
               onClick={toggleMobileMenu}
-              className="mobile-tap-area p-2 -mr-2 text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md"
+              className="mobile-tap-area p-2 text-gray-600 hover:text-blue-600 focus:outline-none rounded-md"
               aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
             >
-              <span className="sr-only">{isMobileMenuOpen ? 'Close menu' : 'Open menu'}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
+              <span className="sr-only">{isMobileMenuOpen ? 'Tutup menu' : 'Buka menu'}</span>
+              <Menu className={`h-6 w-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`} />
             </button>
           </div>
         </div>
-        
-        {/* Mobile Navigation - Linear inspired slide-in panel */}
-        <div 
-          className={`fixed inset-0 z-50 transition-opacity duration-300 md:hidden ${
-            isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
-        >
-          {/* Backdrop with blur effect */}
-          <div 
-            className="absolute inset-0 bg-gray-900/30 backdrop-blur-sm" 
-            onClick={toggleMobileMenu}
-            aria-hidden="true"
-          ></div>
+      </div>
+      
+      {/* Mobile Navigation - Notion inspired slide-in panel */}
+      <div 
+        className={`notion-mobile-menu ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+      >
+        <div className="h-full flex flex-col">
+          {/* Menu header */}
+          <div className="px-5 py-4 border-b border-gray-200 flex items-center justify-between">
+            <a href="#" className="text-lg font-medium text-gray-900" onClick={(e) => { e.preventDefault(); }}>
+              Easy.<span className="text-blue-600">kripsi</span>
+            </a>
+            <button 
+              className="p-2 rounded-md hover:bg-gray-100 transition-colors focus:outline-none"
+              onClick={toggleMobileMenu}
+            >
+              <X className="h-5 w-5 text-gray-500" />
+            </button>
+          </div>
           
-          {/* Mobile menu panel with enhanced animations */}
-          <div 
-            className={`absolute inset-y-0 left-0 w-full max-w-sm bg-white shadow-lg transform transition-transform duration-300 ease-out ${
-              isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-            }`}
-          >
-            <div className="h-full flex flex-col">
-              {/* Menu header */}
-              <div className="px-4 py-6 border-b border-gray-100 flex items-center justify-between">
-                <span className="text-xl font-medium">Easy.kripsi</span>
-                <button 
-                  className="p-2 rounded-full hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  onClick={toggleMobileMenu}
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-              
-              {/* Menu items with improved spacing and touch targets */}
-              <div className="flex-1 overflow-y-auto py-2">
-                <div className="flex flex-col">
-                  <a 
-                    href="#features" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                    className="mobile-nav-item flex items-center justify-between text-base text-gray-900 px-4 py-4 hover:bg-gray-50"
-                  >
-                    <span>Features</span>
-                    <ChevronRight className="h-5 w-5 text-gray-400" />
-                  </a>
-                  
-                  <a 
-                    href="#product" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                    className="mobile-nav-item flex items-center justify-between text-base text-gray-900 px-4 py-4 hover:bg-gray-50"
-                  >
-                    <span>Pricing</span>
-                    <ChevronRight className="h-5 w-5 text-gray-400" />
-                  </a>
-                  
-                  <a 
-                    href="#compare" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('compare'); }}
-                    className="mobile-nav-item flex items-center justify-between text-base text-gray-900 px-4 py-4 hover:bg-gray-50"
-                  >
-                    <span>Compare Plans</span>
-                    <ChevronRight className="h-5 w-5 text-gray-400" />
-                  </a>
-                  
-                  <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase tracking-wider mt-2">
-                    Plans
-                  </div>
-                  
-                  <a 
-                    href="#product" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                    className="mobile-nav-item flex items-center justify-between text-base text-gray-900 px-4 py-4 hover:bg-gray-50"
-                  >
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-                        <div className="h-2 w-2 rounded-full bg-gray-600"></div>
-                      </div>
-                      <span>Basic</span>
-                    </div>
-                    <div className="text-sm text-gray-500">Rp 50.000</div>
-                  </a>
-                  
-                  <a 
-                    href="#product" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                    className="mobile-nav-item flex items-center justify-between text-base text-gray-900 px-4 py-4 hover:bg-gray-50"
-                  >
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                        <div className="h-2 w-2 rounded-full bg-blue-600"></div>
-                      </div>
-                      <span className="font-medium">Advance</span>
-                    </div>
-                    <div className="text-sm text-gray-500">Rp 100.000</div>
-                  </a>
-                  
-                  <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase tracking-wider mt-2">
-                    Support
-                  </div>
-                  
-                  <a 
-                    href="#features" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                    className="mobile-nav-item flex items-center justify-between text-base text-gray-900 px-4 py-4 hover:bg-gray-50"
-                  >
-                    <span>Help Center</span>
-                    <ChevronRight className="h-5 w-5 text-gray-400" />
-                  </a>
+          {/* Menu items with improved spacing and touch targets - Notion style */}
+          <div className="flex-1 overflow-y-auto bg-white">
+            <div className="px-5 py-6">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                    Easy.kripsi
+                  </h3>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a 
+                        href="#features" 
+                        onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center">
+                          <span>Fitur</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="#product" 
+                        onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center">
+                          <span>Harga</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="#compare" 
+                        onClick={(e) => { e.preventDefault(); handleNavClick('compare'); }}
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center">
+                          <span>Perbandingan</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                    Paket
+                  </h3>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a 
+                        href="#product" 
+                        onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center">
+                            <div className="h-2.5 w-2.5 rounded-full bg-gray-500 mr-2"></div>
+                            <span>Basic</span>
+                          </div>
+                          <span className="text-sm font-medium text-gray-500">Rp 50.000</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="#product" 
+                        onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center">
+                            <div className="h-2.5 w-2.5 rounded-full bg-blue-600 mr-2"></div>
+                            <span className="font-medium">Advance</span>
+                          </div>
+                          <span className="text-sm font-medium text-gray-500">Rp 100.000</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                    Bantuan
+                  </h3>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a 
+                        href="#features" 
+                        onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center">
+                          <Info className="h-4 w-4 text-gray-500 mr-2 flex-shrink-0" />
+                          <span>Info Penggunaan</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href="https://iklilzaki.myr.id"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-3 py-2 rounded-md text-base text-gray-900 hover:bg-gray-100"
+                      >
+                        <div className="flex items-center">
+                          <ExternalLink className="h-4 w-4 text-gray-500 mr-2 flex-shrink-0" />
+                          <span>Website Developer</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               
-              {/* Menu footer with call-to-action */}
-              <div className="p-4 border-t border-gray-100">
+              <div className="mt-8 pt-4 border-t border-gray-200">
                 <button 
-                  onClick={(e) => { handleNavClick('product'); }}
-                  className="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-medium transition-colors"
+                  onClick={() => handleNavClick('product')}
+                  className="w-full flex items-center justify-center notion-btn notion-btn-primary py-3"
                 >
                   <ShoppingBag className="h-5 w-5 mr-2" />
-                  Get Easy.kripsi
+                  Dapatkan Easy.kripsi
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Mobile menu backdrop - Notion style blur backdrop */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+          onClick={toggleMobileMenu}
+          aria-hidden="true"
+        ></div>
+      )}
     </header>
   );
 }

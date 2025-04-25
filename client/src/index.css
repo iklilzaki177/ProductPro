@@ -15,6 +15,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -27,185 +28,312 @@
 }
 
 @layer components {
-  /* Linear-inspired container constraints */
-  .container-lg {
+  /* Notion-inspired container constraints */
+  .notion-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  .container-md {
-    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  /* Content width matches Notion's mobile-first approach */
+  .notion-content-sm {
+    @apply max-w-xl mx-auto px-4 sm:px-6;
   }
   
-  .container-sm {
-    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+  .notion-content-md {
+    @apply max-w-3xl mx-auto px-4 sm:px-6;
   }
   
-  /* Updated navigation styles */
-  .nav-item {
-    @apply text-sm text-gray-600 hover:text-blue-600 transition-colors px-4 py-2 rounded-full;
+  .notion-content-lg {
+    @apply max-w-5xl mx-auto px-4 sm:px-6;
   }
   
-  .nav-item-active {
-    @apply text-sm font-medium text-blue-600 bg-blue-50 px-4 py-2 rounded-full;
+  /* Notion-style typography system */
+  .notion-h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight;
   }
   
-  /* Button styles following Linear aesthetic */
-  .btn {
-    @apply inline-flex items-center justify-center rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none;
+  .notion-h2 {
+    @apply text-2xl sm:text-3xl font-semibold text-gray-900 leading-tight;
   }
   
-  .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 h-10 py-2 px-5;
+  .notion-h3 {
+    @apply text-xl sm:text-2xl font-medium text-gray-900;
   }
   
-  .btn-secondary {
-    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 h-10 py-2 px-5;
+  .notion-text {
+    @apply text-base text-gray-600 leading-relaxed;
   }
   
-  .btn-outline {
-    @apply border border-gray-200 bg-white text-gray-900 hover:bg-gray-50 h-10 py-2 px-5;
+  .notion-text-sm {
+    @apply text-sm text-gray-500 leading-relaxed;
   }
   
-  /* Enhanced mobile optimizations */
-  .mobile-nav-item {
-    @apply flex items-center py-4 px-4 transition-colors;
+  /* Notion-inspired navigation */
+  .notion-nav-item {
+    @apply text-sm text-gray-600 hover:text-blue-600 transition-colors px-4 py-2;
   }
   
-  .mobile-touch-target {
-    @apply min-h-[48px] min-w-[48px];
+  .notion-nav-item-active {
+    @apply text-sm font-medium bg-blue-50 text-blue-600 px-4 py-2 rounded-md;
   }
   
-  /* Hero section with Linear-inspired aesthetics */
-  .hero-gradient {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)),
-                linear-gradient(to right, rgba(236, 246, 255, 0.9), rgba(255, 255, 255, 0.9));
+  /* Notion-style buttons for uniformity across devices */
+  .notion-btn {
+    @apply inline-flex items-center justify-center text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none;
   }
   
-  .hero-section {
-    @apply pt-16 pb-20 md:pt-24 md:pb-32;
+  .notion-btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 rounded-md py-2 px-4 shadow-sm;
   }
   
-  .hero-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight;
+  .notion-btn-secondary {
+    @apply bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 rounded-md py-2 px-4 shadow-sm;
   }
   
-  .hero-subtitle {
-    @apply text-lg md:text-xl text-gray-600 mt-4 max-w-3xl;
+  .notion-btn-tertiary {
+    @apply text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md py-2 px-3;
   }
   
-  /* Card styles with enhanced mobile support */
-  .card {
-    @apply bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden;
+  /* Mobile-optimized menu transitions */
+  .notion-mobile-menu {
+    @apply fixed inset-0 bg-white z-50 flex flex-col transform transition-transform duration-300 ease-in-out;
   }
   
-  .card-hover {
-    @apply hover:border-blue-200 hover:shadow-lg transition-all duration-200;
+  .notion-mobile-menu-enter {
+    transform: translateX(-100%);
+  }
+  
+  .notion-mobile-menu-enter-active {
+    transform: translateX(0);
+  }
+  
+  .notion-mobile-menu-exit {
+    transform: translateX(0);
+  }
+  
+  .notion-mobile-menu-exit-active {
+    transform: translateX(-100%);
+  }
+  
+  /* Notion-style card components */
+  .notion-card {
+    @apply bg-white rounded-lg border border-gray-200 overflow-hidden transition-all duration-200;
+  }
+  
+  .notion-card-hover {
+    @apply hover:shadow-md hover:border-gray-300;
+  }
+  
+  /* Notion-inspired content section with proper spacing */
+  .notion-section {
+    @apply py-8 sm:py-12 md:py-16;
+  }
+  
+  /* Notion-style highlighted text */
+  .notion-highlight {
+    @apply bg-yellow-100 px-1 py-0.5 rounded text-yellow-800;
+  }
+  
+  /* Notion-style callout component */
+  .notion-callout {
+    @apply bg-gray-100 rounded-md p-4 flex items-start;
+  }
+  
+  .notion-callout-icon {
+    @apply mr-3 flex-shrink-0 mt-1 text-gray-500;
+  }
+  
+  /* Smooth animations for scroll-triggered elements - optimized for mobile */
+  .notion-fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .notion-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Sequential animations with reduced impact for mobile */
+  .notion-stagger-fade-in > * {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .notion-stagger-fade-in.is-visible > *:nth-child(1) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.1s; 
+  }
+  
+  .notion-stagger-fade-in.is-visible > *:nth-child(2) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.2s; 
+  }
+  
+  .notion-stagger-fade-in.is-visible > *:nth-child(3) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.3s; 
+  }
+  
+  .notion-stagger-fade-in.is-visible > *:nth-child(4) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.4s; 
+  }
+  
+  .notion-stagger-fade-in.is-visible > *:nth-child(5) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.5s; 
+  }
+  
+  /* Keyboard shortcut display like Notion */
+  .notion-shortcut {
+    @apply inline-flex items-center bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded border border-gray-200 font-mono;
   }
   
   /* The following classes maintain compatibility with existing components */
   .main-container {
-    @apply container-md;
+    @apply notion-content-md;
   }
   
   .primary-button {
-    @apply btn btn-primary;
+    @apply notion-btn notion-btn-primary;
+  }
+  
+  .container-md, .container-lg, .container-sm {
+    @apply notion-content-md;
   }
   
   .content-section {
-    @apply py-16 md:py-24;
+    @apply notion-section;
   }
   
-  .page-footer {
-    @apply text-sm text-gray-500 border-t border-gray-200 py-8;
+  .hero-section {
+    @apply py-10 sm:py-14 md:py-20;
   }
   
-  /* Keyboard shortcut badges */
-  .shortcut-badge {
-    @apply bg-gray-800 text-white text-xs px-2 py-1 rounded-md inline-flex items-center font-mono border border-gray-700 shadow-sm;
+  .hero-title {
+    @apply notion-h1;
   }
   
-  /* Glass effect is now more subtle for mobile optimization */
+  .hero-subtitle {
+    @apply notion-text px-4 sm:px-0 max-w-2xl mx-auto;
+  }
+  
+  .btn, .btn-primary, .btn-secondary, .btn-outline {
+    @apply notion-btn notion-btn-primary;
+  }
+  
+  /* Glass effect modified to be more Notion-like and subtle */
   .glass-effect {
-    backdrop-filter: blur(8px);
-    background: rgba(13, 18, 30, 0.75);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    @apply shadow-sm;
   }
   
-  /* Mobile-optimized button with reduced animations */
+  /* Replace techno-button with Notion's simpler style */
   .techno-button {
-    @apply relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-all duration-200 shadow-md;
+    @apply notion-btn notion-btn-primary;
   }
   
-  /* Removed complex button animation effects for better mobile performance */
-  
-  /* Premium badge with simplified gradient */
+  /* Simpler badge style */
   .premium-badge {
-    @apply bg-blue-600 rounded-full font-medium text-xs py-1 px-3 text-white uppercase tracking-wide shadow-sm;
+    @apply inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded;
   }
   
-  /* Mobile menu transitions */
-  .slide-in {
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  
-  /* Linear-inspired feature cards */
   .feature-card {
-    @apply p-6 rounded-2xl border border-gray-200 bg-white hover:border-blue-200 transition-colors;
+    @apply notion-card p-6;
   }
   
   .feature-icon {
-    @apply w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mb-4;
+    @apply w-10 h-10 rounded-md bg-blue-100 flex items-center justify-center text-blue-600 mb-4;
+  }
+
+  /* Notion-style table */
+  .notion-table {
+    @apply w-full border-collapse;
   }
   
-  /* Responsive typography for better mobile reading */
-  @screen md {
-    .hero-title {
-      @apply leading-tight;
-    }
+  .notion-table th {
+    @apply bg-gray-50 text-left p-3 text-sm font-medium text-gray-500 uppercase tracking-wider;
   }
   
-  /* Touch-friendly mobile interface enhancements */
+  .notion-table td {
+    @apply border-t border-gray-200 p-3 text-sm text-gray-700;
+  }
+  
+  .notion-table tr:hover td {
+    @apply bg-gray-50;
+  }
+
+  /* Optimized performance styles for mobile */
+  .optimize-gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Add intersection observer for animation triggers */
+  .intersection-observer-trigger {
+    min-height: 1px;
+  }
+  
+  /* Mobile optimizations */
   @media (max-width: 767px) {
-    /* Ensure touch targets are large enough */
-    .mobile-tap-area {
-      min-height: 48px;
-      min-width: 48px;
+    /* Enhance touch targets */
+    button, a, .notion-btn, .mobile-tap-area {
+      @apply min-h-[44px] min-w-[44px];
     }
     
-    /* Increase spacing for better readability */
-    p, li {
-      line-height: 1.7;
+    /* Improve typography and spacing for mobile */
+    p, li, .notion-text {
+      @apply text-base leading-relaxed;
     }
     
-    /* Improve spacing for mobile */
-    .container-md, .container-lg, .container-sm {
-      padding-left: 16px;
-      padding-right: 16px;
+    h1, .notion-h1 {
+      @apply text-3xl leading-tight;
     }
     
-    /* Stack cards on mobile for better readability */
-    .stack-on-mobile {
-      @apply flex-col space-y-6 space-x-0;
+    h2, .notion-h2 {
+      @apply text-2xl leading-tight;
     }
     
-    /* Automatic spacing adjustments for mobile */
-    .mobile-px-4 {
-      @apply px-4;
+    /* Reduced animation complexity on mobile */
+    .notion-stagger-fade-in > * {
+      transition-duration: 0.2s;
     }
     
-    .mobile-py-8 {
-      @apply py-8;
-    }
-    
-    /* Enhance mobile scrolling experience */
-    .mobile-scroll {
+    /* Horizontal scroll containers for mobile */
+    .mobile-horizontal-scroll {
+      @apply flex overflow-x-auto py-4 px-4 -mx-4 space-x-4;
+      scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-      scrollbar-width: none; /* Firefox */
+      scrollbar-width: none;
     }
     
-    .mobile-scroll::-webkit-scrollbar {
-      display: none; /* Chrome, Safari */
+    .mobile-horizontal-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .mobile-horizontal-scroll > * {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 85%;
+    }
+    
+    /* Mobile spacing adjustments */
+    .notion-section {
+      @apply py-6 sm:py-10;
+    }
+    
+    .notion-content-sm, .notion-content-md, .notion-content-lg {
+      @apply px-4;
     }
   }
 }
