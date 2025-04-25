@@ -65,12 +65,47 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 <span className="text-xs text-gray-400">Daftar Gambar/Tabel/Lampiran</span>
               </div>
             </div>
-            <div className="mt-3 text-xs text-gray-400 text-center px-2">
-              <p className="mb-1">Gunakan <span className="text-blue-400 font-medium">Alt+G</span> untuk caption gambar, <span className="text-blue-400 font-medium">Alt+T</span> untuk tabel, dan <span className="text-blue-400 font-medium">Alt+L</span> untuk lampiran.</p>
-              <p className="mb-1">Tekan <span className="text-blue-400 font-medium">Alt+Shift+G/T/L</span> untuk menampilkan tabel daftar isi dari caption yang telah dibuat.</p>
-              <p className="mb-1">Gunakan <span className="text-blue-400 font-medium">Ctrl+Alt+G/T/L</span> untuk caption dengan 2 digit yang auto deteksi urutan bab (misal di Bab 4: 4.1, 4.2, 4.3).</p>
-              <p className="mb-1">Penomoran halaman: <span className="text-blue-400 font-medium">Alt+K</span> (latin), <span className="text-blue-400 font-medium">Alt+R</span> (romawi), <span className="text-blue-400 font-medium">Ctrl+Alt+K</span> (opsi tengah bawah/kanan atas).</p>
-              <p>Format painter: <span className="text-blue-400 font-medium">Alt+Q</span> (copy), <span className="text-blue-400 font-medium">Alt+W</span> (paste), <span className="text-blue-400 font-medium">Alt+C</span> (hapus nomor halaman).</p>
+            <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + G</div>
+                <span className="text-xs text-gray-400">Caption Gambar</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + T</div>
+                <span className="text-xs text-gray-400">Caption Tabel</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + L</div>
+                <span className="text-xs text-gray-400">Caption Lampiran</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Ctrl + Alt + G/T/L</div>
+                <span className="text-xs text-gray-400">Caption 2 digit (4.1)</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + K</div>
+                <span className="text-xs text-gray-400">Halaman Latin</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + R</div>
+                <span className="text-xs text-gray-400">Halaman Romawi</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Ctrl + Alt + K</div>
+                <span className="text-xs text-gray-400">Posisi Halaman</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + C</div>
+                <span className="text-xs text-gray-400">Hapus No. Halaman</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + Q</div>
+                <span className="text-xs text-gray-400">Format Painter Copy</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="shortcut-badge mb-1">Alt + W</div>
+                <span className="text-xs text-gray-400">Format Painter Paste</span>
+              </div>
             </div>
           </div>
           
