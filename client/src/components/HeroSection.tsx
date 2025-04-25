@@ -210,9 +210,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             {/* Advanced Package - Enhanced Premium Style */}
             <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group md:transform md:scale-110 md:z-20">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 premium-badge z-20">
-                PALING POPULER
-              </div>
+{/* Badge sudah dihilangkan */}
               
               {/* Feature ribbon - adjusted position */}
               <div className="absolute right-0 top-24 bg-gradient-to-r from-blue-600 to-blue-400 py-2 px-4 text-white text-xs font-bold transform rotate-45 translate-x-12 shadow-lg z-20">
