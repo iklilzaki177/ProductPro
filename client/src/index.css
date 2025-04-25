@@ -16,6 +16,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    color: rgb(55, 53, 47);
+    line-height: 1.5;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,6 +26,17 @@
   
   html {
     scroll-behavior: smooth;
+  }
+  
+  /* Make text selection standout - Notion style */
+  ::selection {
+    background-color: rgba(35, 131, 226, 0.14);
+  }
+  
+  /* Better focus styles similar to Notion */
+  :focus-visible {
+    outline: 2px solid rgb(35, 131, 226);
+    outline-offset: 2px;
   }
 }
 
@@ -284,6 +297,115 @@
     min-height: 1px;
   }
   
+  /* Panel component for keyboard shortcut display */
+  .notion-panel {
+    @apply rounded-lg border border-gray-200 overflow-hidden bg-white;
+  }
+  
+  .notion-panel-header {
+    @apply px-5 py-3 bg-gray-50 border-b border-gray-200;
+  }
+  
+  .notion-panel-body {
+    @apply p-5;
+  }
+  
+  .notion-panel-footer {
+    @apply px-5 py-3 bg-gray-50 border-t border-gray-200;
+  }
+  
+  /* VS comparison component */
+  .notion-vs-container {
+    @apply flex flex-col md:flex-row items-center justify-center gap-8 my-8 relative;
+  }
+  
+  .notion-vs-divider {
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-gray-500 border border-gray-200 shadow-sm;
+  }
+  
+  .notion-vs-card {
+    @apply w-full md:w-1/2 rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm;
+  }
+  
+  .notion-vs-card-basic {
+    @apply border-gray-300;
+  }
+  
+  .notion-vs-card-advanced {
+    @apply border-blue-300;
+  }
+  
+  .notion-vs-header {
+    @apply px-6 py-4 flex justify-between items-center;
+  }
+  
+  .notion-vs-title {
+    @apply text-xl font-bold;
+  }
+  
+  .notion-vs-price {
+    @apply text-base font-medium;
+  }
+  
+  /* Keyboard shortcut styling */
+  .notion-kbd {
+    @apply inline-flex items-center justify-center min-w-[1.8rem] h-7 px-1.5 bg-gray-100 text-gray-800 text-sm font-medium rounded border border-gray-300 shadow-sm;
+  }
+  
+  .notion-kbd-description {
+    @apply ml-2 text-gray-600;
+  }
+  
+  .notion-shortcut-item {
+    @apply flex items-center py-2 border-b border-gray-100 last:border-0;
+  }
+  
+  /* Feature list displays */
+  .notion-feature-list {
+    @apply space-y-2;
+  }
+  
+  .notion-feature-item {
+    @apply flex items-start;
+  }
+  
+  .notion-feature-icon {
+    @apply mr-2 text-green-500 flex-shrink-0 mt-0.5;
+  }
+  
+  .notion-feature-text {
+    @apply text-gray-700;
+  }
+  
+  /* Comparison table styling */
+  .notion-compare-table {
+    @apply w-full border-collapse;
+  }
+  
+  .notion-compare-table th {
+    @apply text-left p-3 text-sm font-medium text-gray-500;
+  }
+  
+  .notion-compare-table tr:not(:last-child) td {
+    @apply border-b border-gray-200;
+  }
+  
+  .notion-compare-table td {
+    @apply p-3 text-sm;
+  }
+  
+  .notion-compare-table td:first-child {
+    @apply font-medium text-gray-900;
+  }
+  
+  .notion-compare-check {
+    @apply text-green-500;
+  }
+  
+  .notion-compare-x {
+    @apply text-gray-400;
+  }
+
   /* Mobile optimizations */
   @media (max-width: 767px) {
     /* Enhance touch targets */
@@ -327,6 +449,19 @@
       width: 85%;
     }
     
+    /* VS component adjustments for mobile */
+    .notion-vs-container {
+      @apply flex-col gap-4;
+    }
+    
+    .notion-vs-divider {
+      @apply static transform-none my-2 mx-auto;
+    }
+    
+    .notion-vs-card {
+      @apply w-full;
+    }
+    
     /* Mobile spacing adjustments */
     .notion-section {
       @apply py-6 sm:py-10;
@@ -334,6 +469,15 @@
     
     .notion-content-sm, .notion-content-md, .notion-content-lg {
       @apply px-4;
+    }
+    
+    /* Hide compare table on mobile, show feature lists instead */
+    .notion-compare-table-container {
+      @apply hidden md:block;
+    }
+    
+    .notion-mobile-feature-container {
+      @apply block md:hidden;
     }
   }
 }
