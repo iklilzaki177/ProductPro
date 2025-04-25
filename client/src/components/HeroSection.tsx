@@ -36,6 +36,12 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           {/* Keyboard shortcuts highlight - Futuristic Style */}
           <div className="glass-effect rounded-xl p-6 mt-8 mb-8 shadow-lg neon-border grid-pattern relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
+            
+            {/* Diagonal corner ribbon highlight for klik-pilih-done feature */}
+            <div className="absolute -top-2 -right-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-xs font-bold py-1 px-12 transform rotate-45 shadow-md z-20">
+              EXCLUSIVE ADVANCE
+            </div>
+            
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-5">
                 <div className="bg-blue-500 p-1.5 rounded-full shadow-lg shadow-blue-500/40 mr-3">
@@ -45,7 +51,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </div>
               
               {/* Basic Package Shortcuts */}
-              <div className="mb-6">
+              <div className="mb-8">
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-3 py-1 rounded-full text-xs font-medium text-blue-300 mr-1.5 border border-gray-700">
                     <span className="mr-1.5">⬤</span>BASIC
@@ -53,80 +59,97 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                   <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-6">
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + 1</div>
-                    <span className="text-xs text-blue-200">BAB I PENDAHULUAN</span>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-4 opacity-80">
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + 1</div>
+                    <span className="text-xs text-gray-300">BAB I PENDAHULUAN</span>
                   </div>
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + 2-8</div>
-                    <span className="text-xs text-blue-200">Sub-Heading</span>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + 2-8</div>
+                    <span className="text-xs text-gray-300">Sub-Heading</span>
                   </div>
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + D</div>
-                    <span className="text-xs text-blue-200">Daftar Isi</span>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + D</div>
+                    <span className="text-xs text-gray-300">Daftar Isi</span>
                   </div>
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + G</div>
-                    <span className="text-xs text-blue-200">Caption Gambar</span>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + G</div>
+                    <span className="text-xs text-gray-300">Caption Gambar</span>
                   </div>
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + T</div>
-                    <span className="text-xs text-blue-200">Caption Tabel</span>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + T</div>
+                    <span className="text-xs text-gray-300">Caption Tabel</span>
                   </div>
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + L</div>
-                    <span className="text-xs text-blue-200">Caption Lampiran</span>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + L</div>
+                    <span className="text-xs text-gray-300">Caption Lampiran</span>
                   </div>
-                  <div className="futuristic-card flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
-                    <div className="shortcut-badge mb-2">Alt + Shift + G/T/L</div>
-                    <span className="text-xs text-blue-200">Daftar Gambar/Tabel</span>
+                  <div className="bg-zinc-900/60 flex flex-col items-center p-3 rounded-lg border border-zinc-800/50 transition-all duration-200 transform hover:-translate-y-1 cursor-default">
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded-md border border-gray-700/50 text-xs font-mono mb-2">Alt + Shift + G/T/L</div>
+                    <span className="text-xs text-gray-300">Daftar Gambar/Tabel</span>
                   </div>
                 </div>
               </div>
               
-              {/* Advanced Package Shortcuts */}
+              {/* Advanced Package Shortcuts - Enhanced */}
               <div>
                 <div className="flex items-center mb-4">
-                  <div className="bg-gradient-to-r from-blue-800 to-blue-900 px-3 py-1 rounded-full text-xs font-medium text-blue-100 mr-1.5 border border-blue-700 shadow-md shadow-blue-500/20">
-                    <span className="mr-1.5 text-blue-400">⬤</span>ADVANCE
+                  <div className="premium-badge px-4 py-1.5 text-xs font-medium text-white mr-2 shadow-md shadow-blue-500/30 flex items-center relative">
+                    <span className="absolute w-4 h-4 bg-blue-400 rounded-full top-1/2 -left-2 transform -translate-y-1/2 animate-pulse"></span>
+                    <span className="absolute w-2 h-2 bg-blue-300 rounded-full top-1/2 -left-1 transform -translate-y-1/2"></span>
+                    <span className="ml-1">ADVANCE FEATURES</span>
                   </div>
                   <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Ctrl + Alt + G/T/L</div>
-                    <span className="text-xs text-blue-200">Caption 2 Digit (4.1)</span>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Ctrl + Alt + G/T/L</div>
+                    <span className="text-xs text-blue-200 font-medium">Caption 2 Digit (4.1)</span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + K</div>
-                    <span className="text-xs text-blue-200">Halaman Latin</span>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + K</div>
+                    <span className="text-xs text-blue-200 font-medium">Halaman Latin</span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + R</div>
-                    <span className="text-xs text-blue-200">Halaman Romawi</span>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + R</div>
+                    <span className="text-xs text-blue-200 font-medium">Halaman Romawi</span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + Shift + K</div>
-                    <span className="text-xs text-blue-200">No. Halaman Auto</span>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + Shift + K</div>
+                    <span className="text-xs text-blue-200 font-medium">No. Halaman Auto</span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Ctrl + Alt + K</div>
-                    <span className="text-xs text-blue-200">Posisi Halaman</span>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Ctrl + Alt + K</div>
+                    <span className="text-xs text-blue-200 font-medium">Posisi Halaman</span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + C</div>
-                    <span className="text-xs text-blue-200">Hapus No. Halaman</span>
+                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:border-blue-400/40">
+                    <div className="shortcut-badge mb-2 border-blue-400/40 shadow-sm shadow-blue-400/20">Alt + C</div>
+                    <span className="text-xs text-blue-200 font-medium">Hapus No. Halaman</span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + Q</div>
-                    <span className="text-xs text-blue-200">Format Painter Copy</span>
+                  {/* Highlighted Format Painter Feature */}
+                  <div className="futuristic-card border-blue-400/50 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-400/60 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-800/40 to-blue-700/20 hover:border-blue-300/60 glow-card">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-1 rounded-md shadow-sm shadow-blue-400/40 text-xs font-mono mb-2 text-white">Alt + Q</div>
+                    <span className="text-xs text-blue-100 font-medium">Format Painter Copy</span>
+                    <span className="absolute top-0 right-0 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                   </div>
-                  <div className="futuristic-card border-blue-500/30 flex flex-col items-center p-3 rounded-lg hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-900/40 to-blue-800/20">
-                    <div className="shortcut-badge mb-2 border-blue-400/40">Alt + W</div>
-                    <span className="text-xs text-blue-200">Format Painter Paste</span>
+                  <div className="futuristic-card border-blue-400/50 flex flex-col items-center p-4 rounded-lg hover:shadow-md hover:shadow-blue-400/60 transition-all duration-300 transform hover:-translate-y-1 cursor-default bg-gradient-to-br from-blue-800/40 to-blue-700/20 hover:border-blue-300/60 glow-card">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-1 rounded-md shadow-sm shadow-blue-400/40 text-xs font-mono mb-2 text-white">Alt + W</div>
+                    <span className="text-xs text-blue-100 font-medium">Format Painter Paste</span>
+                    <span className="absolute top-0 right-0 w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-75"></span>
                   </div>
+                </div>
+                
+                {/* Call-to-action for Advance */}
+                <div className="mt-5 text-center">
+                  <a 
+                    href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm text-blue-300 hover:text-blue-200 underline underline-offset-2"
+                  >
+                    Gunakan semua pintasan advanced ini dengan hanya Rp 100.000 →
+                  </a>
                 </div>
               </div>
             </div>
@@ -183,16 +206,19 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           </div>
         </div>
         
-        {/* Product Package Cards - Futuristic Style */}
-        <div className="mt-20 px-4">
-          <div className="text-center mb-10">
+        {/* Product Package Cards - Enhanced Futuristic Style */}
+        <div className="mt-20 px-4 relative">
+          {/* Connecting line between cards */}
+          <div className="absolute left-1/2 top-1/2 w-px h-40 bg-gradient-to-b from-blue-500 to-transparent hidden md:block"></div>
+          
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text glow-text">Pilih Paket yang Tepat untuk Anda</h2>
             <p className="text-blue-200/80 max-w-2xl mx-auto">Sesuaikan pilihan dengan kebutuhan skripsi atau tesis Anda</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Basic Package - Futuristic Style */}
-            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 border border-zinc-800/50 relative overflow-hidden group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto relative">
+            {/* Basic Package - Understated Style */}
+            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/30 border border-zinc-800/50 relative overflow-hidden group md:transform md:scale-90">
               <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-gray-900/80 opacity-80 pointer-events-none"></div>
               <div className="absolute inset-0 opacity-10 grid-pattern"></div>
               <div className="relative z-10">
@@ -241,70 +267,105 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </div>
             </div>
             
-            {/* Advanced Package - Futuristic Style */}
-            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group neon-border">
+            {/* Advanced Package - Enhanced Premium Style */}
+            <div className="glass-effect rounded-2xl p-8 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-600/30 relative overflow-hidden group neon-border pulse-border md:transform md:scale-110 md:z-20 float-animation">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-blue-800/10 to-blue-900/20 opacity-80 pointer-events-none"></div>
               <div className="absolute inset-0 opacity-10 grid-pattern"></div>
-              <div className="absolute -top-3 right-8 bg-gradient-to-r from-blue-600 to-blue-400 text-xs font-bold py-1.5 px-4 rounded-full shadow-lg">
+              <div className="absolute -top-3 right-8 premium-badge text-xs py-1.5 px-4 shadow-lg">
                 PALING POPULER
               </div>
+              
+              {/* Feature ribbon */}
+              <div className="absolute right-0 top-24 bg-gradient-to-r from-blue-600 to-blue-400 py-2 px-4 text-white text-xs font-bold transform rotate-45 translate-x-8 shadow-lg z-20">
+                Fitur Klik-Pilih-Done!
+              </div>
+              
+              {/* Glow effects and animations */}
+              <div className="absolute -right-12 -top-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+              <div className="absolute -left-12 -bottom-12 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+              
               <div className="relative z-10">
-                <div className="inline-block bg-blue-900/80 px-3 py-1.5 rounded-full mb-4 border border-blue-700/50">
+                <div className="inline-block bg-blue-900/80 px-4 py-2 rounded-full mb-5 border border-blue-700/50 shadow-lg shadow-blue-500/20">
                   <h3 className="text-xl font-medium tracking-wide text-blue-100">Advance</h3>
                 </div>
                 <p className="text-blue-100 mb-4">Paket otomatisasi skripsi lengkap</p>
-                <p className="text-4xl font-semibold mb-2 text-white">Rp 100.000</p>
+                <p className="text-4xl font-semibold mb-2 text-white bg-gradient-to-r from-white to-blue-200 bg-clip-text">Rp 100.000</p>
                 <p className="text-blue-200 text-sm mb-8">Hemat waktu & tenaga bernilai jutaan</p>
                 
-                <div className="bg-blue-900/20 rounded-xl p-4 mb-8 text-left space-y-3 backdrop-blur-sm">
+                <div className="bg-blue-900/20 rounded-xl p-5 mb-8 text-left space-y-4 backdrop-blur-sm border border-blue-600/20">
                   <div className="flex items-start">
-                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                    <div className="rounded-full p-1 bg-blue-500/30 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
                       <Check className="h-4 w-4" />
                     </div>
                     <span className="text-blue-100 text-sm">Semua fitur paket Basic</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                    <div className="rounded-full p-1 bg-blue-500/30 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
                       <Check className="h-4 w-4" />
                     </div>
-                    <span className="text-blue-100 text-sm">Penomoran halaman lanjutan dengan opsi tengah bawah/kanan atas</span>
+                    <span className="text-blue-100 text-sm">
+                      <span className="font-medium text-white">Penomoran halaman lanjutan</span> dengan opsi tengah bawah/kanan atas
+                    </span>
                   </div>
                   <div className="flex items-start">
-                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                    <div className="rounded-full p-1 bg-blue-500/30 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
                       <Check className="h-4 w-4" />
                     </div>
-                    <span className="text-blue-100 text-sm">Penomoran halaman otomatis (Alt+Shift+K) dengan deteksi posisi bab</span>
+                    <span className="text-blue-100 text-sm">
+                      <span className="font-medium text-white">Penomoran halaman otomatis</span> (Alt+Shift+K) dengan deteksi posisi bab
+                    </span>
                   </div>
                   <div className="flex items-start">
-                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                    <div className="rounded-full p-1 bg-blue-500/30 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
                       <Check className="h-4 w-4" />
                     </div>
-                    <span className="text-blue-100 text-sm">Opsi halaman latin (Alt+K) dan romawi (Alt+R) untuk berbagai bagian</span>
+                    <span className="text-blue-100 text-sm">
+                      Opsi halaman <span className="font-medium text-white">latin (Alt+K) dan romawi (Alt+R)</span> untuk berbagai bagian
+                    </span>
                   </div>
                   <div className="flex items-start">
-                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                    <div className="rounded-full p-1 bg-blue-500/30 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
                       <Check className="h-4 w-4" />
                     </div>
-                    <span className="text-blue-100 text-sm">Caption gambar/tabel dengan nomor BAB (Gambar 4.1) otomatis</span>
+                    <span className="text-blue-100 text-sm">
+                      <span className="font-medium text-white">Caption 2-digit otomatis</span> dengan nomor BAB (Gambar 4.1) meningkatkan profesionalitas
+                    </span>
                   </div>
                   <div className="flex items-start">
-                    <div className="rounded-full p-1 bg-blue-500/20 text-blue-300 mr-3 flex-shrink-0">
+                    <div className="rounded-full p-1 bg-blue-500/30 text-blue-300 mr-3 flex-shrink-0 shadow-sm">
                       <Check className="h-4 w-4" />
                     </div>
-                    <span className="text-blue-100 text-sm">Format painter (Alt+Q/W) dan dialog klik-pilih-selesai</span>
+                    <span className="text-blue-100 text-sm">
+                      <span className="font-medium text-white">Format painter</span> (Alt+Q/W) dan dialog <span className="font-medium text-white">klik-pilih-selesai</span>
+                    </span>
                   </div>
                 </div>
                 
-                <a 
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="techno-button inline-block py-3 px-8 font-medium"
-                >
-                  <span className="relative z-10">Dapatkan Advance</span>
-                </a>
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-70 blur-sm group-hover:opacity-100 transition-all duration-500"></div>
+                  <a 
+                    href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="techno-button relative inline-block py-3.5 px-10 font-medium"
+                  >
+                    <span className="relative z-10">Dapatkan Advance</span>
+                  </a>
+                </div>
               </div>
             </div>
+            
+            {/* Comparison annotation */}
+            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-20 hidden md:block">
+              <div className="bg-blue-600/90 px-3 py-1 rounded-full text-xs font-medium shadow-md">
+                VS
+              </div>
+            </div>
+          </div>
+          
+          {/* Feature comparison note */}
+          <div className="text-center mt-10 max-w-2xl mx-auto">
+            <p className="text-blue-200/70 text-sm">Pilih Advance untuk mendapatkan <span className="text-white font-medium">2x lebih banyak fitur</span> dan <span className="text-white font-medium">3x lebih cepat</span> dalam formatting skripsi Anda!</p>
           </div>
         </div>
         
