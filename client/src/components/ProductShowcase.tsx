@@ -1,4 +1,7 @@
 import { ChevronRight, FileText, Type, ListOrdered, CheckCircle, Table, Bookmark } from 'lucide-react';
+import panelAdvanceImg from '@assets/panel advance.png';
+import panelAdvance1Img from '@assets/panel advance1.png';
+import iPhoneImg from '@assets/iPhone 14 & 15 Pro - 3.png';
 
 export default function ProductShowcase() {
   return (
@@ -263,81 +266,50 @@ export default function ProductShowcase() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 gap-10">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-green-500 rounded-sm p-1">✓</span>
                 <h3 className="text-xl font-medium pb-2 w-full">Advanced Page Numbering</h3>
               </div>
-              <p className="text-blue-100 mb-4">Simply press <span className="bg-blue-800 px-2 py-1 rounded">Alt + Shift + K</span> and choose from multiple page number styles:</p>
               
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                  <span>LATIN (standard numbering)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              {/* Displaying the actual panel images from the posters */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div>
+                  <p className="text-blue-100 mb-4">Simply press <span className="bg-blue-800 px-2 py-1 rounded">Alt + Shift + K</span> and choose from multiple page number styles:</p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-white rounded-full"></div>
+                      <span>LATIN (standard numbering)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                      </div>
+                      <span>TENGAH BAWAH, KANAN ATAS (center bottom, top right)</span>
+                    </div>
                   </div>
-                  <span>TENGAH BAWAH, KANAN ATAS (center bottom, top right)</span>
-                </div>
-              </div>
-              
-              <div className="mt-6 grid grid-cols-3 gap-2">
-                <div className="bg-blue-800/50 p-2 rounded text-center">
-                  <div className="mb-4 h-16 flex items-center justify-center">
-                    <span className="text-xs">Kata Pengantar</span>
-                  </div>
-                  <div className="border-t border-blue-400 pt-2">
-                    <span className="text-xs">Area kertas kosong</span>
-                  </div>
-                </div>
-                <div className="bg-blue-800/50 p-2 rounded text-center">
-                  <div className="mb-4 h-16 flex items-center justify-center">
-                    <span className="text-xs">ii</span>
-                  </div>
-                  <div className="border-t border-green-400 pt-2">
-                    <span className="text-xs">Area kertas romawi</span>
-                  </div>
-                </div>
-                <div className="bg-blue-800/50 p-2 rounded text-center">
-                  <div className="mb-4 h-16 flex items-center justify-center">
-                    <span className="text-xs"></span>
-                  </div>
-                  <div className="border-t border-blue-400 pt-2">
-                    <span className="text-xs"></span>
+                  
+                  <div className="mt-6 text-center">
+                    <a 
+                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
+                    >
+                      Upgrade to Advance
+                    </a>
                   </div>
                 </div>
-                <div className="bg-blue-800/50 p-2 rounded text-center">
-                  <div className="mb-4 h-16 flex items-center justify-center">
-                    <span className="text-xs">BAB I PENDAHULUAN</span>
-                  </div>
-                  <div className="text-xs">1</div>
-                  <div className="border-t border-green-400 pt-2">
-                    <span className="text-xs">Area kertas latin</span>
-                  </div>
+                
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img 
+                    src={panelAdvanceImg} 
+                    alt="Advanced page numbering panel" 
+                    className="w-full h-auto object-contain" 
+                  />
                 </div>
-                <div className="bg-blue-800/50 p-2 rounded text-center">
-                  <div className="mb-4 h-16 flex items-center justify-center">
-                    <span className="text-xs">2</span>
-                  </div>
-                  <div className="border-t border-green-400 pt-2">
-                    <span className="text-xs"></span>
-                  </div>
-                </div>
-                <div className="bg-blue-800/50 p-2 rounded text-center">
-                  <div className="mb-4 h-16 flex items-center justify-center">
-                    <span className="text-xs">3</span>
-                  </div>
-                  <div className="border-t border-green-400 pt-2">
-                    <span className="text-xs"></span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-4 text-center text-sm text-blue-200">
-                Area kertas latin (bisa tengah bawah atau kanan atas)
               </div>
             </div>
             
@@ -347,59 +319,76 @@ export default function ProductShowcase() {
                 <h3 className="text-xl font-medium pb-2 w-full">Enhanced Image & Table References</h3>
               </div>
               
-              <p className="text-blue-100 mb-4">Advance version automatically links caption numbers to chapters (BAB). For example, if you're in BAB IV, pressing <span className="bg-blue-800 px-2 py-1 rounded">Ctrl + Alt + G/T/L</span> creates captions like "Gambar 4.1", "Tabel 4.2", etc.</p>
-              
-              <div className="grid grid-cols-1 gap-4 mt-6">
-                <div className="bg-blue-800/50 p-4 rounded">
-                  <p className="mb-2 font-semibold">Switch cepat untuk image, table, dan lampiran</p>
-                  <div className="grid grid-cols-3 gap-2 text-center text-sm">
-                    <div>
-                      <p>Gambar 1.1 Ikan</p>
-                      <p>Gambar 1.2 Ayam</p>
-                      <p>Gambar 1.3 Sapi</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div>
+                  <p className="text-blue-100 mb-4">Advance version automatically links caption numbers to chapters (BAB). For example, if you're in BAB IV, pressing <span className="bg-blue-800 px-2 py-1 rounded">Ctrl + Alt + G/T/L</span> creates captions like "Gambar 4.1", "Tabel 4.2", etc.</p>
+                  
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-white rounded-full"></div>
+                      <span>Gambar (for images/figures)</span>
                     </div>
-                    <div>
-                      <p>Tabel 1.1 Ikan</p>
-                      <p>Tabel 1.2 Ayam</p>
-                      <p>Tabel 1.3 Sapi</p>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-white rounded-full"></div>
+                      <span>Tabel (for tables)</span>
                     </div>
-                    <div>
-                      <p>Lampiran 1.1 Ikan</p>
-                      <p>Lampiran 1.2 Ayam</p>
-                      <p>Lampiran 1.3 Sapi</p>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-white rounded-full"></div>
+                      <span>Lampiran (for appendices)</span>
                     </div>
+                  </div>
+                  
+                  <div className="mt-6 text-center">
+                    <a 
+                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
+                    >
+                      Upgrade to Advance
+                    </a>
                   </div>
                 </div>
                 
-                <div className="bg-blue-800/50 p-4 rounded">
-                  <p className="mb-2 font-semibold">Auto-format Daftar Gambar/Tabel/Lampiran</p>
-                  <div className="flex flex-col gap-1 text-sm">
-                    <div className="flex justify-between">
-                      <span>Gambar 1.1 Ikan</span>
-                      <span>1</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Gambar 2.1 Ayam</span>
-                      <span>2</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Gambar 3.1 Sapi</span>
-                      <span>3</span>
-                    </div>
-                  </div>
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img 
+                    src={panelAdvance1Img} 
+                    alt="Advanced caption reference panel" 
+                    className="w-full h-auto object-contain" 
+                  />
                 </div>
               </div>
-              
-              <div className="mt-6 text-center">
-                <a 
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
-                >
-                  Upgrade to Advance
-                </a>
+            </div>
+          </div>
+          
+          <div className="mt-10 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-green-500 rounded-sm p-1">✓</span>
+              <h3 className="text-xl font-medium pb-2 w-full">Example of Easy.kripsi in Action</h3>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl">
+                <img 
+                  src={iPhoneImg} 
+                  alt="Easy.kripsi interface example" 
+                  className="w-full h-auto" 
+                />
               </div>
+            </div>
+            
+            <div className="mt-8 text-center">
+              <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6">
+                "klik-pilih-done" - Simple, fast, and efficient thesis formatting
+              </p>
+              <a 
+                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-full inline-block font-medium text-lg"
+              >
+                Get Advance Version Now
+              </a>
             </div>
           </div>
         </div>
