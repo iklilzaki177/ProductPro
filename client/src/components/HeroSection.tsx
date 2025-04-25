@@ -49,7 +49,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </p>
               <div className="grid grid-cols-2 gap-2">
                 <a 
-                  href="https://www.tiktok.com/@iklilzaki_/video/7316217246244587797" 
+                  href="https://www.tiktok.com/@iklilzaki_/video/7448477605449272592" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="rounded-md h-20 overflow-hidden relative bg-blue-900/20 flex items-center justify-center group"
