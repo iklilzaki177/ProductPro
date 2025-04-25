@@ -104,8 +104,8 @@ export default function AnimatedFeatureSection() {
   const advancedShortcuts = shortcuts.filter(feature => feature.isAdvanced);
 
   return (
-    <div className="py-20 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <div className="py-6 px-4 max-w-7xl mx-auto">
+      <div className="text-center mb-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
