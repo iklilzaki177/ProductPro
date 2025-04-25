@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Check, FileText, Type, ListOrdered, Keyboard, Sparkles, Clock, ThumbsUp, Star, Zap } from 'lucide-react';
+import { ChevronRight, Check, FileText, Type, ListOrdered, Keyboard, Sparkles, Clock, ThumbsUp, Star, Zap, CheckCircle, X } from 'lucide-react';
 import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
 
 interface HeroSectionProps {
@@ -250,6 +250,115 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           {/* Feature comparison note */}
           <div className="text-center mt-10 max-w-2xl mx-auto">
             <p className="text-blue-200/70 text-sm">Pilih Advance untuk mendapatkan <span className="text-white font-medium">2x lebih banyak fitur</span> dan <span className="text-white font-medium">3x lebih cepat</span> dalam formatting skripsi Anda!</p>
+          </div>
+          
+          {/* Feature Comparison Table - Added from ProductShowcase */}
+          <div className="mt-16 overflow-hidden">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-white">Perbandingan Fitur Basic vs Advance</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-md">
+                <thead>
+                  <tr className="bg-blue-50">
+                    <th className="p-3 text-left text-gray-700 border-b">Fitur</th>
+                    <th className="p-3 text-center text-gray-700 border-b">Basic</th>
+                    <th className="p-3 text-center text-blue-800 border-b bg-blue-100/50">Advance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Format heading otomatis (Alt+1, Alt+2)</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Daftar isi otomatis (Alt+D)</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Nomor halaman dasar</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">Caption gambar & tabel sederhana</td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Membuat caption (Alt+G/T/L)</div>
+                      <div className="text-xs text-gray-500 mt-1">Alt+G untuk gambar, Alt+T untuk tabel, Alt+L untuk lampiran</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Caption dengan nomor BAB (Gambar 4.1)</div>
+                      <div className="text-xs text-gray-500 mt-1">Penomoran otomatis sesuai dengan BAB (cth: "Gambar 4.1")</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Daftar isi gambar/tabel/lampiran (Alt+Shift+G/T/L)</div>
+                      <div className="text-xs text-gray-500 mt-1">Tampilkan tabel daftar isi dari caption yang telah dibuat</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Penomoran halaman campuran (Alt+K, Alt+R)</div>
+                      <div className="text-xs text-gray-500 mt-1">Angka Arab (Alt+K) dan Romawi (Alt+R) untuk berbagai bagian</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Penomoran halaman otomatis (Alt+Shift+K)</div>
+                      <div className="text-xs text-gray-500 mt-1">Deteksi posisi bab dan format halaman secara otomatis</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Posisi nomor halaman (Ctrl+Alt+K)</div>
+                      <div className="text-xs text-gray-500 mt-1">Opsi tengah bawah dan kanan atas</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Format painter (Alt+Q/W) & Hapus nomor (Alt+C)</div>
+                      <div className="text-xs text-gray-500 mt-1">Copy format (Alt+Q), paste format (Alt+W), hapus nomor halaman (Alt+C)</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Dialog klik-pilih-selesai</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700 font-medium">Template universitas</td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="p-3 font-semibold text-gray-800">Harga</td>
+                    <td className="p-3 text-center font-medium">Rp 50.000</td>
+                    <td className="p-3 text-center font-medium bg-blue-100/50 text-blue-800">Rp 100.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         
