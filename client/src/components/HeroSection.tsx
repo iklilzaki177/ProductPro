@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Check, FileText, Type, ListOrdered, Keyboard, Sparkles, Clock, ThumbsUp, Star, Zap } from 'lucide-react';
-import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
 
 interface HeroSectionProps {
   onBuyNowClick: () => void;
@@ -34,12 +33,102 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
           </div>
           
-          {/* Keyboard Shortcuts */}
-          <div id="features" className="mt-6">
-            <AnimatedFeatureSection />
+          {/* Keyboard shortcuts highlight - More Compact Version */}
+          <div className="glass-effect rounded-xl p-5 mt-6 mb-6 shadow-lg border border-zinc-800/50 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent opacity-70 pointer-events-none"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-3">
+                <div className="bg-blue-500 p-1.5 rounded-full shadow-lg shadow-blue-500/40 mr-3">
+                  <Keyboard className="h-5 w-5 text-white" />
+                </div>
+                <h4 className="text-md font-medium tracking-wide glow-text text-blue-100">PINTASAN KEYBOARD</h4>
+              </div>
+              
+              {/* Compact Basic Package Shortcuts */}
+              <div className="mb-4">
+                <div className="flex items-center mb-3">
+                  <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-3 py-1 rounded-full text-xs font-medium text-blue-300 mr-1.5 border border-gray-700">
+                    <span className="mr-1.5">⬤</span>BASIC
+                  </div>
+                  <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mb-3">
+                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + 1</div>
+                      <span className="text-xs text-gray-300 mt-1">BAB I PENDAHULUAN</span>
+                    </div>
+                  </div>
+                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + 2-8</div>
+                      <span className="text-xs text-gray-300 mt-1">Sub-Heading</span>
+                    </div>
+                  </div>
+                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + D</div>
+                      <span className="text-xs text-gray-300 mt-1">Daftar Isi</span>
+                    </div>
+                  </div>
+                  <div className="bg-zinc-900/60 flex items-center p-2 rounded-lg border border-zinc-800/50 transition-all duration-200 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="bg-gradient-to-r from-gray-800 to-gray-700 px-2 py-0.5 rounded text-xs font-mono">Alt + G/T/L</div>
+                      <span className="text-xs text-gray-300 mt-1">Caption</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Compact Advanced Package Shortcuts */}
+              <div>
+                <div className="flex items-center mb-3">
+                  <div className="premium-badge px-3 py-1 text-xs font-medium text-white mr-2 shadow-md shadow-blue-500/30 flex items-center">
+                    <span>ADVANCE</span>
+                  </div>
+                  <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="shortcut-badge text-xs border-blue-400/40">Ctrl+Alt+G/T</div>
+                      <span className="text-xs text-blue-200 mt-1">Caption BAB (4.1)</span>
+                    </div>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="shortcut-badge text-xs border-blue-400/40">Alt+K/R</div>
+                      <span className="text-xs text-blue-200 mt-1">Tipe Nomor Hal.</span>
+                    </div>
+                  </div>
+                  <div className="futuristic-card border-blue-400/50 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-800/40 to-blue-700/20 glow-card hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-2 py-0.5 rounded text-xs text-white font-mono">Alt+Q/W</div>
+                      <span className="text-xs text-blue-100 mt-1 font-medium">Format Painter</span>
+                    </div>
+                  </div>
+                  <div className="futuristic-card border-blue-500/30 flex items-center p-2 rounded-lg bg-gradient-to-br from-blue-900/40 to-blue-800/20 hover:-translate-y-1">
+                    <div className="flex flex-col">
+                      <div className="shortcut-badge text-xs border-blue-400/40">Shift+Alt+K</div>
+                      <span className="text-xs text-blue-200 mt-1">Format Auto</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-3 text-center">
+                  <a 
+                    href="#features"
+                    className="inline-block text-xs text-blue-300 hover:text-blue-200 underline underline-offset-2"
+                  >
+                    Lihat semua pintasan keyboard →
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          
-
           
           {/* CTA buttons - Futuristic Style */}
           <div className="flex flex-wrap justify-center gap-4 mt-10">
