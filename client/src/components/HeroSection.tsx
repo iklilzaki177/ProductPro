@@ -35,76 +35,90 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
           
           {/* Keyboard shortcuts highlight */}
           <div className="bg-zinc-900/80 backdrop-blur-sm rounded-xl p-4 mt-6 mb-6 shadow-lg">
-            <div className="flex items-center justify-center mb-2">
+            <div className="flex items-center justify-center mb-3">
               <Keyboard className="h-5 w-5 text-blue-400 mr-2" />
               <h4 className="text-sm font-medium">Pintasan Keyboard Powerfull</h4>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + 1</div>
-                <span className="text-xs text-gray-400">BAB I PENDAHULUAN</span>
+            
+            {/* Basic Package Shortcuts */}
+            <div>
+              <div className="flex items-center mb-2 border-b border-blue-800 pb-1">
+                <div className="bg-zinc-800 px-2 py-0.5 rounded text-xs font-medium text-blue-400 mr-1">Basic</div>
+                <div className="h-px flex-grow bg-zinc-700"></div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + 2-8</div>
-                <span className="text-xs text-gray-400">Sub-Heading</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + D</div>
-                <span className="text-xs text-gray-400">Daftar Isi</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + Shift + K</div>
-                <span className="text-xs text-gray-400">Nomor Halaman</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + G/T/L</div>
-                <span className="text-xs text-gray-400">Gambar/Tabel/Lampiran</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + Shift + G/T/L</div>
-                <span className="text-xs text-gray-400">Daftar Gambar/Tabel/Lampiran</span>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-4">
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + 1</div>
+                  <span className="text-xs text-gray-400">BAB I PENDAHULUAN</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + 2-8</div>
+                  <span className="text-xs text-gray-400">Sub-Heading</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + D</div>
+                  <span className="text-xs text-gray-400">Daftar Isi</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + G</div>
+                  <span className="text-xs text-gray-400">Caption Gambar</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + T</div>
+                  <span className="text-xs text-gray-400">Caption Tabel</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + L</div>
+                  <span className="text-xs text-gray-400">Caption Lampiran</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="shortcut-badge mb-1">Alt + Shift + G/T/L</div>
+                  <span className="text-xs text-gray-400">Daftar Gambar/Tabel</span>
+                </div>
               </div>
             </div>
-            <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + G</div>
-                <span className="text-xs text-gray-400">Caption Gambar</span>
+            
+            {/* Advanced Package Shortcuts */}
+            <div>
+              <div className="flex items-center mb-2 border-b border-blue-600 pb-1">
+                <div className="bg-blue-900 px-2 py-0.5 rounded text-xs font-medium text-blue-200 mr-1">Advance</div>
+                <div className="h-px flex-grow bg-blue-800/50"></div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + T</div>
-                <span className="text-xs text-gray-400">Caption Tabel</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + L</div>
-                <span className="text-xs text-gray-400">Caption Lampiran</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Ctrl + Alt + G/T/L</div>
-                <span className="text-xs text-gray-400">Caption 2 digit (4.1)</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + K</div>
-                <span className="text-xs text-gray-400">Halaman Latin</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + R</div>
-                <span className="text-xs text-gray-400">Halaman Romawi</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Ctrl + Alt + K</div>
-                <span className="text-xs text-gray-400">Posisi Halaman</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + C</div>
-                <span className="text-xs text-gray-400">Hapus No. Halaman</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + Q</div>
-                <span className="text-xs text-gray-400">Format Painter Copy</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="shortcut-badge mb-1">Alt + W</div>
-                <span className="text-xs text-gray-400">Format Painter Paste</span>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Ctrl + Alt + G/T/L</div>
+                  <span className="text-xs text-gray-300">Caption 2 Digit (4.1)</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Alt + K</div>
+                  <span className="text-xs text-gray-300">Halaman Latin</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Alt + R</div>
+                  <span className="text-xs text-gray-300">Halaman Romawi</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Alt + Shift + K</div>
+                  <span className="text-xs text-gray-300">No. Halaman Auto</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Ctrl + Alt + K</div>
+                  <span className="text-xs text-gray-300">Posisi Halaman</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Alt + C</div>
+                  <span className="text-xs text-gray-300">Hapus No. Halaman</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Alt + Q</div>
+                  <span className="text-xs text-gray-300">Format Painter Copy</span>
+                </div>
+                <div className="flex flex-col items-center bg-blue-900/20 p-1.5 rounded-md">
+                  <div className="shortcut-badge mb-1">Alt + W</div>
+                  <span className="text-xs text-gray-300">Format Painter Paste</span>
+                </div>
               </div>
             </div>
           </div>
