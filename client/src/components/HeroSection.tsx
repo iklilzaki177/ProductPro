@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Check, FileText, Type, ListOrdered, Keyboard, Sparkles, Clock, ThumbsUp, Star, Zap } from 'lucide-react';
+import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
 
 interface HeroSectionProps {
   onBuyNowClick: () => void;
@@ -31,6 +32,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </div>
               <span>4.8/5 dari 100+ pengguna</span>
             </div>
+          </div>
+          
+          {/* Keyboard Shortcuts */}
+          <div id="features" className="mt-6">
+            <AnimatedFeatureSection />
           </div>
           
 
