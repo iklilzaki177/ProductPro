@@ -45,7 +45,7 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       }}
       viewport={{ once: true, margin: "-5% 0px -5% 0px" }}
       className={cn(
-        "min-w-0 p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-hidden group h-full",
+        "min-w-0 p-3 xs:p-4 sm:p-5 rounded-xl border backdrop-blur-sm transition-all duration-300 relative overflow-visible group h-full",
         feature.highlight
           ? "bg-gradient-to-br from-blue-800/80 to-blue-900/70 border-blue-400/50 hover:border-blue-300/60"
           : feature.isAdvanced 
@@ -53,8 +53,8 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
             : "bg-gradient-to-br from-zinc-800/80 to-zinc-900/70 border-zinc-600/40 hover:border-gray-500/50"
       )}
     >
-      <div className="flex flex-col h-full min-w-0 w-full">
-        {/* Card header with icon and shortcut - Text left aligned */}
+      <div className="flex flex-col h-full w-full overflow-visible">
+        {/* Card header dengan overflow visible agar teks tidak terpotong */}
         <div className="flex items-start justify-start gap-2 mb-2 sm:mb-3 relative z-10 flex-wrap min-w-0 w-full">
           {/* Icon */}
           <div className={cn(
@@ -69,9 +69,9 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
             )} />
           </div>
 
-          {/* Shortcut label - min-w-0 ensures proper truncation */}
+          {/* Shortcut label - dengan overflow visible agar tidak terpotong */}
           <div className={cn(
-            "min-w-0 text-xs xs:text-sm font-mono font-medium px-2 sm:px-3 py-0.5 rounded-md truncate text-left",
+            "text-xs xs:text-sm font-mono font-medium px-2 sm:px-3 py-0.5 rounded-md text-left overflow-visible",
             feature.isAdvanced 
               ? "bg-blue-500/30 text-blue-100 border border-blue-400/40" 
               : "bg-gray-700/50 text-gray-100 border border-gray-600/40"
@@ -80,10 +80,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
           </div>
         </div>
         
-        {/* Description - using truncate and line clamp to prevent overflow */}
+        {/* Description - dengan overflow visible agar semua teks tampil */}
         <div className="min-w-0 w-full">
           <p className={cn(
-            "text-xs sm:text-sm mt-2 leading-relaxed line-clamp-2 hyphens-auto overflow-wrap-anywhere text-left font-medium",
+            "text-xs sm:text-sm mt-2 leading-relaxed break-words overflow-visible text-left font-medium",
             feature.highlight 
               ? "text-blue-50"
               : feature.isAdvanced ? "text-blue-100" : "text-gray-100"
@@ -175,7 +175,7 @@ export default function AnimatedFeatureSection() {
             <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 overflow-visible">
             {basicShortcuts.map((feature, index) => (
               <FeatureCard key={feature.shortcut} feature={feature} index={index} />
             ))}
@@ -206,7 +206,7 @@ export default function AnimatedFeatureSection() {
             <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 overflow-visible">
             {advancedShortcuts.map((feature, index) => (
               <FeatureCard key={feature.shortcut} feature={feature} index={index + 10} />
             ))}
