@@ -67,7 +67,10 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             <div className="mt-3 text-xs text-gray-400 text-center px-2">
               <p className="mb-1">Gunakan <span className="text-blue-400 font-medium">Alt+G</span> untuk caption gambar, <span className="text-blue-400 font-medium">Alt+T</span> untuk tabel, dan <span className="text-blue-400 font-medium">Alt+L</span> untuk lampiran.</p>
-              <p>Tekan <span className="text-blue-400 font-medium">Alt+Shift+G/T/L</span> untuk menampilkan tabel daftar isi dari caption yang telah dibuat.</p>
+              <p className="mb-1">Tekan <span className="text-blue-400 font-medium">Alt+Shift+G/T/L</span> untuk menampilkan tabel daftar isi dari caption yang telah dibuat.</p>
+              <p className="mb-1">Gunakan <span className="text-blue-400 font-medium">Ctrl+Alt+G/T/L</span> untuk caption dengan 2 digit yang auto deteksi urutan bab (misal di Bab 4: 4.1, 4.2, 4.3).</p>
+              <p className="mb-1">Penomoran halaman: <span className="text-blue-400 font-medium">Alt+K</span> (latin), <span className="text-blue-400 font-medium">Alt+R</span> (romawi), <span className="text-blue-400 font-medium">Ctrl+Alt+K</span> (opsi tengah bawah/kanan atas).</p>
+              <p>Format painter: <span className="text-blue-400 font-medium">Alt+Q</span> (copy), <span className="text-blue-400 font-medium">Alt+W</span> (paste), <span className="text-blue-400 font-medium">Alt+C</span> (hapus nomor halaman).</p>
             </div>
           </div>
           
@@ -171,7 +174,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Pengalih otomatis untuk angka romawi dan arab di berbagai bagian</span>
+                  <span className="text-gray-300">Penomoran halaman otomatis (Alt+Shift+K) dengan deteksi posisi bab</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Opsi halaman latin (Alt+K) dan romawi (Alt+R) untuk berbagai bagian</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
@@ -179,11 +186,15 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">Caption 2-digit dengan auto-deteksi bab (Ctrl+Alt+G/T/L)</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Daftar gambar/tabel/lampiran otomatis (Alt+Shift+G/T/L)</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-300">Dialog klik-pilih-selesai untuk pemformatan cepat</span>
+                  <span className="text-gray-300">Format painter (Alt+Q/W) dan dialog klik-pilih-selesai</span>
                 </li>
               </ul>
               <a 

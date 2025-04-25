@@ -421,12 +421,34 @@ export default function ProductShowcase() {
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="p-3 border-b text-gray-700 font-medium">Penomoran halaman campuran (Arab, Romawi)</td>
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Penomoran halaman campuran (Alt+K, Alt+R)</div>
+                      <div className="text-xs text-gray-500 mt-1">Angka Arab (Alt+K) dan Romawi (Alt+R) untuk berbagai bagian</div>
+                    </td>
                     <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="p-3 border-b text-gray-700 font-medium">Opsi posisi nomor halaman (tengah bawah/kanan atas)</td>
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Penomoran halaman otomatis (Alt+Shift+K)</div>
+                      <div className="text-xs text-gray-500 mt-1">Deteksi posisi bab dan format halaman secara otomatis</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Posisi nomor halaman (Ctrl+Alt+K)</div>
+                      <div className="text-xs text-gray-500 mt-1">Opsi tengah bawah dan kanan atas</div>
+                    </td>
+                    <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
+                    <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="p-3 border-b text-gray-700">
+                      <div className="font-medium">Format painter (Alt+Q/W) & Hapus nomor (Alt+C)</div>
+                      <div className="text-xs text-gray-500 mt-1">Copy format (Alt+Q), paste format (Alt+W), hapus nomor halaman (Alt+C)</div>
+                    </td>
                     <td className="p-3 border-b text-center"><X className="h-5 w-5 text-gray-400 mx-auto" /></td>
                     <td className="p-3 border-b text-center bg-blue-50/30"><CheckCircle className="h-5 w-5 text-blue-600 mx-auto" /></td>
                   </tr>
