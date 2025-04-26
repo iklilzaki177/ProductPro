@@ -52,7 +52,7 @@ export default function ProductShowcase() {
         </div>
         
         {/* Visual Guides for Basic and Advance Features */}
-        <div className="mt-16 mb-8">
+        <div className="mt-16 mb-8" id="contoh-penggunaan">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-semibold mb-3 text-gray-800">Tampilan Fitur yang Anda Dapatkan</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">

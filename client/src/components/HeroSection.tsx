@@ -47,11 +47,18 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </span>
             </button>
             <button 
-              onClick={onLearnMoreClick}
+              onClick={() => {
+                const section = document.getElementById('contoh-penggunaan');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  onLearnMoreClick();
+                }
+              }}
               className="glass-effect text-white px-8 py-3.5 rounded-full font-medium text-lg flex items-center transition-all duration-300 hover:border-blue-400 border border-blue-600/30 hover:shadow-lg hover:shadow-blue-500/20"
             >
               <span className="flex items-center">
-                Pelajari Lebih Lanjut <ChevronRight className="h-5 w-5 ml-1" />
+                Contoh Penggunaan <ChevronRight className="h-5 w-5 ml-1" />
               </span>
             </button>
           </div>
