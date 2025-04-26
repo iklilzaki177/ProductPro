@@ -52,10 +52,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       viewport={{ once: true }}
       custom={index}
       className={cn(
-        "p-5 rounded-xl shadow-lg border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
+        "p-5 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2",
         feature.isAdvanced 
-          ? "bg-blue-900/30 border-blue-500/30 hover:border-blue-400/50 hover:shadow-blue-500/20" 
-          : "bg-gray-900/30 border-zinc-700/30 hover:border-gray-600/50 hover:shadow-gray-700/20"
+          ? "bg-blue-900/30 border-blue-500/50 hover:border-blue-400/70 hover:shadow-blue-500/40" 
+          : "bg-gray-900/30 border-gray-600/50 hover:border-gray-500/70 hover:shadow-gray-600/40"
       )}
     >
       {/* Card layout changed to vertical arrangement for better readability */}
@@ -63,10 +63,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Keyboard shortcut - now better aligned with overall layout */}
         <div className="flex items-center mb-4">
           <div className={cn(
-            "text-base font-mono px-4 py-2.5 rounded-lg shadow-md font-bold tracking-wider",
+            "text-base font-mono px-4 py-2.5 rounded-lg shadow-lg font-bold tracking-wider border",
             feature.isAdvanced 
-              ? "bg-blue-500/40 text-blue-100 shadow-blue-500/20" 
-              : "bg-gray-800/60 text-gray-100 shadow-gray-900/20"
+              ? "bg-blue-600/40 text-blue-50 shadow-blue-500/30 border-blue-400/40" 
+              : "bg-gray-800/80 text-gray-100 shadow-gray-900/30 border-gray-600/40"
           )}>
             {feature.shortcut}
           </div>
@@ -75,12 +75,14 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Description in middle with larger font and better line height */}
         <div className="flex items-start mb-3">
           <div className={cn(
-            "p-2 rounded-full flex items-center justify-center shadow-md mr-3",
-            feature.isAdvanced ? "bg-blue-500/40 shadow-blue-500/20" : "bg-gray-800/60 shadow-gray-900/20"
+            "p-2 rounded-full flex items-center justify-center shadow-md mr-3 border",
+            feature.isAdvanced 
+              ? "bg-blue-500/40 shadow-blue-500/30 border-blue-400/50" 
+              : "bg-gray-800/80 shadow-gray-900/30 border-gray-600/50"
           )}>
             <Keyboard className={cn(
               "h-4 w-4",
-              feature.isAdvanced ? "text-blue-300" : "text-gray-300"
+              feature.isAdvanced ? "text-blue-200" : "text-gray-200"
             )} />
           </div>
           
@@ -95,10 +97,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Package indicator at bottom with improved styling - now left aligned */}
         {feature.isAdvanced && (
           <div className="mt-2 flex items-center self-start">
-            <div className="flex items-center justify-center h-5 w-5 bg-blue-500/20 rounded-full mr-2">
-              <Check className="h-3 w-3 text-blue-300" />
+            <div className="flex items-center justify-center h-5 w-5 bg-blue-500/40 rounded-full mr-2 border border-blue-400/50">
+              <Check className="h-3 w-3 text-blue-200" />
             </div>
-            <span className="text-sm text-blue-300 font-medium">Advanced</span>
+            <span className="text-sm bg-blue-500/20 px-2 py-0.5 rounded-md text-blue-200 font-medium border border-blue-400/30">Advanced</span>
           </div>
         )}
       </div>
