@@ -35,15 +35,16 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection onLearnMoreClick={() => handleScroll('features')} onBuyNowClick={() => handleScroll('product')} />
         
-        {/* Product section is now handled in the HeroSection */}
-        <div id="product"></div>
-        
-        <div id="compare">
-          {/* Feature comparison moved to AnimatedFeatureSection */}
+        <div id="product">
+          <ProductShowcase />
         </div>
         
         <div id="features">
-          <ProductShowcase />
+          {/* Features are shown in ProductShowcase */}
+        </div>
+        
+        <div id="compare">
+          {/* Feature comparison moved to AnimatedFeatureSection */}
         </div>
         
         <div id="testimonials">

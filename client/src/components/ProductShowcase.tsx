@@ -3,6 +3,8 @@ import panelAdvanceImg from '@assets/panel advance.png';
 import panelAdvance1Img from '@assets/panel advance1.png';
 import panelAtasBawahImg from '@assets/4. panel atas + bawah.png';
 import iPhoneImg from '@assets/iPhone 14 & 15 Pro - 3.png';
+import basicVersionImg from '@assets/picture 1.png';
+import advanceVersionImg from '@assets/picture 2.png';
 
 export default function ProductShowcase() {
   return (
@@ -62,7 +64,65 @@ export default function ProductShowcase() {
           </div>
         </div>
         
-        {/* Other sections removed as requested */}
+        {/* Visual Guides for Basic and Advance Features */}
+        <div className="mt-16 mb-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-semibold mb-3 text-gray-800">Tampilan Fitur yang Anda Dapatkan</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Berikut adalah tampilan dialog dan antarmuka yang akan Anda gunakan
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-center gap-8 mt-10">
+            {/* Basic Version */}
+            <div className="flex-1 bg-gray-50 rounded-xl p-6 shadow-md border border-gray-200">
+              <div className="bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-full inline-block mb-4">
+                Basic Version
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md bg-white">
+                <img 
+                  src={basicVersionImg} 
+                  alt="Easy.kripsi Basic Version Features" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block py-2 px-6 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors"
+                >
+                  Basic (Rp 50.000)
+                </a>
+              </div>
+            </div>
+            
+            {/* Advance Version */}
+            <div className="flex-1 bg-blue-50 rounded-xl p-6 shadow-md border border-blue-200">
+              <div className="bg-blue-600 text-white font-medium py-2 px-4 rounded-full inline-block mb-4">
+                Advance Version
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md bg-white">
+                <img 
+                  src={advanceVersionImg} 
+                  alt="Easy.kripsi Advance Version Features" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <a 
+                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block py-2 px-6 bg-blue-700 text-white rounded-full font-medium hover:bg-blue-800 transition-colors shadow-md"
+                >
+                  Advance (Rp 100.000)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
