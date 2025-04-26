@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProductShowcase from '@/components/ProductShowcase';
 import Footer from '@/components/Footer';
-import ResponsiveFeatureTable from '@/components/ResponsiveFeatureTable';
 import ResponsiveTestimonials from '@/components/ResponsiveTestimonials';
 
 export default function Home() {
@@ -40,7 +39,7 @@ export default function Home() {
         <div id="product"></div>
         
         <div id="compare">
-          <ResponsiveFeatureTable />
+          {/* Feature comparison moved to AnimatedFeatureSection */}
         </div>
         
         <div id="features">
