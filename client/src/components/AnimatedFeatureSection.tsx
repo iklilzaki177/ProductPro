@@ -136,8 +136,8 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-2.5 rounded-full text-lg font-semibold text-blue-300 mr-4 border border-gray-700 shadow-md shadow-gray-900/20">
-            Basic Package
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-2.5 rounded-full text-lg font-semibold text-blue-200 mr-4 border border-gray-700 shadow-md shadow-gray-900/20">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-cyan-300">Basic Package</span>
           </div>
           <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
         </motion.div>
@@ -148,7 +148,7 @@ export default function AnimatedFeatureSection() {
           ))}
         </div>
         
-        <div className="text-gray-400 text-sm ml-2 italic">
+        <div className="text-gray-300 text-sm ml-2 italic font-medium bg-gray-800/50 inline-block px-3 py-1 rounded-md">
           *Fitur dasar untuk pemformatan skripsi
         </div>
       </div>
@@ -173,7 +173,7 @@ export default function AnimatedFeatureSection() {
           ))}
         </div>
         
-        <div className="text-blue-400 text-sm ml-2 italic">
+        <div className="text-blue-300 text-sm ml-2 italic font-medium bg-blue-900/50 inline-block px-3 py-1 rounded-md border border-blue-800/30">
           *Fitur profesional dengan penomoran 2-digit dan format painter
         </div>
       </div>
