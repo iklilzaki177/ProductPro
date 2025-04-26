@@ -17,34 +17,18 @@ export default function ProductShowcase() {
           </p>
         </div>
         
-        {/* Advanced Features Showcase - FIRST SECTION */}
+        {/* Introduction Section */}
         <div className="mt-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-white">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-semibold mb-3">Fitur-fitur unggulan terbaru kami</h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Versi Advance memberikan Anda alat yang lebih canggih untuk pemformatan skripsi
             </p>
-            <div className="mt-4 py-1.5 px-6 bg-white text-blue-700 rounded-full inline-block text-sm font-bold border-2 border-white shadow-md">
-              EXCLUSIVE ADVANCE FEATURE
-            </div>
-          </div>
-          
-          <div className="flex justify-center">
-            <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-2xl bg-white">
-              <img 
-                src={panelAtasBawahImg} 
-                alt="Panel penomoran halaman dengan opsi tengah bawah, kanan atas" 
-                className="w-full h-auto px-4 py-6" 
-              />
-            </div>
           </div>
             
           <div className="mt-8 text-center">
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-3">
               Format skripsi Anda secara otomatis dengan pintasan keyboard dan alat cerdas
-            </p>
-            <p className="text-sm text-blue-200/80 max-w-2xl mx-auto mb-6">
-              <span className="bg-blue-600/30 px-4 py-1 rounded-full">Dialog opsi posisi nomor halaman khusus versi Advance</span>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
@@ -106,12 +90,28 @@ export default function ProductShowcase() {
               <div className="bg-blue-600 text-white font-medium py-2 px-4 rounded-full inline-block mb-4">
                 Advance Version
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md bg-white">
+              <div className="py-1.5 px-6 bg-blue-600/30 text-blue-800 rounded-full inline-block text-sm font-bold mb-4 border border-blue-300">
+                EXCLUSIVE ADVANCE FEATURE
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md bg-white mb-4">
                 <img 
                   src={advanceVersionImg} 
                   alt="Easy.kripsi Advance Version Features" 
                   className="w-full h-auto"
                 />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md bg-white">
+                <div className="bg-blue-50 py-2 px-4 text-blue-800 text-sm font-medium border-b border-blue-100">
+                  Dialog Pengaturan Posisi Nomor Halaman
+                </div>
+                <img 
+                  src={panelAtasBawahImg} 
+                  alt="Panel penomoran halaman dengan opsi tengah bawah, kanan atas" 
+                  className="w-full h-auto px-4 py-4" 
+                />
+                <div className="bg-blue-50 py-2 px-4 text-blue-600 text-xs italic border-t border-blue-100">
+                  *Fitur khusus versi Advance untuk mengatur posisi nomor halaman
+                </div>
               </div>
               <div className="mt-4 text-center">
                 <a 
