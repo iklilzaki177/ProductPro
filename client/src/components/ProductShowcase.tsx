@@ -24,8 +24,8 @@ export default function ProductShowcase() {
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Versi Advance memberikan Anda alat yang lebih canggih untuk pemformatan skripsi
             </p>
-            <div className="mt-4 py-1 px-4 bg-white text-blue-700 rounded-full inline-block text-sm font-bold">
-              klik-pilih-selesai
+            <div className="mt-4 py-1.5 px-6 bg-white text-blue-700 rounded-full inline-block text-sm font-bold border-2 border-white shadow-md">
+              EXCLUSIVE ADVANCE FEATURE
             </div>
           </div>
           
@@ -40,8 +40,11 @@ export default function ProductShowcase() {
           </div>
             
           <div className="mt-8 text-center">
-            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6">
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-3">
               Format skripsi Anda secara otomatis dengan pintasan keyboard dan alat cerdas
+            </p>
+            <p className="text-sm text-blue-200/80 max-w-2xl mx-auto mb-6">
+              <span className="bg-blue-600/30 px-4 py-1 rounded-full">Dialog opsi posisi nomor halaman khusus versi Advance</span>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
