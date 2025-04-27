@@ -1,6 +1,7 @@
 import { ChevronRight, Clock, Star, ThumbsUp, Zap, Check } from 'lucide-react';
 import AnimatedFeatureSection from './AnimatedFeatureSection';
 import advanceImg from '@assets/panel advance.png';
+import { useState, useEffect } from 'react';
 
 interface HeroSectionProps {
   onBuyNowClick: () => void;
@@ -8,6 +9,25 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSectionProps) {
+  // Rotating features state
+  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const features = [
+    'Nomor Halaman',
+    'Daftar Isi',
+    'Daftar Gambar',
+    'Heading Bab',
+    'Heading Sub Bab'
+  ];
+  
+  // Effect for rotating features every 1.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % features.length);
+    }, 1500);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <section className="relative">
       {/* Hero Section - Light Theme Style */}
@@ -67,87 +87,45 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full max-w-lg overflow-hidden">
-                {/* Feature Cards - Better Visual Representation */}
-                <div className="space-y-3 p-4">
-                  {/* Feature 1 - Numbered Captions with Chapter */}
-                  <div className="bg-white rounded-lg p-3 border border-gray-200 relative">
-                    <div className="absolute top-3 right-3 flex space-x-2">
-                      <span className="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">ADVANCE</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-blue-100 rounded-full p-2 flex-shrink-0">
-                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-semibold text-gray-900">Daftar gambar 2 digit?</h4>
-                        <div className="mt-1 text-xs text-gray-600">
-                          <span className="bg-gray-100 px-2 py-0.5 rounded">ctrl + alt + g/t/l</span>
-                        </div>
-                        <div className="mt-2 grid grid-cols-3 gap-2 justify-center">
-                          <div className="text-xs text-center text-gray-600">
-                            <div className="border border-gray-200 rounded py-1 text-xs mb-1">Gambar 1.1</div>
-                            <div className="text-[10px]">Gambar 1.2, 1.3, ...</div>
-                          </div>
-                          <div className="text-xs text-center text-gray-600">
-                            <div className="border border-gray-200 rounded py-1 text-xs mb-1">Tabel 1.1</div>
-                            <div className="text-[10px]">Tabel 1.2, 1.3, ...</div>
-                          </div>
-                          <div className="text-xs text-center text-gray-600">
-                            <div className="border border-gray-200 rounded py-1 text-xs mb-1">Lampiran 1.1</div>
-                            <div className="text-[10px]">Lampiran 1.2, 1.3, ...</div>
-                          </div>
-                        </div>
-                      </div>
+                {/* Animated Feature Showcase */}
+                <div className="p-8 flex flex-col items-center text-center">
+                  <div className="bg-blue-600 text-white px-3 py-1 text-xs rounded-full mb-6 font-medium">
+                    FITUR OTOMATIS
+                  </div>
+                  
+                  {/* Animated Panel Image */}
+                  <div className="relative">
+                    <img 
+                      src={advanceImg} 
+                      alt="Easy.kripsi Advance Version Interface" 
+                      className="rounded-lg shadow-md w-full max-w-xs mx-auto" 
+                    />
+                    <div className="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                      ADVANCE
                     </div>
                   </div>
                   
-                  {/* Feature 2 - Roman Page Numbers */}
-                  <div className="bg-white rounded-lg p-3 border border-gray-200">
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-blue-100 rounded-full p-2 flex-shrink-0">
-                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-semibold text-gray-900">Nomor halaman romawi</h4>
-                        <div className="mt-1 text-xs text-gray-600">
-                          <span className="bg-gray-100 px-2 py-0.5 rounded">alt + r</span>
-                        </div>
-                        <div className="mt-2 grid grid-cols-3 gap-2">
-                          <div className="border border-gray-200 rounded flex items-center justify-center h-12 text-xs text-gray-600">i</div>
-                          <div className="border border-gray-200 rounded flex items-center justify-center h-12 text-xs text-gray-600">ii</div>
-                          <div className="border border-gray-200 rounded flex items-center justify-center h-12 text-xs text-gray-600">iii</div>
-                        </div>
-                      </div>
+                  {/* Animated Feature Text */}
+                  <div className="mt-8 h-28 flex flex-col items-center justify-center">
+                    <div className="text-xs text-blue-600 font-medium uppercase tracking-wider mb-2">
+                      FITUR
                     </div>
-                  </div>
-                  
-                  {/* Feature 3 - Latin Page Numbers */}
-                  <div className="bg-white rounded-lg p-3 border border-gray-200">
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-blue-100 rounded-full p-2 flex-shrink-0">
-                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-semibold text-gray-900">Nomor halaman latin</h4>
-                        <div className="mt-1 text-xs text-gray-600">
-                          <span className="bg-gray-100 px-2 py-0.5 rounded">alt + k</span>
+                    <div className="relative overflow-hidden h-20 w-full">
+                      {features.map((feature, index) => (
+                        <div 
+                          key={index}
+                          className={`absolute w-full transition-all duration-500 ease-in-out ${
+                            index === currentFeatureIndex 
+                              ? 'opacity-100 transform-none' 
+                              : 'opacity-0 translate-y-8'
+                          }`}
+                        >
+                          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                            {feature}
+                          </h3>
+                          <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
                         </div>
-                        <div className="mt-2 grid grid-cols-3 gap-2">
-                          <div className="border border-gray-200 rounded flex flex-col items-center justify-center h-14 p-1 text-xs text-gray-600">
-                            <div className="text-[9px] font-medium text-gray-500">BAB I</div>
-                            <div className="text-[9px]">PENDAHULUAN</div>
-                            <div className="mt-auto">1</div>
-                          </div>
-                          <div className="border border-gray-200 rounded flex items-center justify-center h-14 text-xs text-gray-600">2</div>
-                          <div className="border border-gray-200 rounded flex items-center justify-center h-14 text-xs text-gray-600">3</div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -162,7 +140,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                     }}
                     className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center text-sm"
                   >
-                    Lihat Semua Fitur <ChevronRight className="h-4 w-4 ml-1" />
+                    Lihat Contoh Penggunaan <ChevronRight className="h-4 w-4 ml-1" />
                   </button>
                 </div>
               </div>
