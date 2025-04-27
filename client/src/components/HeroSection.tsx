@@ -178,7 +178,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
       </div>
       
       {/* Features Section */}
-      <div className="bg-white py-12">
+      <div className="bg-blue-50 py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <AnimatedFeatureSection />

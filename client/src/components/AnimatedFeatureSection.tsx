@@ -121,10 +121,10 @@ export default function AnimatedFeatureSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-5 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200 tracking-tight leading-tight">
-            Pintasan Keyboard <span className="text-blue-300">Powerful</span>
+          <h2 className="text-4xl font-bold mb-5 text-gray-900 tracking-tight leading-tight">
+            Pintasan Keyboard <span className="text-blue-600">Powerful</span>
           </h2>
-          <p className="text-blue-200/90 max-w-3xl text-xl font-light leading-relaxed">
+          <p className="text-gray-700 max-w-3xl text-xl font-light leading-relaxed">
             Gunakan pintasan keyboard intuitive untuk mempercepat format skripsi Anda
           </p>
         </motion.div>
@@ -138,10 +138,10 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-2.5 rounded-full text-lg font-semibold text-blue-200 mr-4 border border-gray-700 shadow-md shadow-gray-900/20">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-cyan-300">Basic Package</span>
+          <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2.5 rounded-full text-lg font-semibold text-white mr-4 shadow-md shadow-blue-500/20">
+            <span>Basic Package</span>
           </div>
-          <div className="h-px flex-grow bg-gradient-to-r from-gray-700 to-transparent"></div>
+          <div className="h-px flex-grow bg-gradient-to-r from-blue-400/50 to-transparent"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
@@ -150,7 +150,7 @@ export default function AnimatedFeatureSection() {
           ))}
         </div>
         
-        <div className="text-gray-300 text-sm ml-2 italic font-medium bg-gray-800/50 inline-block px-3 py-1 rounded-md">
+        <div className="text-gray-700 text-sm ml-2 italic font-medium bg-gray-100 inline-block px-3 py-1 rounded-md border border-gray-200">
           *Fitur dasar untuk pemformatan skripsi
         </div>
       </div>
@@ -163,10 +163,10 @@ export default function AnimatedFeatureSection() {
           viewport={{ once: true }}
           className="flex items-center mb-8"
         >
-          <div className="premium-badge px-6 py-2.5 rounded-full text-lg font-bold text-white mr-4 shadow-lg shadow-blue-500/40">
-            Advanced Package
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-2.5 rounded-full text-lg font-semibold text-white mr-4 shadow-md shadow-blue-600/20">
+            <span>Advanced Package</span>
           </div>
-          <div className="h-px flex-grow bg-gradient-to-r from-blue-600/50 to-transparent"></div>
+          <div className="h-px flex-grow bg-gradient-to-r from-blue-500/50 to-transparent"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
@@ -175,13 +175,13 @@ export default function AnimatedFeatureSection() {
           ))}
         </div>
         
-        <div className="text-blue-300 text-sm ml-2 italic font-medium bg-blue-900/50 inline-block px-3 py-1 rounded-md border border-blue-800/30">
+        <div className="text-blue-700 text-sm ml-2 italic font-medium bg-blue-100 inline-block px-3 py-1 rounded-md border border-blue-300">
           *Fitur profesional dengan penomoran 2-digit dan format painter
         </div>
         
         {/* Feature Comparison Table - Moved from HeroSection */}
         <div className="mt-16 overflow-hidden w-full">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-left text-white">Perbandingan Fitur Basic vs Advance</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-left text-gray-900">Perbandingan Fitur Basic vs Advance</h3>
           <div className="overflow-x-auto glass-effect p-4 rounded-lg">
             <table className="w-full border-collapse bg-white rounded-lg shadow-md">
               <thead>
@@ -296,18 +296,17 @@ export default function AnimatedFeatureSection() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className="mt-24 mb-10 px-4">
-          <div className="glass-effect rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-lg border border-blue-800/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 opacity-80 pointer-events-none"></div>
+        <div className="mt-16 mb-10 px-4">
+          <div className="rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-lg border border-blue-200 relative overflow-hidden bg-gradient-to-r from-blue-50 to-white">
             <div className="relative z-10">
-              <h2 className="text-3xl font-semibold mb-3 text-white">Siap Menghemat Waktu Format Skripsi?</h2>
-              <p className="text-lg text-blue-100 mb-8 max-w-xl mx-auto">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
+              <h2 className="text-3xl font-semibold mb-3 text-gray-900">Siap Menghemat Waktu Format Skripsi?</h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">Dapatkan Easy.kripsi sekarang dan fokus pada isi skripsi Anda, bukan formatnya.</p>
               <div className="flex flex-wrap justify-center gap-6">
                 <a 
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3.5 px-10 bg-white text-blue-900 font-medium rounded-full hover:bg-blue-50 transition-all shadow-lg transform hover:scale-105 duration-300"
+                  className="py-3.5 px-10 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-all shadow-md transform hover:scale-105 duration-300"
                 >
                   Basic (Rp 50.000)
                 </a>
@@ -315,12 +314,12 @@ export default function AnimatedFeatureSection() {
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105"
+                  className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-md transform hover:scale-105"
                 >
                   Advance (Rp 100.000)
                 </a>
               </div>
-              <div className="mt-6 text-sm text-blue-200/70">
+              <div className="mt-6 text-sm text-gray-500">
                 Developed by @Iklilzaki and @Bangdeniuss
               </div>
             </div>
