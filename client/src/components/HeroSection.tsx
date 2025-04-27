@@ -179,11 +179,44 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
         </div>
       </div>
       
-      {/* Features Section */}
-      <div className="bg-blue-50 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
+      {/* Features Section - Redesigned */}
+      <div className="bg-gradient-to-b from-blue-600 to-blue-700 py-16 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+          <div className="absolute top-1/2 -right-32 w-80 h-80 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 rounded-full bg-blue-300 opacity-20 blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 bg-blue-500 bg-opacity-30 rounded-full text-white text-sm font-medium mb-4">
+              Fitur Unggulan
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Pintasan Keyboard yang <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white">Mempercepat Skripsi Anda</span>
+            </h2>
+            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+              Format skripsi Anda dalam hitungan detik dengan kombinasi pintasan keyboard yang praktis dan intuitif
+            </p>
+          </div>
+          
+          <div className="max-w-7xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl">
             <AnimatedFeatureSection />
+          </div>
+          
+          <div className="flex justify-center mt-10">
+            <a 
+              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center bg-white hover:bg-blue-50 text-blue-600 font-medium py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl"
+            >
+              <span>Dapatkan Semua Fitur di Paket Advance</span>
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
