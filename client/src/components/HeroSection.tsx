@@ -133,14 +133,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </div>
               </div>
               
-              {/* Mobile Version - Only Image */}
-              <div className="lg:hidden">
-                <img 
-                  src={advanceImg} 
-                  alt="Easy.kripsi Advance Version Interface" 
-                  className="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg border border-gray-200" 
-                />
-              </div>
+
             </div>
           </div>
         </div>
