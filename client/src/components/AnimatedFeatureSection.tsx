@@ -130,60 +130,86 @@ export default function AnimatedFeatureSection() {
         </motion.div>
       </div>
 
-      <div className="mb-16">
+      {/* Basic Package Section */}
+      <div className="mb-20 relative">
+        {/* Decorative elements */}
+        <div className="absolute -left-4 -top-4 w-32 h-32 bg-blue-50 rounded-full opacity-40 blur-xl z-0"></div>
+        <div className="absolute right-10 top-20 w-48 h-48 bg-blue-100 rounded-full opacity-30 blur-3xl z-0"></div>
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="flex items-center mb-8"
+          className="relative z-10"
         >
-          <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-2.5 rounded-full text-lg font-semibold text-white mr-4 shadow-md shadow-blue-500/20">
-            <span>Basic Package</span>
+          <div className="flex flex-col items-center text-center mb-10">
+            <div className="inline-flex items-center justify-center px-4 py-1 mb-3 bg-blue-100 text-blue-600 text-xs font-medium uppercase tracking-wider rounded-full">
+              Paket Dasar
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Basic Package</h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full mb-4"></div>
+            <p className="text-gray-600 max-w-2xl">Fitur-fitur esensial untuk memulai format dokumen skripsi Anda dengan mudah dan cepat</p>
           </div>
-          <div className="h-px flex-grow bg-gradient-to-r from-blue-400/50 to-transparent"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 relative z-10">
           {basicShortcuts.map((feature, index) => (
             <FeatureCard key={feature.shortcut} feature={feature} index={index} />
           ))}
         </div>
         
-        <div className="text-gray-700 text-sm ml-2 italic font-medium bg-gray-100 inline-block px-3 py-1 rounded-md border border-gray-200">
-          *Fitur dasar untuk pemformatan skripsi
+        <div className="flex justify-center mt-6 relative z-10">
+          <div className="text-gray-700 text-sm italic font-medium bg-white px-5 py-2.5 rounded-lg border border-gray-200 shadow-sm">
+            <span className="text-blue-600 font-semibold">*</span> Fitur dasar untuk pemformatan skripsi dengan harga Rp 50.000
+          </div>
         </div>
       </div>
 
-      <div className="mb-16">
+      {/* Advanced Package Section */}
+      <div className="mb-20 relative">
+        {/* Decorative elements for advanced section */}
+        <div className="absolute -right-10 -top-10 w-40 h-40 bg-indigo-100 rounded-full opacity-40 blur-xl z-0"></div>
+        <div className="absolute left-20 top-40 w-64 h-64 bg-blue-200 rounded-full opacity-20 blur-3xl z-0"></div>
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="flex items-center mb-8"
+          className="relative z-10"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-2.5 rounded-full text-lg font-semibold text-white mr-4 shadow-md shadow-blue-600/20">
-            <span>Advanced Package</span>
+          <div className="flex flex-col items-center text-center mb-10">
+            <div className="inline-flex items-center justify-center px-4 py-1 mb-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-medium uppercase tracking-wider rounded-full">
+              Paket Premium
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Advanced Package</h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full mb-4"></div>
+            <p className="text-gray-600 max-w-2xl">Fitur-fitur profesional untuk otomatisasi lengkap dengan penomoran 2-digit dan format painter</p>
           </div>
-          <div className="h-px flex-grow bg-gradient-to-r from-blue-500/50 to-transparent"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 relative z-10">
           {advancedShortcuts.map((feature, index) => (
             <FeatureCard key={feature.shortcut} feature={feature} index={index} />
           ))}
         </div>
         
-        <div className="text-blue-700 text-sm ml-2 italic font-medium bg-blue-100 inline-block px-3 py-1 rounded-md border border-blue-300">
-          *Fitur profesional dengan penomoran 2-digit dan format painter
+        <div className="flex justify-center mt-6 relative z-10">
+          <div className="text-blue-800 text-sm italic font-medium bg-blue-50 px-5 py-2.5 rounded-lg border border-blue-200 shadow-sm">
+            <span className="text-blue-600 font-semibold">*</span> Fitur profesional dengan penomoran 2-digit dan format painter dengan harga Rp 100.000
+          </div>
         </div>
         
-        {/* Feature Comparison Table - Moved from HeroSection */}
-        <div className="mt-16 overflow-hidden w-full">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-left text-gray-900">Perbandingan Fitur Basic vs Advance</h3>
-          <div className="overflow-x-auto glass-effect p-4 rounded-lg">
-            <table className="w-full border-collapse bg-white rounded-lg shadow-md">
+        <div className="absolute -right-10 bottom-20 w-48 h-48 bg-blue-50 rounded-full opacity-30 blur-2xl z-0"></div>
+      </div>
+        
+      {/* Feature Comparison Table */}
+      <div className="mb-20 relative">
+        <div className="overflow-hidden w-full">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-gray-900">Perbandingan Fitur Basic vs Advance</h3>
+          <div className="overflow-x-auto p-4 rounded-lg bg-white shadow-lg border border-gray-100">
+            <table className="w-full border-collapse bg-white rounded-lg">
               <thead>
                 <tr className="bg-blue-50">
                   <th className="p-3 text-center text-gray-700 border-b">Fitur</th>
@@ -289,14 +315,14 @@ export default function AnimatedFeatureSection() {
         </div>
       </div>
 
-      {/* Comparison Call to Action - Copied from HeroSection */}
+      {/* Call to Action */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className="mt-16 mb-10 px-4">
+        <div className="my-16 px-4">
           <div className="rounded-2xl p-10 max-w-3xl mx-auto text-center shadow-lg border border-blue-200 relative overflow-hidden bg-gradient-to-r from-blue-50 to-white">
             <div className="relative z-10">
               <h2 className="text-3xl font-semibold mb-3 text-gray-900">Siap Menghemat Waktu Format Skripsi?</h2>
