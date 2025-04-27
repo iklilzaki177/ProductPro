@@ -113,24 +113,65 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             <div className="order-1 lg:order-2 flex flex-col justify-center items-center">
               {/* Desktop Version - Only Feature text */}
               <div className="hidden lg:block relative w-full">
-                {/* Desktop Feature Animation */}
+                {/* Desktop Feature Animation - Portrait Style */}
                 <div className="flex items-center justify-center">
-                  <div className="relative h-32 w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg border border-blue-100">
-                    {features.map((feature, index) => (
-                      <div 
-                        key={`desktop-${index}`}
-                        className={`absolute transition-all duration-700 ease-in-out ${
-                          index === currentFeatureIndex 
-                            ? 'opacity-100 transform-none' 
-                            : 'opacity-0 translate-y-8'
-                        }`}
-                      >
-                        <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">
-                          {feature}
-                        </h3>
-                        <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                  <div className="relative w-4/5 mx-auto flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg border border-blue-100 py-8 px-6">
+                    <div className="absolute -top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium shadow-md">
+                      FITUR ADVANCE
+                    </div>
+                    <div className="h-56 flex items-center justify-center">
+                      {features.map((feature, index) => (
+                        <div 
+                          key={`desktop-${index}`}
+                          className={`absolute transition-all duration-700 ease-in-out ${
+                            index === currentFeatureIndex 
+                              ? 'opacity-100 transform-none' 
+                              : 'opacity-0 translate-y-8'
+                          }`}
+                        >
+                          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">
+                            {feature}
+                          </h3>
+                          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-6 w-full max-w-sm">
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <p className="text-gray-700 font-medium text-center mb-3">Format skripsi lebih cepat dengan pintasan keyboard:</p>
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-sm font-medium">Alt+1</span>
+                            <span className="text-gray-400">→</span>
+                            <span className="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">Format Heading 1</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-sm font-medium">Alt+D</span>
+                            <span className="text-gray-400">→</span>
+                            <span className="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">Daftar Isi Otomatis</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-sm font-medium">Alt+G</span>
+                            <span className="text-gray-400">→</span>
+                            <span className="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">Caption Gambar</span>
+                          </div>
+                          <div className="flex items-center justify-between mt-4">
+                            <a 
+                              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-full py-2 px-3 text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors flex items-center justify-center"
+                            >
+                              <span>Dapatkan Paket Advance</span>
+                              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               </div>
