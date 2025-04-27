@@ -86,26 +86,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             
             <div className="order-1 lg:order-2 flex justify-center items-center">
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full overflow-hidden flex items-center justify-center min-h-[300px] py-12">
-                {/* Animated Feature Text - Simple Version */}
-                <div className="relative h-32 w-full flex items-center justify-center">
-                  {features.map((feature, index) => (
-                    <div 
-                      key={index}
-                      className={`absolute transition-all duration-700 ease-in-out ${
-                        index === currentFeatureIndex 
-                          ? 'opacity-100 transform-none' 
-                          : 'opacity-0 translate-y-8'
-                      }`}
-                    >
-                      <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3 text-center">
-                        {feature}
-                      </h3>
-                      <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <img 
+                src={advanceImg} 
+                alt="Easy.kripsi Advance Version Interface" 
+                className="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg border border-gray-200" 
+              />
             </div>
           </div>
         </div>
@@ -114,6 +99,27 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
       {/* Key Benefits Section */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
+          {/* Feature Animation - Moved from hero */}
+          <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full max-w-lg mx-auto mb-16 overflow-hidden flex items-center justify-center min-h-[200px] py-8">
+            <div className="relative h-32 w-full flex items-center justify-center">
+              {features.map((feature, index) => (
+                <div 
+                  key={index}
+                  className={`absolute transition-all duration-700 ease-in-out ${
+                    index === currentFeatureIndex 
+                      ? 'opacity-100 transform-none' 
+                      : 'opacity-0 translate-y-8'
+                  }`}
+                >
+                  <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3 text-center">
+                    {feature}
+                  </h3>
+                  <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Keunggulan Easy.kripsi</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
