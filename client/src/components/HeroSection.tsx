@@ -32,13 +32,13 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
     <section className="relative">
       {/* Hero Section - Light Theme Style */}
       <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center">
             <div className="order-2 lg:order-1">
               {/* Animated Feature on Mobile only */}
-              <div className="lg:hidden mb-2">
-                <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full overflow-hidden flex items-center justify-center min-h-[130px] py-4">
-                  <div className="relative h-24 w-full flex items-center justify-center">
+              <div className="lg:hidden mb-0">
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md border border-blue-100 w-full overflow-hidden flex items-center justify-center min-h-[100px] py-2">
+                  <div className="relative h-16 w-full flex items-center justify-center">
                     {features.map((feature, index) => (
                       <div 
                         key={`mobile-${index}`}
@@ -48,26 +48,26 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                             : 'opacity-0 translate-y-8'
                         }`}
                       >
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 text-center">
+                        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1 text-center">
                           {feature}
                         </h3>
-                        <div className="w-14 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                        <div className="w-12 h-1 bg-blue-600 mx-auto rounded-full"></div>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
               
-              <div className="text-sm font-medium text-blue-600 mb-3">
+              <div className="text-sm font-medium text-blue-600 mb-2 mt-1">
                 Easy.kripsi – Template Penulisan Skripsi
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+              <h1 className="text-3xl md:text-5xl font-bold mb-3 text-gray-900 leading-tight">
                 Otomatisasi format skripsi/tesis Anda dalam sekejap
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-4">
                 Hemat waktu penulisan skripsi dengan pintasan keyboard dan alat cerdas untuk Word
               </p>
-              <div className="flex flex-wrap items-center gap-2 mb-8 text-gray-500 text-sm">
+              <div className="flex flex-wrap items-center gap-2 mb-5 text-gray-500 text-sm">
                 <span className="flex items-center bg-gray-100 rounded-full px-3 py-1">
                   <Check className="h-4 w-4 text-blue-600 mr-1" /> 1600+ pengguna sejak 2022
                 </span>

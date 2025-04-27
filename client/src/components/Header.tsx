@@ -56,7 +56,7 @@ export default function Header({ onNavClick }: HeaderProps) {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white'}`}>
       <div className="container">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-14 md:h-18">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#" className="text-gray-900 font-bold text-xl" onClick={(e) => { e.preventDefault(); }}>
