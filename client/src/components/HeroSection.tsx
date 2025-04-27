@@ -109,11 +109,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             
             <div className="order-1 lg:order-2 flex flex-col justify-center items-center">
-              {/* Desktop Version - Image and Feature text side by side */}
+              {/* Desktop Version - Only Feature text */}
               <div className="hidden lg:block relative w-full">
                 {/* Desktop Feature Animation */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative h-32 w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-white bg-opacity-90 rounded-lg">
+                <div className="flex items-center justify-center">
+                  <div className="relative h-32 w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg border border-blue-100">
                     {features.map((feature, index) => (
                       <div 
                         key={`desktop-${index}`}
@@ -131,13 +131,6 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                     ))}
                   </div>
                 </div>
-              
-                {/* Desktop Image */}
-                <img 
-                  src={advanceImg} 
-                  alt="Easy.kripsi Advance Version Interface" 
-                  className="w-full max-w-md mx-auto h-auto object-contain rounded-lg shadow-lg border border-gray-200 opacity-80" 
-                />
               </div>
               
               {/* Mobile Version - Only Image */}
