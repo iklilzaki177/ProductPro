@@ -19,11 +19,11 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
     'Heading Sub Bab'
   ];
   
-  // Effect for rotating features every 1.5 seconds
+  // Effect for rotating features every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % features.length);
-    }, 1500);
+    }, 2000);
     
     return () => clearInterval(interval);
   }, []);
@@ -85,63 +85,25 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
               </div>
             </div>
             
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full max-w-lg overflow-hidden">
-                {/* Animated Feature Showcase */}
-                <div className="p-8 flex flex-col items-center text-center">
-                  <div className="bg-blue-600 text-white px-3 py-1 text-xs rounded-full mb-6 font-medium">
-                    FITUR OTOMATIS
-                  </div>
-                  
-                  {/* Animated Panel Image */}
-                  <div className="relative">
-                    <img 
-                      src={advanceImg} 
-                      alt="Easy.kripsi Advance Version Interface" 
-                      className="rounded-lg shadow-md w-full max-w-xs mx-auto" 
-                    />
-                    <div className="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                      ADVANCE
+            <div className="order-1 lg:order-2 flex justify-center items-center">
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full overflow-hidden flex items-center justify-center min-h-[300px] py-12">
+                {/* Animated Feature Text - Simple Version */}
+                <div className="relative h-32 w-full flex items-center justify-center">
+                  {features.map((feature, index) => (
+                    <div 
+                      key={index}
+                      className={`absolute transition-all duration-700 ease-in-out ${
+                        index === currentFeatureIndex 
+                          ? 'opacity-100 transform-none' 
+                          : 'opacity-0 translate-y-8'
+                      }`}
+                    >
+                      <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3 text-center">
+                        {feature}
+                      </h3>
+                      <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
                     </div>
-                  </div>
-                  
-                  {/* Animated Feature Text */}
-                  <div className="mt-8 h-28 flex flex-col items-center justify-center">
-                    <div className="text-xs text-blue-600 font-medium uppercase tracking-wider mb-2">
-                      FITUR
-                    </div>
-                    <div className="relative overflow-hidden h-20 w-full">
-                      {features.map((feature, index) => (
-                        <div 
-                          key={index}
-                          className={`absolute w-full transition-all duration-500 ease-in-out ${
-                            index === currentFeatureIndex 
-                              ? 'opacity-100 transform-none' 
-                              : 'opacity-0 translate-y-8'
-                          }`}
-                        >
-                          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                            {feature}
-                          </h3>
-                          <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-blue-50 px-4 py-3 border-t border-blue-100 text-center">
-                  <button
-                    onClick={() => {
-                      const section = document.getElementById('contoh-penggunaan');
-                      if (section) {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center text-sm"
-                  >
-                    Lihat Contoh Penggunaan <ChevronRight className="h-4 w-4 ml-1" />
-                  </button>
+                  ))}
                 </div>
               </div>
             </div>
