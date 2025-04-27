@@ -75,15 +75,6 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </a>
               </div>
               
-              <div className="mt-8 flex items-center text-sm text-gray-500">
-                <div className="flex -space-x-2 mr-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-xs font-medium text-white border-2 border-white">AD</div>
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-xs font-medium text-white border-2 border-white">SR</div>
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-xs font-medium text-white border-2 border-white">+</div>
-                </div>
-                <div>Dikembangkan oleh <span className="font-medium">@Iklilzaki</span> dan <span className="font-medium">@Bangdeniuss</span></div>
-              </div>
-              
               {/* Animated Feature on Mobile only */}
               <div className="lg:hidden mt-10">
                 <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full overflow-hidden flex items-center justify-center min-h-[180px] py-6">
@@ -105,6 +96,15 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                     ))}
                   </div>
                 </div>
+              </div>
+              
+              <div className="mt-8 flex items-center text-sm text-gray-500">
+                <div className="flex -space-x-2 mr-3">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-xs font-medium text-white border-2 border-white">AD</div>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-xs font-medium text-white border-2 border-white">SR</div>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-xs font-medium text-white border-2 border-white">+</div>
+                </div>
+                <div>Dikembangkan oleh <span className="font-medium">@Iklilzaki</span> dan <span className="font-medium">@Bangdeniuss</span></div>
               </div>
             </div>
             
