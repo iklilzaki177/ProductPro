@@ -32,8 +32,8 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
     <section className="relative">
       {/* Hero Section - Light Theme Style */}
       <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
               <div className="text-sm font-medium text-blue-600 mb-4">
                 Easy.kripsi – Template Penulisan Skripsi
@@ -140,9 +140,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
       </div>
       
       {/* Key Benefits Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Keunggulan Easy.kripsi</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Format skripsi dalam hitungan detik, bukan berjam-jam
@@ -178,7 +178,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
       </div>
       
       {/* Features Section */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <AnimatedFeatureSection />
@@ -187,9 +187,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
       </div>
       
       {/* Pricing Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Pilih Paket yang Tepat untuk Anda</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Sesuaikan pilihan dengan kebutuhan skripsi atau tesis Anda
@@ -329,9 +329,9 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
       </div>
       
       {/* Testimonials Section */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Apa Kata Pengguna Kami</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Dari 1600+ pengguna sejak 2022 yang telah berhasil menghemat waktu
