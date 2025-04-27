@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Search, ShoppingBag, X } from 'lucide-react';
+import { ShoppingBag, X } from 'lucide-react';
 
 interface HeaderProps {
   onNavClick: (id: string) => void;
@@ -55,76 +54,69 @@ export default function Header({ onNavClick }: HeaderProps) {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-zinc-800' : 'bg-black/80 backdrop-blur-sm'}`}>
-      <div className="main-container">
-        <div className="flex justify-between items-center h-12 md:h-14">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white'}`}>
+      <div className="container">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-white font-medium text-lg" onClick={(e) => { e.preventDefault(); }}>
-              <span className="text-lg font-semibold tracking-tight">Easy.<span className="text-blue-400">kripsi</span></span>
+            <a href="#" className="text-gray-900 font-bold text-xl" onClick={(e) => { e.preventDefault(); }}>
+              Easy.<span className="text-blue-600">kripsi</span>
             </a>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 text-xs justify-center flex-grow">
+          <nav className="hidden md:flex space-x-8 text-sm justify-center">
             <a 
               href="#features" 
               onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
+              className="text-gray-600 hover:text-blue-600 transition-colors whitespace-nowrap"
             >
-              Features
+              Fitur
             </a>
             <a 
               href="#product" 
               onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
+              className="text-gray-600 hover:text-blue-600 transition-colors whitespace-nowrap"
             >
-              Products
+              Produk
             </a>
             <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
+              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 transition-colors whitespace-nowrap"
             >
               Basic
             </a>
-
             <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
+              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 transition-colors whitespace-nowrap"
             >
               Advance
             </a>
-            <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-              className="text-blue-100 hover:text-blue-400 transition-colors whitespace-nowrap"
-            >
-              Support
-            </a>
           </nav>
           
-          {/* Icons */}
-          <div className="flex items-center space-x-6">
-            <button className="text-blue-200 hover:text-blue-400 focus:outline-none">
-              <Search className="h-4 w-4" />
-            </button>
-            <button 
-              className="text-blue-200 hover:text-blue-400 focus:outline-none"
-              onClick={() => handleNavClick('buy-now')}
+          {/* CTAs */}
+          <div className="flex items-center space-x-4">
+            <a 
+              href="#"
+              onClick={(e) => { e.preventDefault(); handleNavClick('buy-now'); }}
+              className="hidden md:inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors"
             >
-              <ShoppingBag className="h-4 w-4" />
-            </button>
+              <ShoppingBag className="h-4 w-4 mr-2" />
+              Beli Sekarang
+            </a>
             
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button 
                 type="button" 
                 onClick={toggleMobileMenu}
-                className="text-blue-200 hover:text-blue-400 focus:outline-none"
+                className="text-gray-600 hover:text-blue-600 focus:outline-none"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
                 </svg>
               </button>
@@ -132,19 +124,19 @@ export default function Header({ onNavClick }: HeaderProps) {
           </div>
         </div>
         
-        {/* Mobile Navigation - Improved for better mobile UX */}
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="fixed inset-0 z-50 md:hidden">
             {/* Backdrop overlay */}
-            <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={toggleMobileMenu}></div>
+            <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" onClick={toggleMobileMenu}></div>
             
             {/* Mobile menu panel */}
-            <div className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-black/95 shadow-lg flex flex-col animate-in slide-in-from-right">
+            <div className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-lg flex flex-col animate-in slide-in-from-right">
               {/* Menu header */}
-              <div className="flex items-center justify-between p-4 border-b border-zinc-800">
-                <span className="text-lg font-semibold text-white">Menu</span>
+              <div className="flex items-center justify-between p-4 border-b border-gray-200">
+                <span className="text-lg font-semibold text-gray-900">Menu</span>
                 <button 
-                  className="p-2 rounded-full hover:bg-blue-900/30 text-blue-200 transition-colors"
+                  className="p-2 rounded-full hover:bg-gray-100 text-gray-600 transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   <X className="h-5 w-5" />
@@ -157,48 +149,43 @@ export default function Header({ onNavClick }: HeaderProps) {
                   <a 
                     href="#features" 
                     onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                    className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base border-b border-zinc-800"
+                    className="text-gray-700 hover:bg-gray-100 transition-colors px-6 py-3 text-base border-b border-gray-200"
                   >
-                    Features
+                    Fitur
                   </a>
                   <a 
                     href="#product" 
                     onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                    className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base border-b border-zinc-800"
+                    className="text-gray-700 hover:bg-gray-100 transition-colors px-6 py-3 text-base border-b border-gray-200"
                   >
-                    Products
+                    Produk
                   </a>
-                  <div className="bg-blue-900/20 border-b border-zinc-800">
-                    <div className="px-6 py-2 text-xs text-blue-400 uppercase">Paket</div>
+                  <div className="bg-gray-50 border-b border-gray-200">
+                    <div className="px-6 py-2 text-xs text-gray-500 uppercase font-medium">Paket</div>
                     <a 
-                      href="#" 
-                      onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                      className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base border-b border-zinc-800 flex items-center"
+                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:bg-gray-100 transition-colors px-6 py-3 text-base border-b border-gray-200 flex items-center"
                     >
                       <div className="h-2 w-2 rounded-full bg-blue-500 mr-2"></div>
                       Basic
                     </a>
                     <a 
-                      href="#" 
-                      onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}
-                      className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base flex items-center"
+                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:bg-gray-100 transition-colors px-6 py-3 text-base flex items-center"
                     >
                       <div className="h-2 w-2 rounded-full bg-blue-500 mr-2"></div>
                       Advance
                     </a>
                   </div>
-                  <a 
-                    href="#" 
-                    onClick={(e) => { e.preventDefault(); handleNavClick('features'); }}
-                    className="text-blue-100 hover:bg-blue-900/30 hover:text-blue-400 transition-colors px-6 py-3 text-base"
-                  >
-                    Support
-                  </a>
                 </div>
               </div>
               
               {/* Menu footer */}
-              <div className="p-4 border-t border-zinc-800">
+              <div className="p-4 border-t border-gray-200">
                 <a 
                   href="#"
                   onClick={(e) => { e.preventDefault(); handleNavClick('product'); }}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,179 +10,182 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply font-sans antialiased bg-white text-gray-900;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-light tracking-tight;
+    @apply font-medium tracking-tight;
   }
 }
 
 @layer components {
-  .main-container {
-    @apply max-w-[980px] mx-auto px-4 sm:px-8;
+  .container {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   .nav-style {
-    @apply bg-white/90 backdrop-blur-md text-sm font-light;
+    @apply bg-white shadow-sm text-sm font-medium sticky top-0 z-50;
   }
   
   .primary-button {
-    @apply rounded-full px-4 py-1 text-sm font-medium transition-colors;
+    @apply rounded-lg px-6 py-3 text-sm font-medium transition-colors;
   }
   
   .hero-section {
-    @apply text-center py-12 md:py-20;
+    @apply py-16 lg:py-24;
   }
   
   .hero-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900;
   }
   
   .hero-subtitle {
-    @apply text-xl md:text-2xl font-light text-gray-600 mt-2;
+    @apply text-xl md:text-2xl font-normal text-gray-600 mt-4;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold text-gray-900 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-600 max-w-2xl mx-auto;
   }
   
   .content-section {
-    @apply text-center py-12;
-  }
-  
-  .page-footer {
-    @apply text-xs text-gray-500 border-t border-gray-200;
+    @apply py-16;
   }
   
   .shortcut-badge {
-    @apply bg-gradient-to-r from-blue-900/80 to-blue-800/60 text-white text-xs px-2 py-1 rounded-md inline-flex items-center font-mono border border-blue-600/30 shadow;
+    @apply bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-md inline-flex items-center font-mono font-medium;
   }
   
-  .neon-border {
-    box-shadow: 0 0 5px theme('colors.blue.400'), 0 0 10px theme('colors.blue.500/50');
-  }
-
-  .glass-effect {
-    backdrop-filter: blur(10px);
-    background: rgba(13, 18, 30, 0.75);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-  }
-
-  .glow-text {
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-  }
-
-  .futuristic-card {
-    background: linear-gradient(135deg, rgba(23, 33, 50, 0.9), rgba(17, 24, 39, 0.95));
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.1);
-    backdrop-filter: blur(4px);
+  /* Card styles */
+  .feature-card {
+    @apply bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
   }
   
-  .grid-pattern {
-    background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
+  .feature-icon {
+    @apply w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4;
   }
   
-  .techno-button {
-    @apply relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg transform hover:scale-105;
+  .feature-title {
+    @apply text-lg font-semibold mb-2 text-gray-900;
   }
   
-  .techno-button::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #3b82f6, #1e40af, #3b82f6);
-    z-index: -1;
-    animation: rotate 3s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 100px;
+  .feature-description {
+    @apply text-gray-600;
   }
   
-  .techno-button:hover::before {
-    opacity: 1;
+  /* Button styles */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors;
   }
   
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  /* Removed excessive animations */
-
-  .premium-badge {
-    background: linear-gradient(135deg, #2563eb, #1e40af, #3b82f6);
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-  }
-
-  .glow-card {
-    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
-    transition: all 0.3s ease-in-out;
+  .btn-secondary {
+    @apply bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium py-3 px-6 rounded-lg transition-colors;
   }
   
-  .glow-card:hover {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
-    border-color: rgba(96, 165, 250, 0.7);
-    transform: translateY(-5px);
+  .btn-outline {
+    @apply bg-white hover:bg-gray-100 text-gray-800 font-medium py-3 px-6 rounded-lg border border-gray-200 transition-colors;
   }
   
-  /* Mobile menu animations */
-  .animate-in {
-    animation-duration: 300ms;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-fill-mode: forwards;
+  /* Pricing card styles */
+  .pricing-card {
+    @apply bg-white rounded-xl p-8 shadow-md border border-gray-200 relative hover:shadow-xl transition-shadow;
   }
   
-  .slide-in-from-right {
-    animation-name: slideInFromRight;
+  .pricing-card-premium {
+    @apply bg-white rounded-xl p-8 shadow-lg border-2 border-blue-500 relative hover:shadow-xl transition-shadow;
   }
   
-  @keyframes slideInFromRight {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
+  .pricing-badge {
+    @apply absolute top-0 right-6 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold;
   }
   
-  /* Touch-friendly mobile tweaks */
+  .pricing-title {
+    @apply text-xl font-bold text-gray-900 mb-2;
+  }
+  
+  .pricing-price {
+    @apply text-3xl font-bold text-gray-900;
+  }
+  
+  .pricing-description {
+    @apply text-gray-500 text-sm;
+  }
+  
+  /* Feature list styles */
+  .feature-list {
+    @apply space-y-3 mb-8;
+  }
+  
+  .feature-item {
+    @apply flex items-start;
+  }
+  
+  .feature-check {
+    @apply flex-shrink-0 mt-1;
+  }
+  
+  .feature-text {
+    @apply ml-3 text-gray-600;
+  }
+  
+  /* Testimonial styles */
+  .testimonial-card {
+    @apply bg-white p-6 rounded-xl shadow-md border border-gray-200;
+  }
+  
+  .testimonial-stars {
+    @apply flex mb-4 text-yellow-400;
+  }
+  
+  .testimonial-quote {
+    @apply text-gray-700 mb-6 italic;
+  }
+  
+  .testimonial-avatar {
+    @apply w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-sm font-medium text-blue-600 mr-3;
+  }
+  
+  .testimonial-name {
+    @apply font-medium text-gray-900;
+  }
+  
+  .testimonial-position {
+    @apply text-sm text-gray-500;
+  }
+  
+  /* Footer styles */
+  .footer {
+    @apply bg-gray-50 py-8 border-t border-gray-200;
+  }
+  
+  .footer-text {
+    @apply text-gray-500 text-sm;
+  }
+  
+  /* Responsive adjustments */
   @media (max-width: 767px) {
-    .mobile-tap-area {
-      min-height: 44px; /* Ensure touch targets are at least 44px */
+    .container {
+      @apply px-4;
     }
     
-    .button-icon {
-      display: block; /* Make icon buttons easier to tap */
-      padding: 10px;
-    }
-    
-    /* Improve spacing for mobile */
-    .main-container {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    
-    /* Fix text sizing on small screens */
     .hero-title {
-      font-size: 2.5rem;
-      line-height: 1.2;
+      @apply text-3xl;
     }
     
-    /* Increase touch areas for mobile navigation items */
-    .mobile-nav-item {
-      padding-top: 12px;
-      padding-bottom: 12px;
+    .hero-subtitle {
+      @apply text-lg;
+    }
+    
+    .section-title {
+      @apply text-2xl;
+    }
+    
+    .btn-primary, .btn-secondary, .btn-outline {
+      @apply py-2.5 px-5;
     }
   }
 }
