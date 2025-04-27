@@ -66,18 +66,93 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
             </div>
             
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="bg-gray-50 p-4 rounded-xl shadow-lg border border-gray-100 w-full max-w-md">
-                <div className="relative">
-                  <img 
-                    src={advanceImg} 
-                    alt="Easy.kripsi Advance Version Interface" 
-                    className="w-full h-auto object-cover rounded-lg shadow-md" 
-                  />
-                  <div className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">
-                    ADVANCE
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full max-w-lg overflow-hidden">
+                {/* Feature Cards - Better Visual Representation */}
+                <div className="space-y-3 p-4">
+                  {/* Feature 1 - Numbered Captions with Chapter */}
+                  <div className="bg-white rounded-lg p-3 border border-gray-200 relative">
+                    <div className="absolute top-3 right-3 flex space-x-2">
+                      <span className="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">ADVANCE</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="bg-blue-100 rounded-full p-2 flex-shrink-0">
+                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold text-gray-900">Daftar gambar 2 digit?</h4>
+                        <div className="mt-1 text-xs text-gray-600">
+                          <span className="bg-gray-100 px-2 py-0.5 rounded">ctrl + alt + g/t/l</span>
+                        </div>
+                        <div className="mt-2 grid grid-cols-3 gap-2 justify-center">
+                          <div className="text-xs text-center text-gray-600">
+                            <div className="border border-gray-200 rounded py-1 text-xs mb-1">Gambar 1.1</div>
+                            <div className="text-[10px]">Gambar 1.2, 1.3, ...</div>
+                          </div>
+                          <div className="text-xs text-center text-gray-600">
+                            <div className="border border-gray-200 rounded py-1 text-xs mb-1">Tabel 1.1</div>
+                            <div className="text-[10px]">Tabel 1.2, 1.3, ...</div>
+                          </div>
+                          <div className="text-xs text-center text-gray-600">
+                            <div className="border border-gray-200 rounded py-1 text-xs mb-1">Lampiran 1.1</div>
+                            <div className="text-[10px]">Lampiran 1.2, 1.3, ...</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Feature 2 - Roman Page Numbers */}
+                  <div className="bg-white rounded-lg p-3 border border-gray-200">
+                    <div className="flex items-start space-x-3">
+                      <div className="bg-blue-100 rounded-full p-2 flex-shrink-0">
+                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold text-gray-900">Nomor halaman romawi</h4>
+                        <div className="mt-1 text-xs text-gray-600">
+                          <span className="bg-gray-100 px-2 py-0.5 rounded">alt + r</span>
+                        </div>
+                        <div className="mt-2 grid grid-cols-3 gap-2">
+                          <div className="border border-gray-200 rounded flex items-center justify-center h-12 text-xs text-gray-600">i</div>
+                          <div className="border border-gray-200 rounded flex items-center justify-center h-12 text-xs text-gray-600">ii</div>
+                          <div className="border border-gray-200 rounded flex items-center justify-center h-12 text-xs text-gray-600">iii</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Feature 3 - Latin Page Numbers */}
+                  <div className="bg-white rounded-lg p-3 border border-gray-200">
+                    <div className="flex items-start space-x-3">
+                      <div className="bg-blue-100 rounded-full p-2 flex-shrink-0">
+                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold text-gray-900">Nomor halaman latin</h4>
+                        <div className="mt-1 text-xs text-gray-600">
+                          <span className="bg-gray-100 px-2 py-0.5 rounded">alt + k</span>
+                        </div>
+                        <div className="mt-2 grid grid-cols-3 gap-2">
+                          <div className="border border-gray-200 rounded flex flex-col items-center justify-center h-14 p-1 text-xs text-gray-600">
+                            <div className="text-[9px] font-medium text-gray-500">BAB I</div>
+                            <div className="text-[9px]">PENDAHULUAN</div>
+                            <div className="mt-auto">1</div>
+                          </div>
+                          <div className="border border-gray-200 rounded flex items-center justify-center h-14 text-xs text-gray-600">2</div>
+                          <div className="border border-gray-200 rounded flex items-center justify-center h-14 text-xs text-gray-600">3</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-4 text-center">
+                
+                <div className="bg-blue-50 px-4 py-3 border-t border-blue-100 text-center">
                   <button
                     onClick={() => {
                       const section = document.getElementById('contoh-penggunaan');
@@ -87,7 +162,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                     }}
                     className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center text-sm"
                   >
-                    Lihat Contoh Penggunaan <ChevronRight className="h-4 w-4 ml-1" />
+                    Lihat Semua Fitur <ChevronRight className="h-4 w-4 ml-1" />
                   </button>
                 </div>
               </div>
