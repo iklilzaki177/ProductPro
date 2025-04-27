@@ -75,28 +75,7 @@ export default function HeroSection({ onBuyNowClick, onLearnMoreClick }: HeroSec
                 </a>
               </div>
               
-              {/* Animated Feature on Mobile only */}
-              <div className="lg:hidden mt-10">
-                <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg border border-blue-100 w-full overflow-hidden flex items-center justify-center min-h-[180px] py-6">
-                  <div className="relative h-28 w-full flex items-center justify-center">
-                    {features.map((feature, index) => (
-                      <div 
-                        key={`mobile-${index}`}
-                        className={`absolute transition-all duration-700 ease-in-out ${
-                          index === currentFeatureIndex 
-                            ? 'opacity-100 transform-none' 
-                            : 'opacity-0 translate-y-8'
-                        }`}
-                      >
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">
-                          {feature}
-                        </h3>
-                        <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+
               
               <div className="mt-8 flex items-center text-sm text-gray-500">
                 <div className="flex -space-x-2 mr-3">

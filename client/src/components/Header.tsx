@@ -8,6 +8,25 @@ interface HeaderProps {
 export default function Header({ onNavClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  
+  // Rotating features state
+  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const features = [
+    'Nomor Halaman',
+    'Daftar Isi',
+    'Daftar Gambar',
+    'Heading Bab',
+    'Heading Sub Bab'
+  ];
+  
+  // Effect for rotating features every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % features.length);
+    }, 2000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,6 +81,28 @@ export default function Header({ onNavClick }: HeaderProps) {
             <a href="#" className="text-gray-900 font-bold text-xl" onClick={(e) => { e.preventDefault(); }}>
               Easy.<span className="text-blue-600">kripsi</span>
             </a>
+          </div>
+          
+          {/* Animated Feature on Mobile */}
+          <div className="md:hidden flex-1 mx-4">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-sm border border-blue-100 w-full overflow-hidden flex items-center justify-center py-2">
+              <div className="relative h-8 w-full flex items-center justify-center">
+                {features.map((feature, index) => (
+                  <div 
+                    key={`mobile-header-${index}`}
+                    className={`absolute transition-all duration-700 ease-in-out ${
+                      index === currentFeatureIndex 
+                        ? 'opacity-100 transform-none' 
+                        : 'opacity-0 translate-y-6'
+                    }`}
+                  >
+                    <p className="text-sm font-medium text-gray-900 text-center">
+                      {feature}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           
           {/* Desktop Navigation */}
