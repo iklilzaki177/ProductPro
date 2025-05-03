@@ -75,20 +75,20 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Description in middle with larger font and better line height */}
         <div className="flex items-start mb-3">
           <div className={cn(
-            "p-2 rounded-full flex items-center justify-center shadow-md mr-3 border",
+            "p-2 rounded-full flex items-center justify-center shadow-sm mr-3 border",
             feature.isAdvanced 
-              ? "bg-blue-500/40 shadow-blue-500/30 border-blue-400/50" 
-              : "bg-gray-800/80 shadow-gray-900/30 border-gray-600/50"
+              ? "bg-blue-100 shadow-blue-100 border-blue-200" 
+              : "bg-gray-100 shadow-gray-100 border-gray-200"
           )}>
             <Keyboard className={cn(
               "h-4 w-4",
-              feature.isAdvanced ? "text-blue-200" : "text-gray-200"
+              feature.isAdvanced ? "text-blue-600" : "text-gray-600"
             )} />
           </div>
           
           <p className={cn(
             "flex-1 text-base leading-relaxed",
-            feature.isAdvanced ? "text-blue-100" : "text-gray-300"
+            feature.isAdvanced ? "text-gray-700" : "text-gray-700"
           )}>
             {feature.description}
           </p>
@@ -97,10 +97,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
         {/* Package indicator at bottom with improved styling - now left aligned */}
         {feature.isAdvanced && (
           <div className="mt-2 flex items-center self-start">
-            <div className="flex items-center justify-center h-5 w-5 bg-blue-500/40 rounded-full mr-2 border border-blue-400/50">
-              <Check className="h-3 w-3 text-blue-200" />
+            <div className="flex items-center justify-center h-5 w-5 bg-blue-100 rounded-full mr-2 border border-blue-200">
+              <Check className="h-3 w-3 text-blue-600" />
             </div>
-            <span className="text-sm bg-blue-500/20 px-2 py-0.5 rounded-md text-blue-200 font-medium border border-blue-400/30">Advanced</span>
+            <span className="text-sm bg-blue-50 px-2 py-0.5 rounded-md text-blue-700 font-medium border border-blue-200">Advanced</span>
           </div>
         )}
       </div>
