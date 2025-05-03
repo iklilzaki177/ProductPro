@@ -4,6 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Social Proof Marquee Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.social-proof-marquee {
+  animation: scroll 20s linear infinite;
+  will-change: transform;
+}
+
+.social-proof-marquee:hover {
+  animation-play-state: paused;
+}
+
 @layer base {
   * {
     @apply border-border;

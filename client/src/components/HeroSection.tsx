@@ -152,7 +152,44 @@ export default function HeroSection({
                       ))}
                     </div>
 
-                    <div className="mt-6 w-full max-w-sm">
+                    {/* Social Proof Marquee */}
+                    <div className="w-full overflow-hidden my-4 pb-2">                      
+                      <p className="text-sm text-blue-700 font-medium mb-2 text-center">Dipercaya oleh pengguna dari berbagai universitas</p>
+                      <div className="social-proof-marquee relative flex whitespace-nowrap">
+                        {[
+                          "Pengguna sudah 1600+ sejak 2022",
+                          "Ratusan mahasiswa menghemat waktu",
+                          "Digunakan di 50+ universitas",
+                          "Hemat waktu hingga 10+ jam",
+                          "Rating pengguna ⭐⭐⭐⭐⭐"
+                        ].map((item, i) => (
+                          <div 
+                            key={i} 
+                            className="inline-block mx-4 px-4 py-2 rounded-full bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium"
+                          >
+                            {item}
+                          </div>
+                        ))}
+                        
+                        {/* Duplicate for seamless loop */}
+                        {[
+                          "Pengguna sudah 1600+ sejak 2022",
+                          "Ratusan mahasiswa menghemat waktu",
+                          "Digunakan di 50+ universitas",
+                          "Hemat waktu hingga 10+ jam",
+                          "Rating pengguna ⭐⭐⭐⭐⭐"
+                        ].map((item, i) => (
+                          <div 
+                            key={`dup-${i}`} 
+                            className="inline-block mx-4 px-4 py-2 rounded-full bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium"
+                          >
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="mt-4 w-full max-w-sm">
                       <div className="bg-blue-50 rounded-lg p-4">
                         <p className="text-gray-700 font-medium text-center mb-3">
                           Format skripsi lebih cepat dengan pintasan keyboard:
