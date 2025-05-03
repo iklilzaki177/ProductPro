@@ -106,8 +106,8 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({
             className={cn(
               "text-base font-mono px-4 py-2.5 rounded-lg shadow-lg font-bold tracking-wider border",
               feature.isAdvanced
-                ? "bg-blue-600/40 text-blue-50 shadow-blue-500/30 border-blue-400/40"
-                : "bg-gray-800/80 text-gray-100 shadow-gray-900/30 border-gray-600/40",
+                ? "bg-blue-700 text-white shadow-blue-500/30 border-blue-500"
+                : "bg-gray-800 text-white shadow-gray-900/30 border-gray-700",
             )}
           >
             {feature.shortcut}
