@@ -52,33 +52,33 @@ export default function ProductShowcase() {
         </div>
         
         {/* Visual Guides for Basic and Advance Features */}
-        <div className="mt-16 mb-8" id="contoh-penggunaan">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-semibold mb-3 text-gray-800">Tampilan Fitur yang Anda Dapatkan</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="mt-8 mb-4" id="contoh-penggunaan">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl font-semibold mb-2 text-gray-800">Tampilan Fitur yang Anda Dapatkan</h2>
+            <p className="text-base text-gray-600 max-w-xl mx-auto">
               Berikut adalah tampilan dialog dan antarmuka yang akan Anda gunakan
             </p>
           </div>
           
-          <div className="flex flex-col md:flex-row justify-center gap-8 mt-10">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mt-6 max-w-5xl mx-auto">
             {/* Basic Version */}
-            <div className="flex-1 bg-gray-50 rounded-xl p-6 shadow-md border border-gray-200">
-              <div className="bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-full inline-block mb-4">
+            <div className="flex-1 bg-gray-50 rounded-xl p-4 shadow-md border border-gray-200">
+              <div className="bg-gray-200 text-gray-700 font-medium py-1.5 px-3 rounded-full inline-block mb-3 text-sm">
                 Basic Version
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md bg-white">
+              <div className="rounded-lg overflow-hidden shadow-md bg-white max-w-md mx-auto">
                 <img 
                   src={basicVersionImg} 
                   alt="Easy.kripsi Basic Version Features" 
                   className="w-full h-auto"
                 />
               </div>
-              <div className="mt-4 text-center">
+              <div className="mt-3 text-center">
                 <a 
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-block py-2 px-6 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors"
+                  className="inline-block py-1.5 px-5 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors"
                 >
                   Basic (Rp 50.000)
                 </a>
@@ -86,39 +86,39 @@ export default function ProductShowcase() {
             </div>
             
             {/* Advance Version */}
-            <div className="flex-1 bg-blue-50 rounded-xl p-6 shadow-md border border-blue-200">
-              <div className="bg-blue-600 text-white font-medium py-2 px-4 rounded-full inline-block mb-4">
+            <div className="flex-1 bg-blue-50 rounded-xl p-4 shadow-md border border-blue-200">
+              <div className="bg-blue-600 text-white font-medium py-1.5 px-3 rounded-full inline-block mb-3 text-sm">
                 Advance Version
               </div>
-              <div className="py-1.5 px-6 bg-blue-600/30 text-blue-800 rounded-full inline-block text-sm font-bold mb-4 border border-blue-300">
+              <div className="py-1 px-4 bg-blue-600/30 text-blue-800 rounded-full inline-block text-xs font-bold mb-3 border border-blue-300">
                 EXCLUSIVE ADVANCE FEATURE
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md bg-white mb-4">
+              <div className="rounded-lg overflow-hidden shadow-md bg-white mb-3 max-w-md mx-auto">
                 <img 
                   src={advanceVersionImg} 
                   alt="Easy.kripsi Advance Version Features" 
                   className="w-full h-auto"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden shadow-md bg-white">
-                <div className="bg-blue-50 py-2 px-4 text-blue-800 text-sm font-medium border-b border-blue-100">
+              <div className="rounded-lg overflow-hidden shadow-md bg-white max-w-md mx-auto">
+                <div className="bg-blue-50 py-1.5 px-3 text-blue-800 text-xs font-medium border-b border-blue-100">
                   Dialog Pengaturan Posisi Nomor Halaman
                 </div>
                 <img 
                   src={panelAtasBawahImg} 
                   alt="Panel penomoran halaman dengan opsi tengah bawah, kanan atas" 
-                  className="w-full h-auto px-4 py-4" 
+                  className="w-full h-auto px-3 py-3" 
                 />
-                <div className="bg-blue-50 py-2 px-4 text-blue-600 text-xs italic border-t border-blue-100">
+                <div className="bg-blue-50 py-1.5 px-3 text-blue-600 text-xs italic border-t border-blue-100">
                   *Fitur khusus versi Advance untuk mengatur posisi nomor halaman
                 </div>
               </div>
-              <div className="mt-4 text-center">
+              <div className="mt-3 text-center">
                 <a 
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-block py-2 px-6 bg-blue-700 text-white rounded-full font-medium hover:bg-blue-800 transition-colors shadow-md"
+                  className="inline-block py-1.5 px-5 bg-blue-700 text-white rounded-full text-sm font-medium hover:bg-blue-800 transition-colors shadow-sm"
                 >
                   Advance (Rp 100.000)
                 </a>
