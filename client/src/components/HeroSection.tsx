@@ -154,35 +154,53 @@ export default function HeroSection({
 
                     {/* Social Proof Marquee */}
                     <div className="w-full overflow-hidden my-4 pb-2">                      
-                      <p className="text-sm text-blue-700 font-medium mb-2 text-center">Dipercaya oleh pengguna dari berbagai universitas</p>
+                      <p className="text-sm text-blue-700 font-medium mb-2 text-center">Fitur Otomatis Easy.kripsi</p>
                       <div className="social-proof-marquee relative flex whitespace-nowrap">
                         {[
-                          "Pengguna sudah 1600+ sejak 2022",
-                          "Ratusan mahasiswa menghemat waktu",
-                          "Digunakan di 50+ universitas",
-                          "Hemat waktu hingga 10+ jam",
-                          "Rating pengguna ⭐⭐⭐⭐⭐"
+                          "Heading & Sub-heading (Alt+1-8)",
+                          "Nomor Halaman Otomatis",
+                          "Daftar Isi (Alt+D)",
+                          "Caption Gambar (Alt+G)",
+                          "Caption Tabel (Alt+T)",
+                          "Format Painter (Alt+Q/W)",
+                          "Daftar Tabel (Alt+Shift+T)",
+                          "Daftar Gambar (Alt+Shift+G)",
+                          "Penomoran BAB Otomatis",
+                          "Format Lampiran (Alt+L)",
+                          "Posisi Nomor Halaman (Ctrl+Alt+K)"
                         ].map((item, i) => (
                           <div 
                             key={i} 
-                            className="inline-block mx-4 px-4 py-2 rounded-full bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium"
+                            className="inline-flex items-center mx-3 px-4 py-2 rounded-md bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium group hover:border-blue-300 hover:shadow"
                           >
+                            <span className="w-4 h-4 mr-2 rounded-full bg-blue-100 flex items-center justify-center">
+                              <Check className="h-2.5 w-2.5 text-blue-600" />
+                            </span>
                             {item}
                           </div>
                         ))}
                         
                         {/* Duplicate for seamless loop */}
                         {[
-                          "Pengguna sudah 1600+ sejak 2022",
-                          "Ratusan mahasiswa menghemat waktu",
-                          "Digunakan di 50+ universitas",
-                          "Hemat waktu hingga 10+ jam",
-                          "Rating pengguna ⭐⭐⭐⭐⭐"
+                          "Heading & Sub-heading (Alt+1-8)",
+                          "Nomor Halaman Otomatis",
+                          "Daftar Isi (Alt+D)",
+                          "Caption Gambar (Alt+G)",
+                          "Caption Tabel (Alt+T)",
+                          "Format Painter (Alt+Q/W)",
+                          "Daftar Tabel (Alt+Shift+T)",
+                          "Daftar Gambar (Alt+Shift+G)",
+                          "Penomoran BAB Otomatis",
+                          "Format Lampiran (Alt+L)",
+                          "Posisi Nomor Halaman (Ctrl+Alt+K)"
                         ].map((item, i) => (
                           <div 
                             key={`dup-${i}`} 
-                            className="inline-block mx-4 px-4 py-2 rounded-full bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium"
+                            className="inline-flex items-center mx-3 px-4 py-2 rounded-md bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium group hover:border-blue-300 hover:shadow"
                           >
+                            <span className="w-4 h-4 mr-2 rounded-full bg-blue-100 flex items-center justify-center">
+                              <Check className="h-2.5 w-2.5 text-blue-600" />
+                            </span>
                             {item}
                           </div>
                         ))}

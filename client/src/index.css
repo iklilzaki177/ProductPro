@@ -15,7 +15,7 @@
 }
 
 .social-proof-marquee {
-  animation: scroll 20s linear infinite;
+  animation: scroll 25s linear infinite;
   will-change: transform;
 }
 
