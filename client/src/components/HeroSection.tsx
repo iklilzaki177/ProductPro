@@ -300,7 +300,7 @@ export default function HeroSection({
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto bg-blue-50 rounded-2xl p-4 border border-blue-200 shadow-md">
+          <div className="max-w-5xl mx-auto bg-white rounded-lg p-4 shadow-lg border border-gray-100">
             <AnimatedFeatureSection />
           </div>
 
