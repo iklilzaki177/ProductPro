@@ -15,8 +15,18 @@
 }
 
 .social-proof-marquee {
-  animation: scroll 35s linear infinite;
+  animation: scroll 40s linear infinite;
   will-change: transform;
+  display: flex;
+  width: max-content;
+  gap: 0;
+  padding-right: 20px;
+}
+
+/* Add spacing between items for better readability */
+.social-proof-marquee > div {
+  margin-right: 12px;
+  margin-left: 12px;
 }
 
 .social-proof-marquee:hover {

@@ -153,9 +153,9 @@ export default function HeroSection({
                     </div>
 
                     {/* Social Proof Marquee */}
-                    <div className="w-full overflow-hidden my-4 pb-2">                      
+                    <div className="w-full overflow-hidden my-4 pb-2 relative">                      
                       <p className="text-sm text-blue-700 font-medium mb-2 text-center">Fitur Otomatis Easy.kripsi</p>
-                      <div className="social-proof-marquee relative flex whitespace-nowrap">
+                      <div className="social-proof-marquee whitespace-nowrap">
                         {[
                           "Heading & Sub-heading (Alt+1-8)",
                           "Nomor Halaman Otomatis",
