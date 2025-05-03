@@ -52,10 +52,10 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({ fe
       viewport={{ once: true }}
       custom={index}
       className={cn(
-        "p-5 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2",
+        "p-5 rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border",
         feature.isAdvanced 
-          ? "bg-blue-900/30 border-blue-500/50 hover:border-blue-400/70 hover:shadow-blue-500/40" 
-          : "bg-gray-900/30 border-gray-600/50 hover:border-gray-500/70 hover:shadow-gray-600/40"
+          ? "bg-white border-blue-200 hover:border-blue-300 hover:shadow-blue-100" 
+          : "bg-white border-gray-200 hover:border-gray-300 hover:shadow-gray-100"
       )}
     >
       {/* Card layout changed to vertical arrangement for better readability */}
@@ -114,27 +114,27 @@ export default function AnimatedFeatureSection() {
 
   return (
     <div className="px-4">
-      <div className="mb-8">
+      <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 mb-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-5 text-white tracking-tight leading-tight">
-            Pintasan Keyboard <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white">Powerful</span>
+          <h2 className="text-3xl font-bold mb-3 text-gray-800 tracking-tight leading-tight">
+            Pintasan Keyboard <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-500">Powerful</span>
           </h2>
-          <p className="text-blue-100 max-w-3xl text-xl font-light leading-relaxed">
+          <p className="text-gray-600 max-w-3xl text-lg leading-relaxed">
             Gunakan pintasan keyboard intuitive untuk mempercepat format skripsi Anda
           </p>
         </motion.div>
       </div>
 
       {/* Basic Package Section */}
-      <div className="mb-20 relative">
+      <div className="mb-16 relative">
         {/* Decorative elements */}
-        <div className="absolute -left-4 -top-4 w-32 h-32 bg-blue-50 rounded-full opacity-40 blur-xl z-0"></div>
-        <div className="absolute right-10 top-20 w-48 h-48 bg-blue-100 rounded-full opacity-30 blur-3xl z-0"></div>
+        <div className="absolute -left-4 -top-4 w-24 h-24 bg-blue-50 rounded-full opacity-30 blur-lg z-0"></div>
+        <div className="absolute right-10 top-20 w-32 h-32 bg-blue-100 rounded-full opacity-20 blur-xl z-0"></div>
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
