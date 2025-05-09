@@ -91,7 +91,7 @@ export default function HeroSection({
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium py-3 px-6 rounded-lg transition-colors"
                 >
                   Dapatkan Basic (Rp 50.000)
                 </a>
@@ -99,7 +99,7 @@ export default function HeroSection({
                   href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium py-3 px-6 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
                 >
                   Dapatkan Advance (Rp 100.000)
                 </a>
