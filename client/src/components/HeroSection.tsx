@@ -400,7 +400,7 @@ export default function HeroSection({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Basic Package */}
             <div className="bg-white rounded-xl p-8 shadow-md border border-gray-200 relative hover:shadow-xl transition-shadow">
-              <div className="mb-8">
+              <div className="mb-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Basic</h3>
                 <p className="text-gray-600 mb-4">
                   Alat format esensial untuk mahasiswa
@@ -415,7 +415,7 @@ export default function HeroSection({
                 </div>
               </div>
 
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
@@ -454,19 +454,19 @@ export default function HeroSection({
                 href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-lg transition-colors"
+                className="block w-full text-center py-3 px-4 bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium rounded-lg transition-colors"
               >
-                Dapatkan Basic
+                Beli Sekarang
               </a>
             </div>
 
             {/* Advanced Package */}
-            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-500 relative md:scale-105 hover:shadow-xl transition-shadow">
-              <div className="absolute top-0 right-6 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+            <div className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 shadow-lg border-2 border-blue-500 relative md:scale-105 hover:shadow-xl transition-shadow">
+              <div className="absolute top-0 right-6 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md">
                 RECOMMENDED
               </div>
 
-              <div className="mb-8">
+              <div className="mb-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   Advance
                 </h3>
@@ -474,17 +474,17 @@ export default function HeroSection({
                   Paket otomatisasi skripsi lengkap
                 </p>
                 <div className="flex items-baseline">
-                  <span className="text-3xl font-bold text-gray-900">
+                  <span className="text-3xl font-bold text-blue-700">
                     Rp 100.000
                   </span>
-                  <span className="ml-2 text-gray-500 text-sm">
+                  <span className="ml-2 text-blue-500 text-sm">
                     hemat waktu bernilai jutaan
                   </span>
                 </div>
               </div>
 
-              <div className="space-y-3 mb-8">
-                <div className="flex items-start">
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start bg-white p-2 rounded-md">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
                   </div>
@@ -492,7 +492,7 @@ export default function HeroSection({
                     <span className="font-medium">Semua fitur</span> paket Basic
                   </span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start bg-white p-2 rounded-md">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
                   </div>
@@ -503,7 +503,7 @@ export default function HeroSection({
                     dengan opsi tengah bawah/kanan atas
                   </span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start bg-white p-2 rounded-md">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
                   </div>
@@ -514,7 +514,7 @@ export default function HeroSection({
                     (Alt+Shift+K) dengan deteksi posisi bab
                   </span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start bg-white p-2 rounded-md">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
                   </div>
@@ -525,7 +525,7 @@ export default function HeroSection({
                     </span>
                   </span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start bg-white p-2 rounded-md">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
                   </div>
@@ -536,7 +536,7 @@ export default function HeroSection({
                     dengan nomor BAB (Gambar 4.1)
                   </span>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start bg-white p-2 rounded-md">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-4 w-4 text-blue-600" />
                   </div>
@@ -551,9 +551,9 @@ export default function HeroSection({
                 href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                className="block w-full text-center py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-md"
               >
-                Dapatkan Advance
+                Beli Sekarang
               </a>
             </div>
           </div>
