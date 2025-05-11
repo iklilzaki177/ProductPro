@@ -1,5 +1,3 @@
-import { Link } from "wouter";
-
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-white p-4">
@@ -22,11 +20,12 @@ export default function LandingPage() {
             <p className="text-gray-600 mb-6">
               Pembayaran melalui akun <span className="font-medium">@Iklilzaki</span> - Dengan fitur penuh dan dukungan lengkap.
             </p>
-            <Link href="/zaki">
-              <a className="block w-full text-center py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
-                Buka Halaman Zaki
-              </a>
-            </Link>
+            <a 
+              href="/zaki" 
+              className="block w-full text-center py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+            >
+              Buka Halaman Zaki
+            </a>
           </div>
 
           <div className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 shadow-md border border-blue-200 hover:shadow-lg transition-all">
@@ -34,11 +33,12 @@ export default function LandingPage() {
             <p className="text-gray-600 mb-6">
               Pembayaran melalui akun <span className="font-medium">@Bangdeniuss</span> - Saat ini hanya tersedia paket Basic.
             </p>
-            <Link href="/denius">
-              <a className="block w-full text-center py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
-                Buka Halaman Denius
-              </a>
-            </Link>
+            <a 
+              href="/denius" 
+              className="block w-full text-center py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+            >
+              Buka Halaman Denius
+            </a>
           </div>
         </div>
 

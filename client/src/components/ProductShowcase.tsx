@@ -6,7 +6,21 @@ import iPhoneImg from '@assets/iPhone 14 & 15 Pro - 3.png';
 import basicVersionImg from '@assets/picture 1.png';
 import advanceVersionImg from '@assets/picture 2.png';
 
-export default function ProductShowcase() {
+interface ProductShowcaseProps {
+  paymentLinks?: {
+    basic: string;
+    advance: string;
+  };
+  disableAdvance?: boolean;
+}
+
+export default function ProductShowcase({
+  paymentLinks = {
+    basic: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic",
+    advance: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+  },
+  disableAdvance = false
+}: ProductShowcaseProps) {
   return (
     <section id="product" className="py-16 bg-white">
       <div className="main-container">
@@ -75,7 +89,7 @@ export default function ProductShowcase() {
               </div>
               <div className="mt-3 text-center">
                 <a 
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  href={paymentLinks.basic}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block py-1.5 px-5 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors"
@@ -114,14 +128,20 @@ export default function ProductShowcase() {
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <a 
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block py-1.5 px-5 bg-blue-700 text-white rounded-full text-sm font-medium hover:bg-blue-800 transition-colors shadow-sm"
-                >
-                  Advance (Rp 100.000)
-                </a>
+                {paymentLinks.advance ? (
+                  <a 
+                    href={paymentLinks.advance}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block py-1.5 px-5 bg-blue-700 text-white rounded-full text-sm font-medium hover:bg-blue-800 transition-colors shadow-sm"
+                  >
+                    Advance (Rp 100.000)
+                  </a>
+                ) : disableAdvance ? (
+                  <span className="inline-block py-1.5 px-5 bg-gray-400 text-white rounded-full text-sm font-medium cursor-not-allowed">
+                    Advance (Coming Soon)
+                  </span>
+                ) : null}
               </div>
             </div>
           </div>
