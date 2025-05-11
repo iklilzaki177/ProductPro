@@ -6,11 +6,21 @@ import { useState, useEffect } from "react";
 interface HeroSectionProps {
   onBuyNowClick: () => void;
   onLearnMoreClick: () => void;
+  paymentLinks?: {
+    basic: string;
+    advance: string;
+  };
+  disableAdvance?: boolean;
 }
 
 export default function HeroSection({
   onBuyNowClick,
   onLearnMoreClick,
+  paymentLinks = {
+    basic: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic",
+    advance: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+  },
+  disableAdvance = false
 }: HeroSectionProps) {
   // Rotating features state
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
@@ -88,21 +98,27 @@ export default function HeroSection({
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  href={paymentLinks.basic}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium py-3 px-6 rounded-lg transition-colors"
                 >
-                  Dapatkan Basic (Rp 50.000)
+                  Beli Basic (Rp 50.000)
                 </a>
-                <a
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-                >
-                  Dapatkan Advance (Rp 100.000)
-                </a>
+                {paymentLinks.advance ? (
+                  <a
+                    href={paymentLinks.advance}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  >
+                    Beli Advance (Rp 100.000)
+                  </a>
+                ) : disableAdvance ? (
+                  <span className="inline-flex items-center justify-center bg-gray-300 text-gray-600 font-medium py-3 px-6 rounded-lg cursor-not-allowed">
+                    Advance (Coming Soon)
+                  </span>
+                ) : null}
               </div>
 
               <div className="mt-8 flex items-center text-sm text-gray-500">
@@ -153,8 +169,10 @@ export default function HeroSection({
                     </div>
 
                     {/* Social Proof Marquee */}
-                    <div className="w-full overflow-hidden my-4 pb-2 relative">                      
-                      <p className="text-sm text-blue-700 font-medium mb-2 text-center">Fitur Otomatis Easy.kripsi</p>
+                    <div className="w-full overflow-hidden my-4 pb-2 relative">
+                      <p className="text-sm text-blue-700 font-medium mb-2 text-center">
+                        Fitur Otomatis Easy.kripsi
+                      </p>
                       <div className="social-proof-marquee whitespace-nowrap">
                         {[
                           "Heading & Sub-heading (Alt+1-8)",
@@ -167,10 +185,10 @@ export default function HeroSection({
                           "Daftar Gambar (Alt+Shift+G)",
                           "Penomoran BAB Otomatis",
                           "Format Lampiran (Alt+L)",
-                          "Posisi Nomor Halaman (Ctrl+Alt+K)"
+                          "Posisi Nomor Halaman (Ctrl+Alt+K)",
                         ].map((item, i) => (
-                          <div 
-                            key={i} 
+                          <div
+                            key={i}
                             className="inline-flex items-center mx-3 px-4 py-2 rounded-md bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium group hover:border-blue-300 hover:shadow"
                           >
                             <span className="w-4 h-4 mr-2 rounded-full bg-blue-100 flex items-center justify-center">
@@ -179,7 +197,7 @@ export default function HeroSection({
                             {item}
                           </div>
                         ))}
-                        
+
                         {/* Duplicate for seamless loop */}
                         {[
                           "Heading & Sub-heading (Alt+1-8)",
@@ -192,10 +210,10 @@ export default function HeroSection({
                           "Daftar Gambar (Alt+Shift+G)",
                           "Penomoran BAB Otomatis",
                           "Format Lampiran (Alt+L)",
-                          "Posisi Nomor Halaman (Ctrl+Alt+K)"
+                          "Posisi Nomor Halaman (Ctrl+Alt+K)",
                         ].map((item, i) => (
-                          <div 
-                            key={`dup-${i}`} 
+                          <div
+                            key={`dup-${i}`}
                             className="inline-flex items-center mx-3 px-4 py-2 rounded-md bg-white shadow-sm border border-blue-100 text-sm text-gray-700 font-medium group hover:border-blue-300 hover:shadow"
                           >
                             <span className="w-4 h-4 mr-2 rounded-full bg-blue-100 flex items-center justify-center">
@@ -206,7 +224,7 @@ export default function HeroSection({
                         ))}
                       </div>
                     </div>
-                    
+
                     <div className="mt-4 w-full max-w-sm">
                       <div className="bg-blue-50 rounded-lg p-4">
                         <p className="text-gray-700 font-medium text-center mb-3">
