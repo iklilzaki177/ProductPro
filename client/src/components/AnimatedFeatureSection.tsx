@@ -10,6 +10,14 @@ interface ShortcutFeature {
   highlight?: boolean;
 }
 
+interface AnimatedFeatureSectionProps {
+  paymentLinks?: {
+    basic: string;
+    advance: string;
+  };
+  disableAdvance?: boolean;
+}
+
 const shortcuts: ShortcutFeature[] = [
   { shortcut: "Alt + 1", description: "BAB I PENDAHULUAN" },
   { shortcut: "Alt + 2-8", description: "Sub-Heading level 2-8" },
@@ -158,7 +166,13 @@ const FeatureCard: React.FC<{ feature: ShortcutFeature; index: number }> = ({
   );
 };
 
-export default function AnimatedFeatureSection() {
+export default function AnimatedFeatureSection({
+  paymentLinks = {
+    basic: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic",
+    advance: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+  },
+  disableAdvance = false
+}: AnimatedFeatureSectionProps = {}) {
   const basicShortcuts = shortcuts.filter((feature) => !feature.isAdvanced);
   const advancedShortcuts = shortcuts.filter((feature) => feature.isAdvanced);
 
@@ -516,21 +530,27 @@ export default function AnimatedFeatureSection() {
               </p>
               <div className="flex flex-wrap justify-center gap-6">
                 <a
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                  href={paymentLinks.basic}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="py-3.5 px-10 bg-gray-100 text-gray-800 font-medium rounded-full hover:bg-gray-200 transition-all shadow-md transform hover:scale-105 duration-300"
                 >
                   Basic (Rp 50.000)
                 </a>
-                <a
-                  href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-md transform hover:scale-105"
-                >
-                  Advance (Rp 100.000)
-                </a>
+                {paymentLinks.advance ? (
+                  <a
+                    href={paymentLinks.advance}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3.5 px-10 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-md transform hover:scale-105"
+                  >
+                    Advance (Rp 100.000)
+                  </a>
+                ) : disableAdvance ? (
+                  <span className="py-3.5 px-10 bg-gray-400 text-white font-medium rounded-full cursor-not-allowed shadow-md">
+                    Advance (Coming Soon)
+                  </span>
+                ) : null}
               </div>
               <div className="mt-6 text-sm text-gray-500">
                 Developed by @Iklilzaki and @Bangdeniuss
