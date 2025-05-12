@@ -40,7 +40,7 @@ export default function DeniusPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
-      <Header onNavClick={handleScroll} />
+      <Header onNavClick={handleScroll} paymentLinks={paymentLinks} />
       <main className="flex-grow">
         <HeroSection 
           onLearnMoreClick={() => handleScroll('features')} 

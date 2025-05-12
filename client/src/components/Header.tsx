@@ -3,9 +3,19 @@ import { ShoppingBag, X } from 'lucide-react';
 
 interface HeaderProps {
   onNavClick: (id: string) => void;
+  paymentLinks?: {
+    basic: string;
+    advance: string;
+  };
 }
 
-export default function Header({ onNavClick }: HeaderProps) {
+export default function Header({ 
+  onNavClick,
+  paymentLinks = {
+    basic: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic",
+    advance: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+  }
+}: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -81,7 +91,7 @@ export default function Header({ onNavClick }: HeaderProps) {
               Produk
             </a>
             <a 
-              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic" 
+              href={paymentLinks.basic}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 transition-colors whitespace-nowrap"
@@ -89,7 +99,7 @@ export default function Header({ onNavClick }: HeaderProps) {
               Basic
             </a>
             <a 
-              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance" 
+              href={paymentLinks.advance}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 transition-colors whitespace-nowrap"
@@ -163,7 +173,7 @@ export default function Header({ onNavClick }: HeaderProps) {
                   <div className="bg-gray-50 border-b border-gray-200">
                     <div className="px-6 py-2 text-xs text-gray-500 uppercase font-medium">Paket</div>
                     <a 
-                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                      href={paymentLinks.basic}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-700 hover:bg-gray-100 transition-colors px-6 py-3 text-base border-b border-gray-200 flex items-center"
@@ -172,7 +182,7 @@ export default function Header({ onNavClick }: HeaderProps) {
                       Basic
                     </a>
                     <a 
-                      href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                      href={paymentLinks.advance}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-700 hover:bg-gray-100 transition-colors px-6 py-3 text-base flex items-center"
