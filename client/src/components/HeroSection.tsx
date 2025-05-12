@@ -378,27 +378,33 @@ export default function HeroSection({
           </div>
 
           <div className="flex justify-center mt-10">
-            <a
-              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center bg-white hover:bg-blue-50 text-blue-600 font-medium py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl"
-            >
-              <span>Dapatkan Semua Fitur di Paket Advance</span>
-              <svg
-                className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            {paymentLinks.advance ? (
+              <a
+                href={paymentLinks.advance}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center bg-white hover:bg-blue-50 text-blue-600 font-medium py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </a>
+                <span>Dapatkan Semua Fitur di Paket Advance</span>
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </a>
+            ) : disableAdvance ? (
+              <span className="flex items-center justify-center bg-gray-200 text-gray-600 font-medium py-3 px-8 rounded-full cursor-not-allowed shadow-lg">
+                Paket Advance - Coming Soon
+              </span>
+            ) : null}
           </div>
         </div>
       </div>
@@ -565,14 +571,20 @@ export default function HeroSection({
                 </div>
               </div>
 
-              <a
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-md"
-              >
-                Beli Sekarang
-              </a>
+              {paymentLinks.advance ? (
+                <a
+                  href={paymentLinks.advance}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-md"
+                >
+                  Beli Sekarang
+                </a>
+              ) : disableAdvance ? (
+                <span className="block w-full text-center py-3.5 px-4 bg-gray-400 text-white font-semibold rounded-lg cursor-not-allowed shadow-md">
+                  Coming Soon
+                </span>
+              ) : null}
             </div>
           </div>
 
