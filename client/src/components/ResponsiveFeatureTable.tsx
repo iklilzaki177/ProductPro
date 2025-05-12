@@ -8,7 +8,21 @@ interface FeatureItem {
   inAdvance: boolean;
 }
 
-export default function ResponsiveFeatureTable() {
+interface ResponsiveFeatureTableProps {
+  paymentLinks?: {
+    basic: string;
+    advance: string;
+  };
+  disableAdvance?: boolean;
+}
+
+export default function ResponsiveFeatureTable({
+  paymentLinks = {
+    basic: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic",
+    advance: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+  },
+  disableAdvance = false
+}: ResponsiveFeatureTableProps = {}) {
   const features: FeatureItem[] = [
     {
       name: "Format heading dengan Alt+1 s/d Alt+8",
@@ -107,7 +121,7 @@ export default function ResponsiveFeatureTable() {
             </div>
             <div className="p-4 pt-0">
               <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                href={paymentLinks.basic}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 bg-gray-100 text-blue-700 font-medium text-center rounded-lg hover:bg-gray-200 transition-colors"
@@ -146,7 +160,7 @@ export default function ResponsiveFeatureTable() {
             </div>
             <div className="p-4 pt-0">
               <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                href={paymentLinks.advance}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 bg-blue-600 text-white font-medium text-center rounded-lg hover:bg-blue-700 transition-colors"
