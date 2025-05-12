@@ -475,7 +475,7 @@ export default function HeroSection({
               </div>
 
               <a
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                href={paymentLinks.basic}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center py-3 px-4 bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium rounded-lg transition-colors"

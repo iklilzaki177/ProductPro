@@ -2,7 +2,21 @@ import { PricingPlan } from '@/lib/types';
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export default function PricingSection() {
+interface PricingSectionProps {
+  paymentLinks?: {
+    basic: string;
+    advance: string;
+  };
+  disableAdvance?: boolean;
+}
+
+export default function PricingSection({
+  paymentLinks = {
+    basic: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic",
+    advance: "https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+  },
+  disableAdvance = false
+}: PricingSectionProps = {}) {
   const pricingPlans: PricingPlan[] = [
     {
       title: "Basic",
@@ -72,7 +86,7 @@ export default function PricingSection() {
               </ul>
               
               <a 
-                href={`https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-${plan.title.toLowerCase()}`}
+                href={plan.title.toLowerCase() === 'basic' ? paymentLinks.basic : paymentLinks.advance}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`inline-block w-full py-3 px-4 rounded-lg text-center ${
