@@ -4,9 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import ProductShowcase from '@/components/ProductShowcase';
 import Footer from '@/components/Footer';
 import ResponsiveTestimonials from '@/components/ResponsiveTestimonials';
-import AnimatedFeatureSection from '@/components/AnimatedFeatureSection';
-import ResponsiveFeatureTable from '@/components/ResponsiveFeatureTable';
-import PricingSection from '@/components/PricingSection';
 
 export default function DeniusPage() {
   const sectionsRef = useRef<Record<string, HTMLElement | null>>({});
@@ -64,18 +61,7 @@ export default function DeniusPage() {
         </div>
         
         <div id="compare">
-          <AnimatedFeatureSection 
-            paymentLinks={paymentLinks}
-            disableAdvance={disableAdvance}
-          />
-          <ResponsiveFeatureTable 
-            paymentLinks={paymentLinks}
-            disableAdvance={disableAdvance}
-          />
-          <PricingSection 
-            paymentLinks={paymentLinks}
-            disableAdvance={disableAdvance}
-          />
+          {/* Feature comparison moved to AnimatedFeatureSection */}
         </div>
         
         <div id="testimonials">

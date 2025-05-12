@@ -46,7 +46,7 @@ export default function ProductShowcase({
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-basic"
+                href={paymentLinks.basic}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-full inline-block font-medium"
@@ -54,7 +54,7 @@ export default function ProductShowcase({
                 Dapatkan Basic (Rp 50.000)
               </a>
               <a 
-                href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                href={paymentLinks.advance}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/90 border-2 border-white text-blue-700 hover:bg-white px-6 py-2 rounded-full inline-block font-medium"
