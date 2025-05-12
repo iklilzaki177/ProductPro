@@ -31,7 +31,7 @@ export default function LandingPage() {
           <div className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 shadow-md border border-blue-200 hover:shadow-lg transition-all">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Versi Denius</h2>
             <p className="text-gray-600 mb-6">
-              Pembayaran melalui akun <span className="font-medium">@Bangdeniuss</span> - Saat ini hanya tersedia paket Basic.
+              Pembayaran melalui akun <span className="font-medium">@Bangdeniuss</span> - Tersedia paket Basic dan Advance.
             </p>
             <a 
               href="/denius" 

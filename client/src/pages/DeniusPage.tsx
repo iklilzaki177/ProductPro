@@ -31,7 +31,7 @@ export default function DeniusPage() {
 
   // These are Denius's payment links
   const paymentLinks = {
-    basic: "https://bangdeniuss.myr.id/pl/toolsskripsi-windows",
+    basic: "https://bangdeniuss.myr.id/pl/toolsskripsi-windows-basic",
     advance: "https://bangdeniuss.myr.id/pl/toolsskripsi-windows-advance"
   };
 
