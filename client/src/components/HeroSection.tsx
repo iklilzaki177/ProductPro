@@ -260,7 +260,7 @@ export default function HeroSection({
                           </div>
                           <div className="flex items-center justify-between mt-4">
                             <a
-                              href="https://iklilzaki.myr.id/pl/template-skripsi-easykripsi-advance"
+                              href={paymentLinks.advance}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="w-full py-2 px-3 text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors flex items-center justify-center"
@@ -374,7 +374,7 @@ export default function HeroSection({
           </div>
 
           <div className="max-w-5xl mx-auto bg-white rounded-lg p-4 shadow-lg border border-gray-100">
-            <AnimatedFeatureSection />
+            <AnimatedFeatureSection paymentLinks={paymentLinks} disableAdvance={disableAdvance} />
           </div>
 
           <div className="flex justify-center mt-10">

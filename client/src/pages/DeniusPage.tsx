@@ -32,11 +32,11 @@ export default function DeniusPage() {
   // These are Denius's payment links
   const paymentLinks = {
     basic: "https://bangdeniuss.myr.id/pl/toolsskripsi-windows",
-    advance: "" // Coming soon
+    advance: "https://bangdeniuss.myr.id/pl/toolsskripsi-windows-advance"
   };
 
-  // Flag to disable the advance button for Denius's page
-  const disableAdvance = true;
+  // Advance option is now available for Denius's page
+  const disableAdvance = false;
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
